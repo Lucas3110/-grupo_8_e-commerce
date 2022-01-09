@@ -1,6 +1,6 @@
 # -grupo_8_e-commerce
 
-**¿Qué producto venderá?** 
+**¿Qué producto venderán?** 
 Será un Ecommerce de NFT (Non Fungible Token), que es una unidad de data única e irrepetible, que certifica un bien digital. Los usuarios podrán comprar colecciones o productos, todos NFT. 
 
 **¿Quién será nuestra audiencia objetiva?** 
@@ -9,7 +9,7 @@ Este será nuestro público principal. Hombres de entre 18 y 60 años interesado
 
 
 **¿Cómo ajustaremos nuestra oferta a ese público?** 
-Pensamos ofrecer diferentes colecciones y productos de valor. Sobre todo queremos tener una gran variedad de opciones para abarcar la mayor cantidad de gustos entre nuestro amplio público objetivo. 
+Pensamos ofrecer diferentes colecciones y productos de valor. Sobretodo queremos tener una gran variedad de opciones para abarcar la mayor cantidad de gustos entre nuestro amplio público objetivo. 
 
 
 
@@ -27,5 +27,5 @@ https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
 https://www.dafont.com/es/coolvetica.font
 
 **Wireframes:** 
-https://www.figma.com/file/HUi7V0cisctBpTCE58vftD/Wireframe-NFTs?node-id=0%3A1
-https://www.figma.com/file/XedTDFU08cVJmGxgofyYD5/Untitled (la ultima pantalla esta divida en 2 ya que no podiamos crear otra por el free trial)
+- https://www.figma.com/file/HUi7V0cisctBpTCE58vftD/Wireframe-NFTs?node-id=0%3A1
+- https://www.figma.com/file/XedTDFU08cVJmGxgofyYD5/Untitled (la última pantalla está divida en 2 ya que no podiamos crear otra por el free trial)
