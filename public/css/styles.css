@@ -1,0 +1,73 @@
+/* poner la imagen mas chica en el header */
+body {
+    background-color: #1B262C;
+}
+
+#logo {
+    width: 20%;
+    height: 20%;
+}
+
+#principio{
+    background-image: url('/images/fondo prueba posta.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;  
+    margin:auto;
+    padding:0;
+}
+
+.texto{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA;
+}
+h3 {
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA;
+}
+
+h4 {
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA;
+}
+
+.secciones{    
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA;
+}
+
+.navbar {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA;    
+}
+
+#imgfooter{
+    width: 25%;
+    height: 25%;
+}
+
+li{
+    font-size: small;
+    font-weight: bold;    
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA; 
+}
+
+#final{
+    font-size: small;
+    font-weight: bold;    
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA; 
+}
+
