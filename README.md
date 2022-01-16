@@ -1,4 +1,4 @@
-# -grupo_8_e-commerce
+# -grupo_8_e-unforged
 
 **¿Qué producto venderán?** 
 Será un Ecommerce de NFT (Non Fungible Token), que es una unidad de data única e irrepetible, que certifica un bien digital. Los usuarios podrán comprar colecciones o productos, todos NFT. 
@@ -29,3 +29,8 @@ https://www.dafont.com/es/coolvetica.font
 **Wireframes:** 
 - https://www.figma.com/file/HUi7V0cisctBpTCE58vftD/Wireframe-NFTs?node-id=0%3A1
 - https://www.figma.com/file/XedTDFU08cVJmGxgofyYD5/Untitled (la última pantalla está divida en 2 ya que no podiamos crear otra por el free trial)
+
+Roles:
+Front End - Lucas y Jessica
+Backend - Joan y Nicolas
+
