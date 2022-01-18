@@ -24,7 +24,7 @@ Pensamos ofrecer diferentes colecciones y productos de valor. Sobretodo queremos
 https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
 
 **Tipografía:** 
-https://www.dafont.com/es/coolvetica.font
+https://fonts.google.com/specimen/Lato
 
 **Wireframes:** 
 - https://www.figma.com/file/HUi7V0cisctBpTCE58vftD/Wireframe-NFTs?node-id=0%3A1
