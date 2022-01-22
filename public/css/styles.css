@@ -7,7 +7,15 @@ body {
     width: 5%;
     height: 5%;
 }
-
+a{
+    text-decoration: none;
+    box-shadow: none;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    color: #BBE1FA;
+}
 #principio{
     background-image: url('/images/fondo prueba posta.jpg');
     background-size: cover;
@@ -38,11 +46,14 @@ h4 {
     color: #BBE1FA;
 }
 
-.secciones{    
+.container-secciones{    
     font-weight: bold;
     text-align: left;
     font-family: 'Lato', sans-serif;
     color: #BBE1FA;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;    
 }
 
 .navbar {
@@ -62,12 +73,15 @@ li{
     font-weight: bold;    
     font-family: 'Lato', sans-serif;
     color: #BBE1FA; 
+    margin: 5%;
+    list-style-type: none;
 }
 
 
 .footer-container{
     display: flex;    
     justify-content: space-around;
+
 }
 
 .container-final{
@@ -75,7 +89,9 @@ li{
     font-weight: bold;    
     font-family: 'Lato', sans-serif;
     color: #BBE1FA; 
-    display:flex;
+    display:flex;    
     justify-content: space-between;
+    padding: 2%;
+    
 }
 
