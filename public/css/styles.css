@@ -66,8 +66,7 @@ li{
 
 
 .footer-container{
-    display: flex;
-    border: solid 3px red;
+    display: flex;    
     justify-content: space-around;
 }
 
