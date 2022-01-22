@@ -53,8 +53,8 @@ h4 {
 }
 
 #imgfooter{
-    width: 25%;
-    height: 25%;
+    width: 65%;
+    height: 65%;
 }
 
 li{
@@ -64,10 +64,19 @@ li{
     color: #BBE1FA; 
 }
 
-#final{
+
+.footer-container{
+    display: flex;
+    border: solid 3px red;
+    justify-content: space-around;
+}
+
+.container-final{
     font-size: small;
     font-weight: bold;    
     font-family: 'Lato', sans-serif;
     color: #BBE1FA; 
+    display:flex;
+    justify-content: space-between;
 }
 
