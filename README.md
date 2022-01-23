@@ -31,6 +31,6 @@ https://fonts.google.com/specimen/Lato
 - https://www.figma.com/file/XedTDFU08cVJmGxgofyYD5/Untitled (la última pantalla está divida en 2 ya que no podiamos crear otra por el free trial)
 
 Roles:
-Front End - Lucas y Jessica
+Front End - Lucas y Jessica |
 Backend - Joan y Nicolas
 
