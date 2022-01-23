@@ -95,7 +95,7 @@ li{
     
 }
 
-.container {
+.container-nft {
     position: relative;
 }
   
@@ -117,7 +117,7 @@ li{
     border: solid 2px #3282B8;
 }
 
-.container2 {
+.container-desc {
     background-color: #3282B8;
     border: solid 2px #3282B8;
 }
