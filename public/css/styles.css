@@ -223,11 +223,9 @@ li{
 }
 
 /*login */
-
 .bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #ebebeb;
-    border: solid 3px red;
 }
 
 .sectionlogin{
@@ -274,6 +272,7 @@ button{
 
 #form{
     border-radius: 7px;
-} 
+}
+
 
 /*fin dek login*/
