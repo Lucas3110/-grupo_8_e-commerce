@@ -95,7 +95,7 @@ li{
     
 }
 
-.container {
+.container-nft {
     position: relative;
 }
   
@@ -117,7 +117,7 @@ li{
     border: solid 2px #3282B8;
 }
 
-.container2 {
+.container-desc {
     background-color: #3282B8;
     border: solid 2px #3282B8;
 }
@@ -224,12 +224,13 @@ li{
 
 /*login */
 
-#bodylogin{
+.bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #ebebeb;
+    border: solid 3px red;
 }
 
-#sectionlogin{
+.sectionlogin{
     border-style: solid;
     border-color: #BBE1FA;
     border: 0em;
@@ -245,7 +246,6 @@ li{
 
 }
 
-/*login*/
 .inicio{
     padding: 10px;
     padding-bottom: 1px;
@@ -274,6 +274,6 @@ button{
 
 #form{
     border-radius: 7px;
-}
+} 
 
 /*fin dek login*/
