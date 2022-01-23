@@ -13,3 +13,12 @@ app.listen(3000, () => {
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/home.html"))
 })
+
+
+
+/*
+app.get("shopping-cart", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/shopping-cart.html"))
+})
+ -No puedo hacer que me mande a la pag del carrito | Lucas- */
+
