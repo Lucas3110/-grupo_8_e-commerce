@@ -224,12 +224,12 @@ li{
 
 /*login */
 
-body{
+#bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #ebebeb;
 }
 
-section{
+#sectionlogin{
     border-style: solid;
     border-color: #BBE1FA;
     border: 0em;
