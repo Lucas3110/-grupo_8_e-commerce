@@ -222,3 +222,57 @@ li{
     
 }
 
+/*login */
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #ebebeb;
+}
+
+section{
+    border-style: solid;
+    border-color: #BBE1FA;
+    border: 0em;
+    background-color: #3282B8;
+    width: 30%;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.inicio{
+    padding: 10px;
+    padding-bottom: 1px;
+    color: white;
+    justify-content: space-around;
+}
+
+.Registrarse{
+    border-bottom: 10px;
+    color: white;
+}
+
+.registro{
+    margin: 10px;
+}
+
+button{
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    padding: 5px;
+    text-decoration: #0F4C75;
+    font-size: 16px;
+    color: #0F4C75;
+    width: 120px;
+}
+
+#form{
+    border-radius: 7px;
+}
+
+/*fin dek login*/
