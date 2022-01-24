@@ -1,4 +1,9 @@
 /* poner la imagen mas chica en el header */
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+
 body {
     background-color: #1B262C;
 }
