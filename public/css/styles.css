@@ -82,7 +82,10 @@ li{
     list-style-type: none;
 }
 
-
+.footer{
+    background-color: white; /* Quise cambiarle el color para diferencialo de la pag
+    pero no me responde por alguna razon, lo vemos en la prox reunion */
+}
 .footer-container{
     display: flex;    
     justify-content: space-around;
