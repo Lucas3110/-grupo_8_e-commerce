@@ -20,6 +20,8 @@ Pensamos ofrecer diferentes colecciones y productos de valor. Sobretodo queremos
 - https://magiceden.io/
 - https://www.binance.com/en/nft/home
 
+**Logo:** https://www.canva.com/design/DAE0-vix-b0/CDnTDFBxDbBvyW1pbyCOOA/edit 
+
 **Paleta de colores:** 
 https://colorhunt.co/palette/1b262c0f4c753282b8bbe1fa
 
