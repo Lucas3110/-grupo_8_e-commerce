@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/productDetail.css">
   <script src="https://kit.fontawesome.com/a25985a1fb.js" crossorigin="anonymous"></script>
   <title>Name NFT</title>
 </head>
@@ -17,25 +17,22 @@
 <body>
   <main>
     <div class="container-nft">
-      <img src="images/naruto.jpg" alt="" width="100%" height="auto" class="imagen">
+      <img src="images/naruto.jpg" alt="" height="auto" width="97%" class="imagen">
       <button class="topright"><i class="fas fa-share-alt"></i></button>
     </div>
-    <article>
-      <div class="container-desc">
-        <h4 class="container-desc">Nombre</h4>
-        <h4 class="container-desc">Coleccion</h4>
-        <h4 class="container-desc">Precio</h4>
-      </div>
-        <button type='submit' class="description">CTA</button>
+    <article class="precio">
+        <h4 class="item1">Nombre</h4>
+        <h4 class="item2">Coleccion</h4>
+        <h4 class="item3">Precio</h4>
+        <button type='submit' class="description item4">CTA</button>
     </article>
     <article class="description">
-      <p class="description">Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quas blanditiis ipsa voluptates totam dignissimos porro temporibus cum maxime, quasi eaque doloremque harum
-        quos. Ipsum earum consequuntur cupiditate quae. Provident, eligendi.</p>
-      <p class="description">Creador: X</p>
+      <p >Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quas blanditiis.</p>
+      <p >Creador: X</p>
     </article>
-    <article>
-      <h2>Tambien podria interesarte</h2>
+    <article class="slides-grid">
+      <h2 class="color">Tambien podria interesarte</h2>
       <br>
       <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
@@ -108,10 +105,9 @@
             dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
+        // dots[slideIndex-1].className += " active";
       }
     </script>
   </main>
 </body>
-
 </html>
