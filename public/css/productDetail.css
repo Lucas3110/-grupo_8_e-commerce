@@ -147,6 +147,7 @@ body{
             "collection"
             "price"
             "CTA";
+        width: 350px;
     }
     .description{
         grid-area: description;
@@ -161,6 +162,10 @@ body{
             "description description description"
             "slides slides slides";
         grid-gap: 1px;
+    }
+    .topright{
+        top: 5px;
+        right: 10px;
     }
 }
 
@@ -191,7 +196,7 @@ body{
             "collection"
             "price"
             "CTA";
-        max-width: 800px;
+        width: 800px;
         position: relative;
     }
     .description{
@@ -207,7 +212,6 @@ body{
             "description description description"
             "slides slides slides";
         grid-gap: 1px;
-        grid-auto-columns: 35% 30% 45%;
         padding-left: 1em;
         padding-right: 1em;
     }
