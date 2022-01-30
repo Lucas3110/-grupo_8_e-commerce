@@ -67,7 +67,32 @@ html,body{
   background-color: white;
   border-radius: 10px;
 }
+header .form{
+    width: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 2px 0px 0px 10px;
+    font-size: 11px;    
+   right: 375px;
+}
 
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+.banner{
+  background-image: url('/images/fondo prueba posta.jpg');
+  background-size: cover;
+  background-position: center center;    
+  height: 29vh;
+  width: 100%;    
+  
+}
 /* slider de imagen*/
   
   #slider {
@@ -157,32 +182,7 @@ h2{
 }  funca pero hay que ajustar el fondo para que quede las medidas correctas como en solana
 */
 
-header .form{
-    width: 50%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    padding: 2px 0px 0px 10px;
-    font-size: 11px;    
-   right: 375px;
-}
 
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-
-.banner{
-  background-image: url('/images/fondo prueba posta.jpg');
-  background-size: cover;
-  background-position: center center;    
-  height: 29vh;
-  width: 100%;    
-  
-}
 .final{
     display: flex;
     justify-content: center;
