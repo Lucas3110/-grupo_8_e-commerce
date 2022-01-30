@@ -308,4 +308,29 @@ h2{
     transition: all 25ms;   
     
   }
+
+  /* fix de navbar*/
+  .navbar-links{
+    display: flex;    
+    position: absolute;
+  }
+  .navbar-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;  
+  }
+
+  .toggle-button {
+    display: none;
+  }
 }
