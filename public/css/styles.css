@@ -67,16 +67,15 @@ html,body{
   background-color: white;
   border-radius: 10px;
 }
+/* CSS de lupa falta ubicarlo bien*/
 header .form{
     width: 50%;
     position: absolute;
     display: flex;
-    align-items: center;
-    padding: 2px 0px 0px 10px;
+    align-items: center;    
     font-size: 11px;    
-   right: 375px;
+   
 }
-
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
@@ -84,7 +83,7 @@ header .form .input{
     color: #666;
     padding: 2px;
 }
-
+/* CSS lupa fin */
 .banner{
   background-image: url('/images/fondo prueba posta.jpg');
   background-size: cover;
@@ -103,15 +102,16 @@ header .form .input{
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
   }
-  .fondo-sliders h2 a{
+  .fondo-sliders div a{
     display: block;
     text-decoration: none;
+    margin: 10rem 63rem -8rem;
     color: white;
     font-weight: 500; 
     transition: all 25ms;   
     
   }
-  .fondo-sliders h2 a:hover{
+  .fondo-sliders div a:hover{
     font-weight: bold;
     color: #BBE1FA;
     
@@ -207,7 +207,9 @@ h2{
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 800px)
+/*todo esto es el navbar*/
+{
   .navbar {
       flex-direction: column;
       align-items: flex-start;
@@ -237,5 +239,15 @@ h2{
 
   .navbar-links.active {
       display: flex;
+  }
+  /* fin navbar*/
+
+  #slider{
+    margin: 11rem 8rem -4rem;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
   }
 }
