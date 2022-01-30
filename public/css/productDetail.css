@@ -212,7 +212,6 @@ body{
             "description description description"
             "slides slides slides";
         grid-gap: 1px;
-        grid-auto-columns: 35% 30% 45%;
         padding-left: 1em;
         padding-right: 1em;
     }
