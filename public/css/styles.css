@@ -207,15 +207,48 @@ h2{
 }
 @media (min-width: 375px){
 
-  #slider{
-    margin: 11rem 8rem -4rem;
-    
-  }
-  
-  .fondo-sliders div a{
-    margin: 9rem 22rem -9rem;
-  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.toggle-button {
+    display: flex;
+}
+
+.navbar-links {
+    display: none;
+    width: 100%;
+}
+
+.navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+}
+
+.navbar-links ul li {
+    text-align: center;
+}
+
+.navbar-links ul li a {
+    padding: .5rem 1rem;
+}
+
+.navbar-links.active {
+    display: flex;
+}
+/* fin navbar*/
+
+#slider{
+  width: 349px;
+  height: 198px;
+  margin: 10rem 0rem 15rem;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 9rem -9rem;
+}
 }
 
 @media (min-width: 630px){
@@ -229,45 +262,25 @@ h2{
     margin: 9rem 22rem -9rem;
   }
 
+  #slider{
+    margin: 11rem 8rem -4rem;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
+  }
 }
 
-@media (max-width: 800px)
+@media (min-width: 800px)
 /*todo esto es el navbar*/
 {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .toggle-button {
-      display: flex;
-  }
-
-  .navbar-links {
-      display: none;
-      width: 100%;
-  }
-
-  .navbar-links ul {
-      width: 100%;
-      flex-direction: column;
-  }
-
-  .navbar-links ul li {
-      text-align: center;
-  }
-
-  .navbar-links ul li a {
-      padding: .5rem 1rem;
-  }
-
-  .navbar-links.active {
-      display: flex;
-  }
-  /* fin navbar*/
+  
 
   #slider{
     margin: 11rem 8rem -4rem;
+    width: 500px;
+    height: 265px;
     
   }
   
