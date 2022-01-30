@@ -1,104 +1,241 @@
-/* poner la imagen mas chica en el header */
-* {
+*{
     font-family: 'Lato', sans-serif;
 }
-
-
 body {
-    background-color: #1B262C;
+    margin: 0;
 }
-
-#logo {
-    width: 5%;
-    height: 5%;
-}
-a{
-    text-decoration: none;
-    box-shadow: none;
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-}
-#principio{
-    background-image: url('/images/fondo prueba posta.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;  
-    margin:auto;
-    padding:0;
-}
-
-.texto{
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-}
-h3 {
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-}
-
-h4 {
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-}
-
-.container-secciones{    
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-    display: flex;
-    flex-direction: column;
-    margin: 1%;    
+html,body{
+    overflow-x: hidden;
 }
 
 .navbar {
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;    
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
 }
 
-#imgfooter{
-    width: 65%;
-    height: 65%;
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
 }
 
-li{
-    font-size: small;
-    font-weight: bold;    
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA; 
-    margin: 5%;
-    list-style-type: none;
+.navbar-links {
+  height: 100%;
 }
 
-.footer{
-    background-color: white; /* Quise cambiarle el color para diferencialo de la pag
-    pero no me responde por alguna razon, lo vemos en la prox reunion */
-}
-.footer-container{
-    display: flex;    
-    justify-content: space-around;
-
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.container-final{
-    font-size: small;
-    font-weight: bold;    
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA; 
-    display:flex;    
-    justify-content: space-between;
-    padding: 2%;
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;  
+}
+
+.navbar-links li:hover {
+  background-color: #0F4C75;
+  border-radius: 10px;
+  transition: all 250ms;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* slider de imagen*/
+  
+  #slider {
+    position: relative;
+    width: 500px;
+    height: 265px;
+    margin: 11rem 50rem -4rem;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+  }
+  .fondo-sliders h2 a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500; 
+    transition: all 25ms;   
     
+  }
+  .fondo-sliders h2 a:hover{
+    font-weight: bold;
+    color: #BBE1FA;
+    
+  }
+  #slider ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 10000%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+  }
+  #slider ul li {
+    position: relative;
+    height: 100%;
+   
+    float: left;
+  }
+  #slider ul li img{
+    width: 500px;
+    height: 265px;
+  }
+   
+  #slider #prev, #slider #next {
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+  }
+  #slider #prev:hover, #slider #next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0;
+  }
+  #slider #prev {
+    left: 10px;
+  }
+  #slider #next {
+    right: 10px;
+  }
+  
+
+  /* slider de imagen fin*/
+  
+h2{
+    position: relative;
+    color: #BBE1FA;
+    left: 965px;
+    top: 133px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;    
+}
+/*
+.fondo-sliders{
+    background-color: white;       
+    margin-left: 10px;
+    margin-right: 20px;
+}  funca pero hay que ajustar el fondo para que quede las medidas correctas como en solana
+*/
+
+header .form{
+    width: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 2px 0px 0px 10px;
+    font-size: 11px;    
+   right: 375px;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+.banner{
+  background-image: url('/images/fondo prueba posta.jpg');
+  background-size: cover;
+  background-position: center center;    
+  height: 29vh;
+  width: 100%;    
+  
+}
+.final{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    justify-content: space-evenly;
+    background-color: #1B262C;
+    color: white;
+}
+.final a{   
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500; 
+    transition: all 25ms;  
+}
+
+.final a:hover{    
+    font-weight: bold;
+    color: #BBE1FA;
+        
+      
+}
+
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
 }
