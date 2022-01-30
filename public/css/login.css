@@ -4,6 +4,28 @@
     background-color: #1B262C;
 }
 
+#logo {
+    width: 5%;
+    height: 5%;
+}
+
+#principio{
+    background-image: url('/images/fondo prueba posta.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;  
+    margin:auto;
+    padding:0;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
+    font-size: 12px;
+}
+
 .sectionlogin{
     border-style: solid;
     border-color: #BBE1FA;
