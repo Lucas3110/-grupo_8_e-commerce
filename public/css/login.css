@@ -1,0 +1,94 @@
+/*login */
+.bodylogin{
+    font-family: 'Lato', sans-serif;
+    background-color: #1B262C;
+}
+
+.sectionlogin{
+    border-style: solid;
+    border-color: #BBE1FA;
+    background-color: #3282B8;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.inicio{
+    padding: 10px;
+    padding-bottom: 1px;
+    color: white;
+    justify-content: space-around;
+}
+
+.Registrarse{
+    border-bottom: 10px;
+    color: white;
+}
+
+.registro{
+    margin: 10px;
+}
+
+button{
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    padding: 5px;
+    text-decoration: #0F4C75;
+    font-size: 16px;
+    color: #0F4C75;
+    width: 120px;
+}
+
+#form{
+    border-radius: 7px;
+}
+
+.recordarme{
+    color: white;
+    font-size: 13px;
+}
+
+.recuerdame{
+    display: flex;
+    justify-content: stretch;
+    padding: 5%;
+}
+
+.olvido{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.textolvido{
+    font-size: 13px;
+
+}
+
+.crearcuenta{
+    border-top: 0.5px;
+    font-size: 13px;
+    padding: 0;
+    margin: 10px;
+}
+
+.nuevacuenta{
+    margin: 0%;
+}
+
+
+
+@media(max-width: 460px){
+    .sectionlogin{
+        margin-top: 30%;
+    }
+}
+
+/*fin dek login*/
