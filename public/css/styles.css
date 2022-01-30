@@ -205,7 +205,31 @@ h2{
         
       
 }
+@media (min-width: 375px){
 
+  #slider{
+    margin: 11rem 8rem -4rem;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
+  }
+
+}
+
+@media (min-width: 630px){
+
+  #slider{
+    margin: 11rem 8rem -4rem;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
+  }
+
+}
 
 @media (max-width: 800px)
 /*todo esto es el navbar*/
@@ -249,5 +273,26 @@ h2{
   
   .fondo-sliders div a{
     margin: 9rem 22rem -9rem;
+  }
+}
+
+@media (min-width: 1200px){
+
+  #slider {
+    position: relative;
+    width: 500px;
+    height: 265px;
+    margin: 11rem 50rem -4rem;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+  }
+  .fondo-sliders div a{
+    display: block;
+    text-decoration: none;
+    margin: 10rem 63rem -8rem;
+    color: white;
+    font-weight: 500; 
+    transition: all 25ms;   
+    
   }
 }
