@@ -1,4 +1,11 @@
 /*login */
+.logo {
+    width: 5%;
+    height: 5%;
+    display: flex;
+    align-items: flex-end;
+}
+
 .bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #1B262C;
@@ -110,6 +117,10 @@ button{
 @media(max-width: 460px){
     .sectionlogin{
         margin-top: 30%;
+    }
+    .logo{
+        width: 10%;
+        height: 10%;
     }
 }
 
