@@ -174,13 +174,17 @@ h2{
     margin-bottom: 10px;
     padding: 0;    
 }
-/*
+
 .fondo-sliders{
-    background-color: white;       
-    margin-left: 10px;
-    margin-right: 20px;
-}  funca pero hay que ajustar el fondo para que quede las medidas correctas como en solana
-*/
+    background: #333;       
+    margin: 2.5rem auto;
+    max-width: 110em;
+    width: 72%;
+    height: 1288px;    
+    overflow: hidden;    
+    border-radius: 0.6em;    
+    box-shadow: 0 0.5em 0 rgb(138 148 152 / 20%);
+} 
 
 
 .final{
@@ -295,17 +299,23 @@ h2{
     position: relative;
     width: 500px;
     height: 265px;
-    margin: 11rem 50rem -4rem;
+    margin: 11rem 10rem -4rem;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
   }
   .fondo-sliders div a{
     display: block;
     text-decoration: none;
-    margin: 10rem 63rem -8rem;
+    margin: 10rem 22rem -8rem;
     color: white;
     font-weight: 500; 
     transition: all 25ms;   
+    
+  }
+
+  #titular{
+    top: 1rem;
+    margin: -7rem 0rem -8rem;   
     
   }
 
