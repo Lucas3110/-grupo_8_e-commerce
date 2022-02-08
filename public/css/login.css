@@ -4,12 +4,14 @@
     background-color: #1B262C;
 }
 
-#logo {
+.logo {
     width: 5%;
     height: 5%;
+    display: flex;
+    align-items: flex-end;
 }
 
-#principio{
+.principio{
     background-image: url('/images/fondo prueba posta.jpg');
     background-size: cover;
     background-position: center center;
@@ -17,13 +19,6 @@
     margin:auto;
     padding:0;
     
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1%;
-    font-size: 12px;
 }
 
 .sectionlogin{
@@ -46,7 +41,9 @@
     padding: 10px;
     padding-bottom: 1px;
     color: white;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .Registrarse{
@@ -111,6 +108,11 @@ button{
     .sectionlogin{
         margin-top: 30%;
     }
+    .logo{
+        width: 10%;
+        height: 10%;
+    }
 }
 
 /*fin dek login*/
+
