@@ -7,6 +7,14 @@ body {
 html,body{
   overflow-x: hidden;
 }
+
+.logo {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
+}
+
 /* borrar las lineas sobrantes de la navbar ya que las tenes en el mq de 1200px*/
 .navbar {
 display: flex;
@@ -15,11 +23,6 @@ justify-content: space-between;
 align-items: center;
 background-color: #333;
 color: white;
-}
-
-.brand-title {
-font-size: 1.5rem;
-margin: .5rem;
 }
 
 .navbar-links {
@@ -85,10 +88,10 @@ header .form .input{
 }
 /* CSS lupa fin */
 .banner{
-background-image: url('/images/fondo prueba posta.jpg');
-background-size: cover;
+background-image: url('/images2/background/3.jpg');
+background-size: auto;
 background-position: center center;    
-height: 29vh;
+height: 60vh;
 width: 100%;    
 
 }
