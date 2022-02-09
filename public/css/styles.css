@@ -1,104 +1,346 @@
-/* poner la imagen mas chica en el header */
-* {
-    font-family: 'Lato', sans-serif;
+*{
+  font-family: 'Lato', sans-serif;
 }
-
-
 body {
-    background-color: #1B262C;
+  margin: 0;
+}
+html,body{
+  overflow-x: hidden;
+}
+/* borrar las lineas sobrantes de la navbar ya que las tenes en el mq de 1200px*/
+.navbar {
+display: flex;
+position: relative;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: white;
 }
 
-#logo {
-    width: 5%;
-    height: 5%;
-}
-a{
-    text-decoration: none;
-    box-shadow: none;
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-}
-#principio{
-    background-image: url('/images/fondo prueba posta.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;  
-    margin:auto;
-    padding:0;
+.brand-title {
+font-size: 1.5rem;
+margin: .5rem;
 }
 
-.texto{
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-}
-h3 {
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
+.navbar-links {
+height: 100%;
 }
 
-h4 {
-    font-size: large;
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
+.navbar-links ul {
+display: flex;
+margin: 0;
+padding: 0;
 }
 
-.container-secciones{    
-    font-weight: bold;
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;
-    display: flex;
-    flex-direction: column;
-    margin: 1%;    
+.navbar-links li {
+list-style: none;
 }
+
+.navbar-links li a {
+display: block;
+text-decoration: none;
+color: white;
+padding: 1rem;
+font-weight: bold;  
+}
+
+.navbar-links li:hover {
+background-color: #0F4C75;
+border-radius: 10px;
+transition: all 250ms;
+}
+
+.toggle-button {
+position: absolute;
+top: .75rem;
+right: 1rem;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+/* CSS de lupa falta ubicarlo bien*/
+header .form{
+  width: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;    
+  font-size: 11px;    
+ 
+}
+header .form .input{
+  background-color: #FFF;
+  border: 1px solid #000;
+  outline: none;
+  color: #666;
+  padding: 2px;
+}
+/* CSS lupa fin */
+.banner{
+background-image: url('/images/fondo prueba posta.jpg');
+background-size: cover;
+background-position: center center;    
+height: 29vh;
+width: 100%;    
+
+}
+/* slider de imagen*/
+
+#slider {
+  position: relative;
+  width: 500px;
+  height: 265px;
+  margin: 11rem 50rem -4rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+}
+.fondo-sliders div a{
+  display: block;
+  text-decoration: none;
+  margin: 10rem 63rem -8rem;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;   
+  
+}
+.fondo-sliders div a:hover{
+  font-weight: bold;
+  color: #BBE1FA;
+  
+}
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+ 
+  float: left;
+}
+#slider ul li img{
+  width: 500px;
+  height: 265px;
+}
+ 
+#slider #prev, #slider #next {
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+#slider #prev:hover, #slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+#slider #prev {
+  left: 10px;
+}
+#slider #next {
+  right: 10px;
+}
+
+
+/* slider de imagen fin*/
+
+h2{
+  position: relative;
+  color: #BBE1FA;
+  left: 965px;
+  top: 133px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;    
+}
+
+.fondo-sliders{
+  background: #333;       
+  margin: 2.5rem auto;
+  max-width: 110em;
+  width: 72%;
+  height: 1288px;    
+  overflow: hidden;    
+  border-radius: 0.6em;    
+  box-shadow: 0 0.5em 0 rgb(138 148 152 / 20%);
+} 
+
+
+.final{
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  justify-content: space-evenly;
+  background-color: #1B262C;
+  color: white;
+}
+.final a{   
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;  
+}
+
+.final a:hover{    
+  font-weight: bold;
+  color: #BBE1FA;
+      
+    
+}
+@media (min-width: 375px){
 
 .navbar {
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA;    
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-#imgfooter{
-    width: 65%;
-    height: 65%;
+.toggle-button {
+  display: flex;
 }
 
-li{
-    font-size: small;
-    font-weight: bold;    
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA; 
-    margin: 5%;
-    list-style-type: none;
+.navbar-links {
+  display: none;
+  width: 100%;
 }
 
-.footer{
-    background-color: white; /* Quise cambiarle el color para diferencialo de la pag
-    pero no me responde por alguna razon, lo vemos en la prox reunion */
+.navbar-links ul {
+  width: 100%;
+  flex-direction: column;
 }
-.footer-container{
-    display: flex;    
-    justify-content: space-around;
+
+.navbar-links ul li {
+  text-align: center;
+}
+
+.navbar-links ul li a {
+  padding: .5rem 1rem;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+/* fin navbar*/
+
+#slider{
+width: 349px;
+height: 198px;
+margin: 10rem 0rem 15rem;
 
 }
 
-.container-final{
-    font-size: small;
-    font-weight: bold;    
-    font-family: 'Lato', sans-serif;
-    color: #BBE1FA; 
-    display:flex;    
-    justify-content: space-between;
-    padding: 2%;
-    
+.fondo-sliders div a{
+margin: 9rem 9rem -9rem;
+}
+}
+
+@media (min-width: 630px){
+
+#slider{
+  margin: 11rem 8rem -4rem;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 22rem -9rem;
+}
+
+#slider{
+  margin: 11rem 8rem -4rem;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 22rem -9rem;
+}
+}
+
+@media (min-width: 800px)
+/*todo esto es el navbar*/
+{
+
+
+#slider{
+  margin: 11rem 8rem -4rem;
+  width: 500px;
+  height: 265px;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 22rem -9rem;
+}
+}
+
+@media (min-width: 1200px){
+
+#slider {
+  position: relative;
+  width: 500px;
+  height: 265px;
+  margin: 11rem 10rem -4rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+}
+.fondo-sliders div a{
+  display: block;
+  text-decoration: none;
+  margin: 10rem 22rem -8rem;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;   
+  
+}
+
+#titular{
+  top: 1rem;
+  margin: -7rem 0rem -8rem;   
+  
+}
+
+/* fix de navbar*/
+.navbar-links{
+  display: flex;    
+  position: absolute;
+}
+.navbar-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;  
+}
+
+.toggle-button {
+  display: none;
+}
 }
