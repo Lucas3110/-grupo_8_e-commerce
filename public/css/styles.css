@@ -88,8 +88,8 @@ header .form .input{
 }
 /* CSS lupa fin */
 .banner{
-background-image: url('/images2/background/3.jpg');
-background-size: auto;
+background-image: url('/images/banner.jpeg');
+background-size: cover;
 background-position: center center;    
 height: 60vh;
 width: 100%;    
