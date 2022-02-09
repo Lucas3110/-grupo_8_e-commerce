@@ -37,6 +37,14 @@ body{
     background-color: #BBE1FA;
 }
 
+.interested{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
@@ -138,7 +146,6 @@ body{
     .item2 { grid-area: collection; }
     .item3 { grid-area: price; }
     .item4 { grid-area: CTA; }
-
     .precio{
         grid-area: precio;
         display: grid;
@@ -147,7 +154,6 @@ body{
             "collection"
             "price"
             "CTA";
-        width: 350px;
     }
     .description{
         grid-area: description;
@@ -162,6 +168,7 @@ body{
             "description description description"
             "slides slides slides";
         grid-gap: 1px;
+        
     }
     .topright{
         top: 5px;
@@ -170,53 +177,11 @@ body{
 }
 
 @media only screen and (min-width: 1201px) {
-    *{
-        font-size: x-large;
-    }
-    .text{
-        font-size: x-large;
-    }
-    .container-nft{ 
-        grid-area: foto;
-        max-width: 800px;
-        max-height: auto;
-    }
-    .item1 { grid-area: nombre; }
-    .item2 { grid-area: collection; }
-    .item3 { grid-area: price; }
-    .item4 { 
-        grid-area: CTA; 
+    .container-nft{
+        max-width: 950px;
+        max-height: 700px;
+        overflow: hidden;
+        margin-left: 50px;
     }
 
-    .precio{
-        grid-area: precio;
-        display: grid;
-        grid-template-areas: 
-            "nombre"
-            "collection"
-            "price"
-            "CTA";
-        width: 800px;
-        position: relative;
-    }
-    .description{
-        grid-area: description;
-    }
-    .slides-grid{
-        grid-area: slides;
-    }
-    main {
-        display: grid;
-        grid-template-areas: 
-            "foto foto precio"
-            "description description description"
-            "slides slides slides";
-        grid-gap: 1px;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-    .topright{
-        top: 5px;
-        right: 10px;
-    }
 }
