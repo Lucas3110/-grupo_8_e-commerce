@@ -1,22 +1,103 @@
-/*login */
-.logo {
-    width: 5%;
-    height: 5%;
-    display: flex;
-    align-items: flex-end;
+/*Inicio del header*/
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
 }
+
+.logo {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;  
+}
+
+.navbar-links li:hover {
+  background-color: #0F4C75;
+  border-radius: 10px;
+  transition: all 250ms;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+/* CSS de lupa falta ubicarlo bien*/
+header .form{
+    width: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;    
+    font-size: 11px;    
+   
+}
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+/* CSS lupa fin */
+.banner{
+  background-image: url('/images/fondo prueba posta.jpg');
+  background-size: cover;
+  background-position: center center;    
+  height: 29vh;
+  width: 100%;    
+  
+}
+
+  /*Fin del header*/
+
+
+/*login */
 
 .bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #0d1117;
 }
 
-#logo {
-    width: 5%;
-    height: 5%;
-}
-
-#principio{
+.principio{
     background-image: url('/images/fondo prueba posta.jpg');
     background-size: cover;
     background-position: center center;
@@ -26,13 +107,6 @@
     
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1%;
-    font-size: 12px;
-}
-
 .sectionlogin{
     border-style: solid;
     border-color: #4b4b4b;
@@ -40,10 +114,10 @@
     text-align: center;
     font-size: 16px;
     display: flex;
-    width: 20%;
+    width: 70%;
     margin: auto;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     justify-content: center;
     border-radius: 10px;
 
@@ -57,7 +131,9 @@ input{
     padding: 10px;
     padding-bottom: 1px;
     color: white;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .Registrarse{
@@ -108,6 +184,7 @@ transition: all 250ms;
 
 .textolvido{
     font-size: 13px;
+    color: #BBE1FA;
 
 }
 
@@ -116,10 +193,16 @@ transition: all 250ms;
     font-size: 13px;
     padding: 0;
     margin: 10px;
+    
+}
+
+.crear{
+  color: white;
 }
 
 .nuevacuenta{
     margin: 0%;
+    color: #BBE1FA;
 }
 
 
@@ -135,3 +218,32 @@ transition: all 250ms;
 }
 
 /*fin dek login*/
+
+
+/*footer*/
+.final{
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  justify-content: space-evenly;
+  background-color: #1B262C;
+  color: white;
+}
+.final a{   
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;  
+}
+
+.final a:hover{    
+  font-weight: bold;
+  color: #BBE1FA;
+      
+    
+}
+
+
+
+
