@@ -164,6 +164,7 @@ body{
         grid-template-areas: 
             "foto foto precio"
             "description description description"
+            "color color color"
             "slides slides slides";
         grid-gap: 1px;
         
@@ -171,6 +172,9 @@ body{
     .topright{
         top: 5px;
         right: 10px;
+    }
+    .item4{
+        padding: 20px 50px;
     }
 }
 
@@ -182,11 +186,23 @@ body{
         margin-left: 50px;
     }
     .precio{
-        margin-right: 50px;
         width: 700px;
     }
     .topright{
         top: 5px;
         right: 20px;
+    }
+    .description{
+        margin-left: 50px;
+        margin-right: 53px;
+    }
+    .color{
+        margin-left: 50px;
+    }
+    .item4{
+        padding: 20px 50px;
+    }
+    .item1, .item2, .item3, .item4{
+        font-size: large;
     }
 }
