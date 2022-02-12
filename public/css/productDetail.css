@@ -2,10 +2,11 @@
     font-family: 'Lato', sans-serif;
 }
 body{
-    background-color:#1B262C ;
+    background-color:#0d1117 ;
 }
 .container-nft {
     position: relative;
+    
 }
   
 .topright {
@@ -21,20 +22,38 @@ body{
     cursor: pointer;
 }
 
-.imagen {
-    border: solid 5px #3282B8;
-}
+
 
 .precio {
-    background-color: #3282B8;
-    border: solid 2px #BBE1FA;
+    background-color: #0F4C75;
+    border: solid 2px #4b4b4b;
 }
 
 .color{
-    color: #BBE1FA;
+    color: #f7f7f7;
 }
 .description{
-    background-color: #BBE1FA;
+    background-color: #0F4C75;
+    color: #f7f7f7;
+    text-align: center;
+}
+
+.item1, .item2, .item3{
+    color: #f7f7f7;
+}
+
+.item4{
+    border-radius: 0.3em;
+    font-size: 1.4em;
+    font-weight: bold;
+    background: #43ace3;
+    color: #fff;
+    
+}
+.item4:hover{
+    background-color: green;
+    border-radius: 10px;
+    transition: all 250ms;
 }
 
 .interested{
@@ -43,7 +62,10 @@ body{
     overflow: hidden;
 }
 
-
+img{
+    border-radius: 10px;
+    border: solid 2px #4b4b4b
+}
 
 .slideshow-container {
     max-width: 1000px;
@@ -140,7 +162,7 @@ body{
 @media only screen and (min-width: 768px) {
     .container-nft{
         grid-area: foto;
-        
+        margin-top: 20px;
     }
     .item1 { grid-area: nombre; }
     .item2 { grid-area: collection; }
@@ -152,9 +174,12 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        margin-top: 20px;
+        
     }
     .description{
         grid-area: description;
+        margin: 20px;
     }
     .slides-grid{
         grid-area: slides;
@@ -187,14 +212,15 @@ body{
     }
     .precio{
         width: 700px;
+        height: 489px;
     }
     .topright{
         top: 5px;
         right: 20px;
     }
     .description{
-        margin-left: 50px;
-        margin-right: 53px;
+        margin: 2rem 20rem;
+        border-radius: 10px;
     }
     .color{
         margin-left: 50px;
