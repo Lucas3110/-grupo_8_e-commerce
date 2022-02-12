@@ -40,6 +40,9 @@ body{
 
 .item1, .item2, .item3{
     color: #f7f7f7;
+    display: flex;
+    padding: 2vh 30vh;
+    border: solid 3px #f7f7f7;
 }
 
 .item4{
@@ -54,12 +57,6 @@ body{
     background-color: green;
     border-radius: 10px;
     transition: all 250ms;
-}
-
-.interested{
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
 }
 
 img{
@@ -163,6 +160,8 @@ img{
     .container-nft{
         grid-area: foto;
         margin-top: 20px;
+        width: 700px;
+
     }
     .item1 { grid-area: nombre; }
     .item2 { grid-area: collection; }
@@ -175,7 +174,6 @@ img{
         align-items: center;
         justify-content: space-around;
         margin-top: 20px;
-        
     }
     .description{
         grid-area: description;
@@ -184,7 +182,7 @@ img{
     .slides-grid{
         grid-area: slides;
     }
-    main {
+    .main2 {
         display: grid;
         grid-template-areas: 
             "foto foto precio"
@@ -209,9 +207,10 @@ img{
         max-height: 500px;
         overflow: hidden;
         margin-left: 50px;
+        width: 1200px;
     }
     .precio{
-        width: 700px;
+        max-width: 700px;
         height: 489px;
     }
     .topright{
