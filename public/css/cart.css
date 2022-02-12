@@ -1,8 +1,7 @@
 html {
     background: #0d1117;
-    font: 62.5%/1.5em 'Lato', sans-serif;
-  }
-  
+    
+  }  
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;    
@@ -51,7 +50,7 @@ html {
     margin: 40px auto;  
     overflow: hidden;
     position: relative;
-    
+    font: 62.5%/1.5em 'Lato', sans-serif; 
     border-radius: 0.6em;
     background: #ecf0f1;
     box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
