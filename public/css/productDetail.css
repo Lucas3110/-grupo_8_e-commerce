@@ -2,10 +2,11 @@
     font-family: 'Lato', sans-serif;
 }
 body{
-    background-color:#1B262C ;
+    background-color:#0d1117 ;
 }
 .container-nft {
     position: relative;
+    
 }
   
 .topright {
@@ -21,20 +22,49 @@ body{
     cursor: pointer;
 }
 
-.imagen {
-    border: solid 5px #3282B8;
-}
+
 
 .precio {
-    background-color: #3282B8;
-    border: solid 2px #BBE1FA;
+    background-color: #0F4C75;
+    border: solid 2px #4b4b4b;
 }
 
 .color{
-    color: #BBE1FA;
+    color: #f7f7f7;
 }
 .description{
-    background-color: #BBE1FA;
+    background-color: #0F4C75;
+    color: #f7f7f7;
+    text-align: center;
+}
+
+.item1, .item2, .item3{
+    color: #f7f7f7;
+}
+
+.item4{
+    border-radius: 0.3em;
+    font-size: 1.4em;
+    font-weight: bold;
+    background: #43ace3;
+    color: #fff;
+    
+}
+.item4:hover{
+    background-color: green;
+    border-radius: 10px;
+    transition: all 250ms;
+}
+
+.interested{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+img{
+    border-radius: 10px;
+    border: solid 2px #4b4b4b
 }
 
 .slideshow-container {
@@ -132,25 +162,24 @@ body{
 @media only screen and (min-width: 768px) {
     .container-nft{
         grid-area: foto;
-        
+        margin-top: 20px;
     }
     .item1 { grid-area: nombre; }
     .item2 { grid-area: collection; }
     .item3 { grid-area: price; }
     .item4 { grid-area: CTA; }
-
     .precio{
         grid-area: precio;
-        display: grid;
-        grid-template-areas: 
-            "nombre"
-            "collection"
-            "price"
-            "CTA";
-        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 20px;
+        
     }
     .description{
         grid-area: description;
+        margin: 20px;
     }
     .slides-grid{
         grid-area: slides;
@@ -160,63 +189,46 @@ body{
         grid-template-areas: 
             "foto foto precio"
             "description description description"
+            "color color color"
             "slides slides slides";
         grid-gap: 1px;
+        
     }
     .topright{
         top: 5px;
         right: 10px;
+    }
+    .item4{
+        padding: 20px 50px;
     }
 }
 
 @media only screen and (min-width: 1201px) {
-    *{
-        font-size: x-large;
+    .container-nft{
+        max-width: 950px;
+        max-height: 500px;
+        overflow: hidden;
+        margin-left: 50px;
     }
-    .text{
-        font-size: x-large;
-    }
-    .container-nft{ 
-        grid-area: foto;
-        max-width: 800px;
-        max-height: auto;
-    }
-    .item1 { grid-area: nombre; }
-    .item2 { grid-area: collection; }
-    .item3 { grid-area: price; }
-    .item4 { 
-        grid-area: CTA; 
-    }
-
     .precio{
-        grid-area: precio;
-        display: grid;
-        grid-template-areas: 
-            "nombre"
-            "collection"
-            "price"
-            "CTA";
-        width: 800px;
-        position: relative;
-    }
-    .description{
-        grid-area: description;
-    }
-    .slides-grid{
-        grid-area: slides;
-    }
-    main {
-        display: grid;
-        grid-template-areas: 
-            "foto foto precio"
-            "description description description"
-            "slides slides slides";
-        grid-gap: 1px;
-        padding-left: 1em;
-        padding-right: 1em;
+        width: 700px;
+        height: 489px;
     }
     .topright{
         top: 5px;
-        right: 10px;
+        right: 20px;
+    }
+    .description{
+        margin: 2rem 20rem;
+        border-radius: 10px;
+    }
+    .color{
+        margin-left: 50px;
+    }
+    .item4{
+        padding: 20px 50px;
+    }
+    .item1, .item2, .item3, .item4, .description{
+        font-size: large;
     }
 }
