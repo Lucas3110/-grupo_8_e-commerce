@@ -181,7 +181,7 @@ body{
 @media only screen and (min-width: 1201px) {
     .container-nft{
         max-width: 950px;
-        max-height: 700px;
+        max-height: 500px;
         overflow: hidden;
         margin-left: 50px;
     }
@@ -202,7 +202,7 @@ body{
     .item4{
         padding: 20px 50px;
     }
-    .item1, .item2, .item3, .item4{
+    .item1, .item2, .item3, .item4, .description{
         font-size: large;
     }
 }
