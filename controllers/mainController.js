@@ -15,6 +15,9 @@ const controlador = {
     },
     register: (req, res) => {        
         res.render("register");        
+    },
+    edit: (req, res) => {        
+        res.render("edit");        
     }
 };
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css"> 
+    <link rel="stylesheet" href="/css/edit.css"> 
+    <title>Edit</title>
+</head>
+<body>
+    <main>
+    <header><!-- header --> <%- include ('./partials/header') %></header>
+    <form class="formcontainer">
+        <div class="flex-items">
+            <label>Nombre del producto:</label><br>
+            <input type="text" id="pname" name="pname"><br>
+            <label>Descripcion:</label><br>
+            <input type="text" id="description" name="description">
+            <label>Selecciona una imagen:</label>
+            <input type="file" name="image">
+            <input type="submit" name="submit" value="Upload">
+            <label>Elige la colección:</label>
+            <select id="coleccion" name="coleccion">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+            <label>Precio:</label><br>
+            <input type="number" id="price" name="price"><br>
+        </div>
+      </form>
+    <footer><!-- footer --> <%- include ('./partials/footer') %>  </footer> 
+    </main>
+</body>
+</html>
