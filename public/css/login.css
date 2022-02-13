@@ -3,7 +3,7 @@
 .navbar {
   display: flex;
   position: relative;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #333;
   color: white;
@@ -12,8 +12,7 @@
 .logo {
   width: 20%;
   height: 20%;
-  display: flex;
-  align-items: flex-end;
+ 
 }
 
 .navbar-links {
@@ -95,16 +94,6 @@ header .form .input{
 .bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #0d1117;
-}
-
-.principio{
-    background-image: url('/images/fondo prueba posta.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;  
-    margin:auto;
-    padding:0;
-    
 }
 
 .sectionlogin{
@@ -207,16 +196,6 @@ transition: all 250ms;
 
 
 
-@media(max-width: 460px){
-    .sectionlogin{
-        margin-top: 30%;
-    }
-    .logo{
-        width: 10%;
-        height: 10%;
-    }
-}
-
 /*fin dek login*/
 
 
@@ -246,4 +225,148 @@ transition: all 250ms;
 
 
 
+@media(max-width: 460px){
+  .sectionlogin{
+      margin-top: 30%;
+  }
+  .logo{
+      width: 10%;
+      height: 10%;
+  }
+}
 
+
+/*Responsive*/ 
+@media (min-width: 375px){
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .toggle-button {
+    display: flex;
+  }
+  
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .navbar-links ul li {
+    text-align: center;
+  }
+  
+  .navbar-links ul li a {
+    padding: .5rem 1rem;
+  }
+  
+  .navbar-links.active {
+    display: flex;
+  }
+  /* fin navbar*/
+  
+  #slider{
+  width: 349px;
+  height: 198px;
+  margin: 10rem 0rem 15rem;
+  
+  }
+  
+  .fondo-sliders div a{
+  margin: 9rem 9rem -9rem;
+  }
+  }
+  
+  @media (min-width: 630px){
+  
+  #slider{
+    margin: 11rem 8rem -4rem;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
+  }
+  
+  #slider{
+    margin: 11rem 8rem -4rem;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
+  }
+  }
+  
+  @media (min-width: 800px)
+  /*todo esto es el navbar*/
+  {
+  
+  
+  #slider{
+    margin: 11rem 8rem -4rem;
+    width: 500px;
+    height: 265px;
+    
+  }
+  
+  .fondo-sliders div a{
+    margin: 9rem 22rem -9rem;
+  }
+  }
+  
+  @media (min-width: 1200px){
+  
+  #slider {
+    position: relative;
+    width: 500px;
+    height: 265px;
+    margin: 11rem 10rem -4rem;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+  }
+  .fondo-sliders div a{
+    display: block;
+    text-decoration: none;
+    margin: 10rem 22rem -8rem;
+    color: white;
+    font-weight: 500; 
+    transition: all 25ms;   
+    
+  }
+  
+  #titular{
+    top: 1rem;
+    margin: -7rem 0rem -8rem;   
+    
+  }
+  
+  /* fix de navbar*/
+  .navbar-links{
+    display: flex;    
+    position: absolute;
+  }
+  .navbar-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;  
+  }
+  
+  
+  }
