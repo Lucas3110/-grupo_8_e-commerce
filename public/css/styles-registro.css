@@ -9,8 +9,9 @@ main {
     background-color: #333;
     text-align: center;
     font-size: 16px;
+    color: white;
     display: flex;
-    width: 20%;
+    width: 55%;
     margin: auto;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -42,16 +43,38 @@ main {
 
 .button {
     border-radius: 7px;
-    -webkit-border-radius: 7px;
+  /*  -webkit-border-radius: 7px; <-- Yo no puse esto. ¿Qué carajos es esto?*/
     padding: 5px;
-    text-decoration: #0F4C75;
+   /* text-decoration: #0F4C75; <--Tampoco puse esto aca*/
     font-size: 16px;
     color: white;
-    width: 120px;
+    width: 5rem;
     background-color: #333;
 }
 
-.button:hover{ 
+.button:hover{
     background-color: #0F4C75;
     transition: all 250ms;
+}
+
+/*--TABLETS--*/
+@media (min-width:361px) {
+    .control{
+        width: 80%;
     }
+    .button{
+        margin: 0rem 2rem;
+    }
+}
+
+/*--DESKTOP--*/
+@media (min-width:769px) {
+    .form-control label{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .button{
+        margin: 0rem 3rem;
+    }
+}
