@@ -1,110 +1,8 @@
-/*Inicio del header*/
-
-.navbar {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: white;
-}
-
-.logo {
-  width: 20%;
-  height: 20%;
-  display: flex;
-  align-items: flex-end;
-}
-
-.navbar-links {
-  height: 100%;
-}
-
-.navbar-links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-  font-weight: bold;  
-}
-
-.navbar-links li:hover {
-  background-color: #0F4C75;
-  border-radius: 10px;
-  transition: all 250ms;
-}
-
-.toggle-button {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-/* CSS de lupa falta ubicarlo bien*/
-header .form{
-    width: 50%;
-    position: absolute;
-    display: flex;
-    align-items: center;    
-    font-size: 11px;    
-   
-}
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-/* CSS lupa fin */
-.banner{
-  background-image: url('/images/fondo prueba posta.jpg');
-  background-size: cover;
-  background-position: center center;    
-  height: 29vh;
-  width: 100%;    
-  
-}
-
-  /*Fin del header*/
-
-
 /*login */
 
 .bodylogin{
     font-family: 'Lato', sans-serif;
     background-color: #0d1117;
-}
-
-.principio{
-    background-image: url('/images/fondo prueba posta.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;  
-    margin:auto;
-    padding:0;
-    
 }
 
 .sectionlogin{
@@ -114,7 +12,7 @@ header .form .input{
     text-align: center;
     font-size: 16px;
     display: flex;
-    width: 70%;
+    width: 50%;
     margin: auto;
     margin-top: 10%;
     margin-bottom: 5%;
@@ -129,10 +27,10 @@ input{
 }
 .inicio{
     padding: 10px;
-    padding-bottom: 1px;
+    padding-bottom: 10px;
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -173,6 +71,7 @@ transition: all 250ms;
 .recuerdame{
     display: flex;
     justify-content: stretch;
+    align-items: center;
     padding: 5%;
 }
 
@@ -207,43 +106,20 @@ transition: all 250ms;
 
 
 
-@media(max-width: 460px){
-    .sectionlogin{
-        margin-top: 30%;
-    }
-    .logo{
-        width: 10%;
-        height: 10%;
-    }
-}
-
 /*fin dek login*/
 
 
-/*footer*/
-.final{
-  display: flex;
-  justify-content: center;
-  align-items: center;    
-  justify-content: space-evenly;
-  background-color: #1B262C;
-  color: white;
-}
-.final a{   
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-weight: 500; 
-  transition: all 25ms;  
-}
-
-.final a:hover{    
-  font-weight: bold;
-  color: #BBE1FA;
-      
-    
-}
 
 
+
+@media(max-width: 460px){
+  .sectionlogin{
+      margin-top: 30%;
+  }
+  .logo{
+      width: 10%;
+      height: 10%;
+  }
+}
 
 

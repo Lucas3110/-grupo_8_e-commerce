@@ -18,7 +18,13 @@ const controlador = {
     },
     edit: (req, res) => {        
         res.render("edit");        
-    }
+    }, 
+    productos: (req, res) => {        
+        res.render("productlist");        
+    },
+    create: (req, res) => {        
+        res.render("create");        
+    }, 
 };
 
 module.exports = controlador;

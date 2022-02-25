@@ -1,0 +1,52 @@
+{ "productos":[{
+        "id": 1,
+        "nombre": "Genshin wonder great",
+        "coleccion":"Genshin",
+        "precio": 0.001,
+        "descripcion": "Genshin wonder great"
+        } , {
+        "id": 2,
+        "nombre": "Genshin glorious great",
+        "coleccion": "Genshin",
+        "precio": 0.100,
+        "descripcion": "Genshin glorious great"
+        } , {
+        "id": 3,
+        "nombre": "Genshin fabulous great",
+        "coleccion": "Genshin",
+        "precio": 0.002,
+        "descripcion": "Genshin fabulous great"
+        } , {
+        "id": 4,
+        "nombre": "Genshin incredible great", 
+        "coleccion": "Genshin", 
+        "precio": 0.0015,
+        "descripcion": "Genshin incredible great"
+        } , {
+        "id": 5,
+        "nombre": "Van Gohg azzurro medio", 
+        "coleccion": "Van Gohg", 
+        "precio": 0.020,
+        "descripcion": "NFT Van Gohg azzurro medio original de un cuadro pintado con inspiracion en Van Gohg, hecho por el artista Simon Leviev"
+        }, {
+        "id": 6,
+        "nombre": "Van Gogh inspiration", 
+        "coleccion": "Van Gohg", 
+        "precio": 0.001,
+        "descripcion": "NFT original de Van Gogh inspiration, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+        } , {
+        "id": 7,
+        "nombre": "Van Goghh Purple tibio", 
+        "coleccion": "Van Gohg", 
+        "precio": 0.010,
+        "descripcion": "NFT original de Van Goghh Purple tibio, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+        } , {
+        "id": 8,
+        "nombre": "Van Gogh incredible", 
+        "coleccion": "Van Gohg", 
+        "precio": 0.003,
+        "descripcion": "NFT original de Van Gogh incredible, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+        } 
+
+        ]
+}

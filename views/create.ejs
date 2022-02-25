@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head --> <%- include('./partials/head') %>  
+    <link rel="stylesheet" href="/css/edit.css">
+    <title>Create</title>
+</head>
+<body>
+    
+    <!-- header --> <%- include('./partials/header') %> 
+   
+   <main>
+    <form action="#" method="post" class="register-form">
+        <div class="form-control">
+            <label>Nombre de producto </label>
+            <input type="text" name="pname" class="control" required>
+        </div>
+        
+        <div class="form-control">
+            <label>Selecciona una imagen:</label>
+            <input type="file" name="image">
+            <input type="submit" name="submit" value="Upload">
+        </div>
+        
+        <div class="form-control">
+            <label>Elige la colección:</label>
+            <select id="coleccion" name="coleccion">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>Descripción </label>
+           <textarea name="description" id="" cols="30" rows="10"> </textarea>
+        </div>
+       
+      
+        <div class="form-control">
+            <label>Precio</label><br>
+            <input type="number" id="price" name="price"><br>
+        </div>
+        
+        
+        <button type="reset" class="button">Borrar</button>
+        <button type="submit" class="button">Guardar</button>
+    </form>
+   </main>
+    <!-- footer --> <%- include('./partials/footer') %> 
+</body>
+</html>

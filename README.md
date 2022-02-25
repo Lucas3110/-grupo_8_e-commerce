@@ -36,3 +36,5 @@ Roles:
 Front End - Lucas y Jessica |
 Backend - Joan y Nicolas
 
+**Tablero:** https://proyectounforged.atlassian.net/jira/software/c/projects/UN/boards/1 (los invitamos como colaboradores)
+

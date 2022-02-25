@@ -1,13 +1,20 @@
 body {
-    background-color: rgb(27, 38, 44);
+    background-color: #0d1117;
     font-family: 'Lato', sans-serif;
 }
 
 main {
+    border-style: solid;
+    border-color: #4b4b4b;
+    background-color: #333;
+    text-align: center;
+    font-size: 16px;
+    color: white;
     display: flex;
-    background-color: rgb(50, 130, 184);
-    width: 50%;
+    width: 55%;
     margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
     justify-content: center;
     border-radius: 10px;
 }
@@ -29,16 +36,45 @@ main {
 }
 
 .control {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+    border-radius: 6px;
+    margin: 0.35rem;
+    height: 23px;
 }
 
 .button {
-    background-color: rgb(15, 76, 117);
-    border: none;
-    font-size: 20px;
-    color: rgb(187, 225, 250);
-    padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 7px;
+  /*  -webkit-border-radius: 7px; <-- Yo no puse esto. ¿Qué carajos es esto?*/
+    padding: 5px;
+   /* text-decoration: #0F4C75; <--Tampoco puse esto aca*/
+    font-size: 16px;
+    color: white;
+    width: 5rem;
+    background-color: #333;
+}
+
+.button:hover{
+    background-color: #0F4C75;
+    transition: all 250ms;
+}
+
+/*--TABLETS--*/
+@media (min-width:361px) {
+    .control{
+        width: 80%;
+    }
+    .button{
+        margin: 0rem 2rem;
+    }
+}
+
+/*--DESKTOP--*/
+@media (min-width:769px) {
+    .form-control label{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .button{
+        margin: 0rem 3rem;
+    }
 }
