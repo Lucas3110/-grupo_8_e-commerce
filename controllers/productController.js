@@ -50,8 +50,8 @@ const controlador = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		res.redirect('/');
 	},
-    productCart: (req, res) => {        
-        res.render("productCart");        
+    cart: (req, res) => {        
+        res.render("cart");        
     },   
     edit: (req, res) => {        
         res.render("edit");       
