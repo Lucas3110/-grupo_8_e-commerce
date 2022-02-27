@@ -1,4 +1,4 @@
-[
+[ 
         {
                 "id": 1,
                 "nombre": "Genshin wonder great",
@@ -13,7 +13,7 @@
                 "coleccion": "Genshin",
                 "precio": 0.100,
                 "descripcion": "Genshin glorious great",
-                "imagen": "/coleccionJo/genshin2.jpg"
+                "imagen": "coleccionJo/genshin2.jpg"
         },
         {
                 "id": 3,
@@ -21,7 +21,7 @@
                 "coleccion": "Genshin",
                 "precio": 0.002,
                 "descripcion": "Genshin fabulous great",
-                "imagen": "/coleccionJo/genshin3.jpg"
+                "imagen": "coleccionJo/genshin3.jpg"
         },
         {
                 "id": 4,
@@ -29,7 +29,7 @@
                 "coleccion": "Genshin",
                 "precio": 0.0015,
                 "descripcion": "Genshin incredible great",
-                "imagen": "/coleccionJo/genshin4.jpg"
+                "imagen": "coleccionJo/genshin4.jpg"
         },
         {
                 "id": 5,

@@ -142,6 +142,10 @@ footer p {
  display: flex;
  justify-content: center;
 }
+.Price--eth-icon{
+    width: 24px;
+    height: 24px;
+}
 
 @media (min-width: 361px){
     main section article .description{
