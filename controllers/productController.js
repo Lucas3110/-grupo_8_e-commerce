@@ -35,16 +35,28 @@ const controlador = {
 		res.render('productDetail', {
 			product			
 		})
-    },       
+    },    
+    create: (req, res) => {        
+        res.render("create");        
+    }, 
+    // Create -  Method to store
+	store: (req, res) => {
+		let newProduct = {
+			id: products[products.length - 1].id + 1,
+			...req.body,
+			/*image: 'default-image.png'*/
+		};
+		products.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/');
+	},
     productCart: (req, res) => {        
         res.render("productCart");        
     },   
     edit: (req, res) => {        
-        res.render("edit");        
-    },     
-    create: (req, res) => {        
-        res.render("create");        
-    }, 
+        res.render("edit");       
+    }       
+
 };
 
 module.exports = controlador;
