@@ -38,9 +38,6 @@ const controlador = {
     },       
     productCart: (req, res) => {        
         res.render("productCart");        
-    },
-    productDetail: (req, res) => {        
-        res.render("productDetail");        
     },   
     edit: (req, res) => {        
         res.render("edit");        
