@@ -18,7 +18,7 @@ router.post('/', productController.store);
 
 router.get('/edit', productController.edit);
 
-router.get('/productos', productController.productos);
+router.get('/list', productController.list);
 
 
 

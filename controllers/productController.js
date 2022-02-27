@@ -20,8 +20,8 @@ const coleccionJ = products.filter(function(product){
 	return product.coleccion == 'Van-Gohg' //cambiar el JSON con "-" en vez de espacio
 })
 const controlador = {    
-    productos: (req, res) => {        
-        res.render('productlist', {
+    list: (req, res) => {        
+        res.render('list', {
             coleccionJo,
             coleccionL,
             coleccionN,

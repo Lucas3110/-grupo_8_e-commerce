@@ -4,7 +4,7 @@
 <head>
     <!-- head -->
     <%- include('./partials/head') %>
-        <link rel="stylesheet" href="/css/productlist.css">
+        <link rel="stylesheet" href="/css/list.css">
         <title>productos</title>
 </head>
 
@@ -23,7 +23,7 @@
                         100)).toFixed(0) %>
                     <article>
                         <a href="/product/detail/<%= product.id %>">
-                            <img src="images/<%= product.imagen %>" class="product_img">
+                            <img src="/images/<%= product.imagen %>" class="product_img">
                             <div class="main-article">
                                 <p class="price"><img alt="ETH" class="Price--eth-icon"
                                 src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
@@ -42,7 +42,7 @@
             <h3>Van Gogh Collection</h3>
             <div class="products">
                 <article>
-                    <img src="images/coleccion-jessi/VanGogh1.jpg" alt="VanGogh1" class="product_img">
+                    <img src="/images/coleccionJ/VanGogh1.jpg" alt="VanGogh1" class="product_img">
                     <div class="main-article">
                         <p class="price">ETH 0,020</p>
                         <p class="discount"></p>
@@ -50,7 +50,7 @@
                     </div>
                 </article>
                 <article>
-                    <img src="images/coleccion-jessi/VanGogh2.jpg" alt="VanGogh2" class="product_img">
+                    <img src="/images/coleccionJ/VanGogh2.jpg" alt="VanGogh2" class="product_img">
                     <div class="main-article">
                         <p class="price">ETH 0,001</p>
                         <p class="discount">10% off</p>
@@ -58,7 +58,7 @@
                     </div>
                 </article>
                 <article>
-                    <img src="images/coleccion-jessi/VanGogh3.jpg" alt="VanGogh3" class="product_img">
+                    <img src="/images/coleccionJ/VanGogh3.jpg" alt="VanGogh3" class="product_img">
                     <div class="main-article">
                         <p class="price">ETH 0,010</p>
                         <p class="discount">10% off</p>
@@ -66,7 +66,7 @@
                     </div>
                 </article>
                 <article>
-                    <img src="images/coleccion-jessi/VanGogh4.jpg" alt="VanGogh4" class="product_img">
+                    <img src="/images/coleccionJ/VanGogh4.jpg" alt="VanGogh4" class="product_img">
                     <div class="main-article">
                         <p class="price">ETH 0,003</p>
                         <p class="discount">5% off</p>
