@@ -22,7 +22,7 @@
                     <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
                         100)).toFixed(0) %>
                     <article>
-                        <a href="/productDetail/<%= product.id %>">
+                        <a href="/product/detail/<%= product.id %>">
                             <img src="images/<%= product.imagen %>" class="product_img">
                             <div class="main-article">
                                 <p class="price"><img alt="ETH" class="Price--eth-icon"

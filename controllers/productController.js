@@ -32,7 +32,7 @@ const controlador = {
 	detail: (req, res) => {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
-		res.render('productDetail', {
+		res.render('detail', {
 			product			
 		})
     },    
