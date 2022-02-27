@@ -5,7 +5,7 @@ let fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const coleccionJo = products.filter(function(product){
 	return product.coleccion == 'Genshin'
@@ -25,10 +25,17 @@ const controlador = {
             coleccionJo,
             coleccionL,
             coleccionN,
-            coleccionJ,
-            toThousand
+            coleccionJ           
         });   
-    },    
+    },
+    // Detail - Detail from one product
+	detail: (req, res) => {
+		let id = req.params.id
+		let product = products.find(product => product.id == id)
+		res.render('productDetail', {
+			product			
+		})
+    },       
     productCart: (req, res) => {        
         res.render("productCart");        
     },

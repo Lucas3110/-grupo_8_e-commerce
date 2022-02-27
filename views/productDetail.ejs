@@ -14,19 +14,17 @@
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="images/coleccionJo/genshin1.jpg" alt="" width="100%">
+          <img src="images/<%= product.imagen %>" alt="" width="100%">  
         </div>
         <div class="col-2">
-          <p>Genshin Collection<i class="fa-solid fa-square-check"></i></p>
-          <h1>Genshin 1</h1>
-          <h4><img alt="ETH" class="Price--eth-icon" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> 100</h4>
+          <p><%= product.coleccion %><i class="fa-solid fa-square-check"></i></p>  
+          <h1><%= product.nombre %></h1>  
+          <h4><img alt="ETH" class="Price--eth-icon" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %></h4> 
           <a href="" class="btn">Add to cart</a>
-
-          <h3>Description</h3>
+          <h3><%= product.descripcion %></h3> 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Error ut, atque eaque earum officiis hic aliquam ipsum ducimus, assumenda fuga delectus blanditiis! Necessitatibus earum aliquam architecto voluptatum alias. Adipisci, illo?</p>
-          <h3>Creador</h3>
-          <p>###</p>
+          <h3>Creador</h3>          
         </div>
       </div>
     </div>
