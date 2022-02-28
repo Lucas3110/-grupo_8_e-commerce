@@ -52,10 +52,34 @@ const controlador = {
 	},
     cart: (req, res) => {        
         res.render("cart");        
-    },   
-    edit: (req, res) => {        
-        res.render("edit");       
-    }       
+    },       
+    	// Update - Form to edit
+	edit: (req, res) => {
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('edit', {productToEdit})
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		let id = req.params.id;
+		let productToEdit = products.find(product => product.id == id)
+
+		productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			image: productToEdit.image,
+		};
+		
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	},       
 
 };
 
