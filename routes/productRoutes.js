@@ -19,6 +19,9 @@ router.patch('/', productController.store);
 router.get('/edit/:id', productController.edit); 
 router.put('/edit/:id', productController.update); 
 
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/delete/:id', productController.destroy); 
+
 router.get('/list', productController.list);
 
 

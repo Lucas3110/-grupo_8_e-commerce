@@ -43,8 +43,9 @@
             <input type="number" id="precio" name="precio"><br>
         </div>
         
-        
-        <button type="reset" class="button">Borrar</button>
+        <form action="/product/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="action-button delete">Borrar</button>
+        </form>        
         <button type="submit" class="button">Guardar</button>
     </form>
    </main>

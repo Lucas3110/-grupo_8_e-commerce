@@ -80,7 +80,13 @@ const controlador = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
 		res.redirect('/');
 	},       
-
+    // Delete - Delete one product from DB
+	destroy : (req, res) => {
+		let id = req.params.id;
+		let finalProducts = products.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
+	}
 };
 
 module.exports = controlador;
