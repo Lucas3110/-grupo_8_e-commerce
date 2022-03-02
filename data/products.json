@@ -62,18 +62,10 @@
  },
  {
   "id": 9,
-  "nombre": "Producto Editado",
+  "nombre": "1",
   "imagen": "",
-  "coleccion": "saab",
-  "descripcion": "Me acaban de editar",
-  "precio": "2"
- },
- {
-  "id": 10,
-  "nombre": "hola",
-  "imagen": "",
-  "coleccion": "saab",
-  "descripcion": " soy un producto nuevo",
+  "coleccion": "volvo",
+  "descripcion": "hola me esta editando el delete?",
   "precio": "1"
  }
 ]

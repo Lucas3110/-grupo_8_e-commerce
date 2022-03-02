@@ -3,6 +3,7 @@ let express = require('express');
 let router = express.Router();
 const productController = require('../controllers/productController');
 
+router.get('/list', productController.list);
 
 router.get('/cart', productController.cart);
 
@@ -22,7 +23,7 @@ router.patch('/edit/:id', productController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productController.destroy); 
 
-router.get('/list', productController.list);
+
 
 
 

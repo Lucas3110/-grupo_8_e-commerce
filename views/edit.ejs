@@ -42,13 +42,15 @@
             <label for="precio">Precio</label><br>
             <input type="number" id="precio" name="precio"><br>
         </div>
-         <!--
-        <form action="/product/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
-            <button type="submit" class="action-button delete">Borrar</button>
-        </form>   SI PONGO ESTE BOTON DE ELIMINAR ROMPE EL BOTON DE GUARDAR Y NO EDITA
-             -->
-        <button type="submit" class="button">Guardar</button>
+
+        <button type="submit" class="button">Guardar</button> 
+             
+        
     </form>
+
+    <form action="/product/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="button">Borrar</button>
+    </form>  
    </main>
     <!-- footer --> <%- include('./partials/footer') %> 
 </body>
