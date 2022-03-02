@@ -62,11 +62,11 @@
  },
  {
   "id": 9,
-  "nombre": "fdfdf",
+  "nombre": "Producto Editado",
   "imagen": "",
-  "coleccion": "volvo",
-  "descripcion": " sfsdfsdf",
-  "precio": "1"
+  "coleccion": "saab",
+  "descripcion": "Me acaban de editar",
+  "precio": "2"
  },
  {
   "id": 10,
