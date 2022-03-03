@@ -5,7 +5,8 @@
   "coleccion": "Genshin",
   "precio": 0.001,
   "descripcion": "Genshin wonder great",
-  "imagen": "coleccionJo/genshin1.jpg"
+  "imagen": "coleccionJo/genshin1.jpg", 
+  "creador": ""
  },
  {
   "id": 2,
@@ -13,7 +14,8 @@
   "coleccion": "Genshin",
   "precio": 0.1,
   "descripcion": "Genshin glorious great",
-  "imagen": "coleccionJo/genshin2.jpg"
+  "imagen": "coleccionJo/genshin2.jpg", 
+  "creador": ""
  },
  {
   "id": 3,
@@ -21,7 +23,8 @@
   "coleccion": "Genshin",
   "precio": 0.002,
   "descripcion": "Genshin fabulous great",
-  "imagen": "coleccionJo/genshin3.jpg"
+  "imagen": "coleccionJo/genshin3.jpg", 
+  "creador": ""
  },
  {
   "id": 4,
@@ -29,7 +32,8 @@
   "coleccion": "Genshin",
   "precio": 0.0015,
   "descripcion": "Genshin incredible great",
-  "imagen": "coleccionJo/genshin4.jpg"
+  "imagen": "coleccionJo/genshin4.jpg", 
+  "creador": ""
  },
  {
   "id": 5,
@@ -37,35 +41,70 @@
   "coleccion": "Van Gohg",
   "precio": 0.02,
   "descripcion": "NFT Van Gohg azzurro medio original de un cuadro pintado con inspiracion en Van Gohg, hecho por el artista Simon Leviev",
-  "imagen": ""
+  "imagen": "", 
+  "creador": ""
  },
  {
   "id": 6,
   "nombre": "Van Gogh inspiration",
   "coleccion": "Van Gohg",
   "precio": 0.001,
-  "descripcion": "NFT original de Van Gogh inspiration, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+  "descripcion": "NFT original de Van Gogh inspiration, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
+  "imagen": "", 
+  "creador": ""
  },
  {
   "id": 7,
   "nombre": "Van Goghh Purple tibio",
   "coleccion": "Van Gohg",
   "precio": 0.01,
-  "descripcion": "NFT original de Van Goghh Purple tibio, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+  "descripcion": "NFT original de Van Goghh Purple tibio, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
+  "imagen": "", 
+  "creador": ""
  },
  {
   "id": 8,
   "nombre": "Van Gogh incredible",
   "coleccion": "Van Gohg",
   "precio": 0.003,
-  "descripcion": "NFT original de Van Gogh incredible, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+  "descripcion": "NFT original de Van Gogh incredible, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
+  "imagen": "", 
+  "creador": ""
  },
  {
   "id": 9,
   "nombre": "1",
-  "imagen": "",
   "coleccion": "volvo",
-  "descripcion": "hola me esta editando el delete?",
-  "precio": "1"
- }
+  "precio": "1",
+  "descripcion": "hola me esta editando el delete?", 
+  "imagen": "", 
+  "creador": ""
+ }, 
+ {
+   "id": 10,
+   "nombre": "1",
+   "coleccion": "volvo",
+   "precio": "1",
+   "descripcion": "hola me esta editando el delete?", 
+   "imagen": "", 
+   "creador": ""
+}, 
+{
+   "id": 11,
+   "nombre": "1",
+   "coleccion": "volvo",
+   "precio": "1",
+   "descripcion": "hola me esta editando el delete?", 
+   "imagen": "", 
+   "creador": ""
+}, 
+{
+    "id": 12,
+    "nombre": "1",
+    "coleccion": "volvo",
+    "precio": "1",
+    "descripcion": "hola me esta editando el delete?", 
+    "imagen": "", 
+    "creador": ""
+}
 ]
