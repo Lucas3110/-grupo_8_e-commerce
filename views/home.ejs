@@ -1,130 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- head --> <%- include('./partials/head') %>   
+<html>
+<head>  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unforged</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel=”stylesheet” href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css”>    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <!DOCTYPE html>
-    <html>
-        <head>            
-        </head>
-        <body>
-          <!-- header --> <%- include('./partials/header') %>          
-            <div class="banner"></div>
-    <main>
-                    
-            <div style ="padding: 20px; 
-                 background-color: #0d1117;
-                 height: 1500px;">
-                <h1 style="color: #f7f7f7;">
-                    <br />
-                    Unforged NFTs
-                </h1>
-                
-                <div class="fondo-sliders">
-                        <div id="titular">
-                          <a href="/productDetail">Hot Collections</a></div>                      
-                            <div id="slider"> <!-- tratar de cambiar el z index pq tapa el navbar -->                                      
-                                <ul id="slideWrap"> 
-                                <li><img src="images/naruto.jpg" alt=""></li>
-                                <li><img src="images/hinata.jpg" alt=""></li>
-                                <li><img src="images/sasuke.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-T_V-s57aVDo/YPCQrWayswI/AAAAAAAACXg/h1ifJGnBuXovvBdGDNvmhg-DXIVK4Xw9QCNcBGAsYHQ/s16000/4.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-TNT1a5M1v3o/YPCQrWmn_fI/AAAAAAAACXk/p8nx_OB2R6Aw172WIv5vuB8jF-qWDsHlwCNcBGAsYHQ/s16000/5.jpg" alt=""></li>
-                                </ul>
-                                <a id="prev" href="#">&#8810;</a>
-                                <a id="next" href="#">&#8811;</a>
-                            </div>
-                            <div id="titular"><a href="/productDetail">Top Collections</a></div> 
-                            <div id="slider"> <!-- tratar de cambiar el z index pq tapa el navbar -->
-                                <ul id="slideWrap"> 
-                                <li><img src="images/sasuke.jpg" alt=""></li>
-                                <li><img src="images/hinata.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-dt6CL2fiBq0/YPCQp0zmK6I/AAAAAAAACXY/0PevDL7pvx87mefb4oCnO613N1UitdicQCNcBGAsYHQ/s16000/3.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-T_V-s57aVDo/YPCQrWayswI/AAAAAAAACXg/h1ifJGnBuXovvBdGDNvmhg-DXIVK4Xw9QCNcBGAsYHQ/s16000/4.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-TNT1a5M1v3o/YPCQrWmn_fI/AAAAAAAACXk/p8nx_OB2R6Aw172WIv5vuB8jF-qWDsHlwCNcBGAsYHQ/s16000/5.jpg" alt=""></li>
-                                </ul>
-                                <a id="prev" href="#">&#8810;</a>
-                                <a id="next" href="#">&#8811;</a>
-                            </div>
-                            <div id= "titular"><a href="/productDetail">New Collections</a></div> 
-                            <div id="slider"> <!-- tratar de cambiar el z index pq tapa el navbar -->
-                                <ul id="slideWrap"> 
-                                <li><img src="images/hinata.jpg" alt=""></li>
-                                <li><img src="images/hinata.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-dt6CL2fiBq0/YPCQp0zmK6I/AAAAAAAACXY/0PevDL7pvx87mefb4oCnO613N1UitdicQCNcBGAsYHQ/s16000/3.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-T_V-s57aVDo/YPCQrWayswI/AAAAAAAACXg/h1ifJGnBuXovvBdGDNvmhg-DXIVK4Xw9QCNcBGAsYHQ/s16000/4.jpg" alt=""></li>
-                                <li><img src="https://1.bp.blogspot.com/-TNT1a5M1v3o/YPCQrWmn_fI/AAAAAAAACXk/p8nx_OB2R6Aw172WIv5vuB8jF-qWDsHlwCNcBGAsYHQ/s16000/5.jpg" alt=""></li>
-                                </ul>
-                                <a id="prev" href="#">&#8810;</a>
-                                <a id="next" href="#">&#8811;</a>
-                            </div>
-                </div>
-            </div>           
-            
-              <script> /* codigo para el slider arranca*/
-                var responsiveSlider = function() {
-           
-            var slider = document.getElementById("slider");
-            var sliderWidth = slider.offsetWidth;
-            var slideList = document.getElementById("slideWrap");
-            var count = 1;
-            var items = slideList.querySelectorAll("li").length;
-            var prev = document.getElementById("prev");
-            var next = document.getElementById("next");
-            
-            window.addEventListener('resize', function() {
-              sliderWidth = slider.offsetWidth;
-            });
-            
-            var prevSlide = function() {
-              if(count > 1) {
-                count = count - 2;
-                slideList.style.left = "-" + count * sliderWidth + "px";
-                count++;
-              }
-              else if(count = 1) {
-                count = items - 1;
-                slideList.style.left = "-" + count * sliderWidth + "px";
-                count++;
-              }
-            };
-            
-            var nextSlide = function() {
-              if(count < items) {
-                slideList.style.left = "-" + count * sliderWidth + "px";
-                count++;
-              }
-              else if(count = items) {
-                slideList.style.left = "0px";
-                count = 1;
-              }
-            };
-            
-            next.addEventListener("click", function() {
-              nextSlide();
-            });
-            
-            prev.addEventListener("click", function() {
-              prevSlide();
-            });
-            
-            setInterval(function() {
-              nextSlide()
-            }, 5000);
-            
-            };
-            
-            window.onload = function() {
-            responsiveSlider();  
-            }   
-                                 
-
-            
-              </script>
-              <!-- footer --> <%- include('./partials/footer') %>         
-    </main>  
+    <div class="hero">
+        <div class="navbar">
+            <img src="images/logoW.png" class="logo">
+            <a href="/users/register"><button type="button">Wallet</button></a>
+        </div>
+        <div class="content">
+            <small>Welcome to our</small>
+            <h1>World's<br>Creative Collections</h1>
+            <a href="/product/list"><button type="button">Take a tour</button></a>
+        </div>
+        
+        
+       
+        
+        
+    </div>
     
-</body> 
+</body>
 </html>
-
