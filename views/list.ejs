@@ -75,6 +75,52 @@
                 </article>
             </div>
         </section>
+
+
+        <section class="last-visit">
+           <h3>Lucas Collection</h3>
+            <div class="products"> <!-- main section div.products -->
+                <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                    100)).toFixed(0) %>
+                <article>
+                    <a href="/product/detail/<%= product.id %>">
+                        <img src="/images/<%= product.imagen %>" class="product_img">
+                        <div class="main-article">
+                            <p class="price"><img alt="ETH" class="Price--eth-icon"
+                            src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                            </p>
+                            <h4 class="description">
+                                <%= product.descripcion %>
+                            </h4>
+                        </div>
+                    </a>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+
+        <section class="last-visit">
+            <h3>Nico Collection</h3>
+             <div class="products"> <!-- main section div.products -->
+                 <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                     100)).toFixed(0) %>
+                 <article>
+                     <a href="/product/detail/<%= product.id %>">
+                         <img src="/images/<%= product.imagen %>" class="product_img">
+                         <div class="main-article">
+                             <p class="price"><img alt="ETH" class="Price--eth-icon"
+                             src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                             </p>
+                             <h4 class="description">
+                                 <%= product.descripcion %>
+                             </h4>
+                         </div>
+                     </a>
+                 </article>
+                 <% }) %>
+             </div>
+         </section>
+
     </main>
 
     <footer>
