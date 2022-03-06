@@ -24,6 +24,7 @@ p{
     font-size: 18px;
     width: 30%;
     color: white;
+    text-decoration: none;
 }
 
 .discount{
@@ -42,7 +43,7 @@ h4,
 }
 
 .description{
-    display: none;
+    
     margin-top: 20px;
 }
 
@@ -80,10 +81,11 @@ article div.main-article{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
+    align-items: baseline;  
     position: relative;
     padding: 15px;
+    text-decoration: none;
+    color: red;
 }
 
 .Price--eth-icon{
