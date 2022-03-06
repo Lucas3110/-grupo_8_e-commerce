@@ -13,7 +13,7 @@
     <form action="/product/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="register-form">
         <div class="form-control">
             <label for="name">Nombre de producto </label>
-            <input type="text" id="name" name="nombre" class="control" required>
+            <input type="text" id="name" name="nombre" class="control">
         </div>
 
         <div class="form-control">
@@ -24,11 +24,12 @@
         
         <div class="form-control">
             <label for="coleccion">Elige la colección:</label>
-            <select id="coleccion" name="coleccion" selected="<%= productToEdit.coleccion %>">
-            <option value="volvo">Genshin</option>
-            <option value="saab">Van Gogh inspiration</option>
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
+            <select id="coleccion" name="coleccion">
+            <option value="none" selected disabled hidden><%= productToEdit.coleccion %></option>
+            <option value="Genshin">Genshin</option>
+            <option value="Van-Gogh">Van Gogh</option>
+            <option value="Punks">Punks</option>
+            <option value="Magic">Magic</option>
             </select>
         </div>
 

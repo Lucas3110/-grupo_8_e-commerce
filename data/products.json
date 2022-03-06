@@ -5,7 +5,7 @@
   "coleccion": "Genshin",
   "precio": 0.001,
   "descripcion": "Genshin wonder great",
-  "imagen": "coleccionJo/genshin1.jpg", 
+  "imagen": "coleccionJo/genshin1.jpg",
   "creador": ""
  },
  {
@@ -14,7 +14,7 @@
   "coleccion": "Genshin",
   "precio": 0.1,
   "descripcion": "Genshin glorious great",
-  "imagen": "coleccionJo/genshin2.jpg", 
+  "imagen": "coleccionJo/genshin2.jpg",
   "creador": ""
  },
  {
@@ -23,7 +23,7 @@
   "coleccion": "Genshin",
   "precio": 0.002,
   "descripcion": "Genshin fabulous great",
-  "imagen": "coleccionJo/genshin3.jpg", 
+  "imagen": "coleccionJo/genshin3.jpg",
   "creador": ""
  },
  {
@@ -32,16 +32,16 @@
   "coleccion": "Genshin",
   "precio": 0.0015,
   "descripcion": "Genshin incredible great",
-  "imagen": "coleccionJo/genshin4.jpg", 
+  "imagen": "coleccionJo/genshin4.jpg",
   "creador": ""
  },
  {
   "id": 5,
   "nombre": "Van Gohg azzurro medio",
-  "coleccion": "Van-Gogh", 
+  "coleccion": "Van-Gogh",
   "precio": 0.02,
   "descripcion": "NFT Van Gohg azzurro medio original de un cuadro pintado con inspiracion en Van Gohg, hecho por el artista Simon Leviev",
-  "imagen": "coleccionJ/VanGogh1.jpg", 
+  "imagen": "coleccionJ/VanGogh1.jpg",
   "creador": ""
  },
  {
@@ -49,8 +49,8 @@
   "nombre": "Van Gogh inspiration",
   "coleccion": "Van-Gogh",
   "precio": 0.001,
-  "descripcion": "NFT original de Van Gogh inspiration, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
-  "imagen": "coleccionJ/VanGogh2.jpg", 
+  "descripcion": "NFT original de Van Gogh inspiration, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg",
+  "imagen": "coleccionJ/VanGogh2.jpg",
   "creador": ""
  },
  {
@@ -58,8 +58,8 @@
   "nombre": "Van Goghh Purple tibio",
   "coleccion": "Van-Gogh",
   "precio": 0.01,
-  "descripcion": "NFT original de Van Goghh Purple tibio, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
-  "imagen": "coleccionJ/VanGogh3.jpg", 
+  "descripcion": "NFT original de Van Goghh Purple tibio, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg",
+  "imagen": "coleccionJ/VanGogh3.jpg",
   "creador": ""
  },
  {
@@ -67,8 +67,8 @@
   "nombre": "Van Gogh incredible",
   "coleccion": "Van-Gogh",
   "precio": 0.003,
-  "descripcion": "NFT original de Van Gogh incredible, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
-  "imagen": "coleccionJ/VanGogh4.jpg", 
+  "descripcion": "NFT original de Van Gogh incredible, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg",
+  "imagen": "coleccionJ/VanGogh4.jpg",
   "creador": ""
  },
  {
@@ -76,68 +76,70 @@
   "nombre": "1",
   "coleccion": "Punks",
   "precio": 0.1,
-  "descripcion": "Clásico NFT especial para usar de avatar donde quieras", 
-  "imagen": "coleccionL/nft1.jpg", 
+  "descripcion": "Clásico NFT especial para usar de avatar donde quieras",
+  "imagen": "coleccionL/nft1.jpg",
   "creador": ""
- }, 
+ },
  {
-   "id": 10,
-   "nombre": "1",
-   "coleccion": "Punks",
-   "precio": 0.02,
-   "descripcion": "Especial avatar vintage para lucir en el mundo digital", 
-   "imagen": "coleccionL/nft2.jpg", 
-   "creador": ""
-}, 
-{
-   "id": 11,
-   "nombre": "1",
-   "coleccion": "Punks",
-   "precio": 0.003,
-   "descripcion": "John te acompañará en el metaverso adonde quieras", 
-   "imagen": "coleccionL/nft3.jpg", 
-   "creador": ""
-}, 
-{
-    "id": 12,
-    "nombre": "1",
-    "coleccion": "Punks",
-    "precio": 0.0023,
-    "descripcion": "Alex te promete que será la mejor inversión de tu vida", 
-    "imagen": "coleccionL/nft4.jpg", 
-    "creador": ""
-}, 
-{
-   "id": 13,
-   "nombre": "1",
-   "coleccion": "Magic",
-   "precio": 0.0065,
-   "descripcion": "Magic invade los NFT para quedarse", 
-   "imagen": "coleccionN/mtg5.jpg", 
-   "creador": ""
-}, {
-   "id": 14,
-   "nombre": "1",
-   "coleccion": "Magic",
-   "precio": 0.0008,
-   "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
-   "imagen": "coleccionN/mtg2.jpg", 
-   "creador": ""
-}, {
-   "id": 15,
-   "nombre": "1",
-   "coleccion": "Magic",
-   "precio": 0.007,
-   "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
-   "imagen": "coleccionN/mtg3.jpg", 
-   "creador": ""
-}, {
-   "id": 16,
-   "nombre": "1",
-   "coleccion": "Magic",
-   "precio": 0.0008,
-   "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
-   "imagen": "coleccionN/mtg4.jpg", 
-   "creador": ""
-}
+  "id": 10,
+  "nombre": "1",
+  "coleccion": "Punks",
+  "precio": 0.02,
+  "descripcion": "Especial avatar vintage para lucir en el mundo digital",
+  "imagen": "coleccionL/nft2.jpg",
+  "creador": ""
+ },
+ {
+  "id": 11,
+  "nombre": "1",
+  "coleccion": "Punks",
+  "precio": 0.003,
+  "descripcion": "John te acompañará en el metaverso adonde quieras",
+  "imagen": "coleccionL/nft3.jpg",
+  "creador": ""
+ },
+ {
+  "id": 12,
+  "nombre": "1",
+  "coleccion": "Punks",
+  "precio": 0.0023,
+  "descripcion": "Alex te promete que será la mejor inversión de tu vida",
+  "imagen": "coleccionL/nft4.jpg",
+  "creador": ""
+ },
+ {
+  "id": 13,
+  "nombre": "1",
+  "coleccion": "Magic",
+  "precio": 0.0065,
+  "descripcion": "Magic invade los NFT para quedarse",
+  "imagen": "coleccionN/mtg5.jpg",
+  "creador": ""
+ },
+ {
+  "id": 14,
+  "nombre": "1",
+  "coleccion": "Magic",
+  "precio": 0.0008,
+  "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos",
+  "imagen": "coleccionN/mtg2.jpg",
+  "creador": ""
+ },
+ {
+  "id": 15,
+  "nombre": "1",
+  "coleccion": "Magic",
+  "precio": 0.007,
+  "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos",
+  "imagen": "coleccionN/mtg3.jpg",
+  "creador": ""
+ },
+ {
+  "id": 16,
+  "nombre": "",
+  "imagen": "",
+  "coleccion": "Magic",
+  "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos",
+  "precio": ""
+ }
 ]
