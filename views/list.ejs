@@ -16,7 +16,7 @@
 
     <main>
         <section class="last-visit">
-            <h3>Genshin Collection</h3>
+            <h3>Genshin</h3>
             
                 <div class="products"> <!-- main section div.products -->
                     <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
@@ -38,49 +38,35 @@
                 </div>
                
         </section>
-        <section class="offers">
-            <h3>Van Gogh Collection</h3>
-            <div class="products">
-                <article>
-                    <img src="/images/coleccionJ/VanGogh1.jpg" alt="VanGogh1" class="product_img">
-                    <div class="main-article">
-                        <p class="price">ETH 0,020</p>
-                        <p class="discount"></p>
-                        <h4 class="description">Van Gogh Azzurro medio</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/coleccionJ/VanGogh2.jpg" alt="VanGogh2" class="product_img">
-                    <div class="main-article">
-                        <p class="price">ETH 0,001</p>
-                        <p class="discount">10% off</p>
-                        <h4 class="description">Van Gogh inspiration</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/coleccionJ/VanGogh3.jpg" alt="VanGogh3" class="product_img">
-                    <div class="main-article">
-                        <p class="price">ETH 0,010</p>
-                        <p class="discount">10% off</p>
-                        <h4 class="description">Van Goghh Purple tibio</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="/images/coleccionJ/VanGogh4.jpg" alt="VanGogh4" class="product_img">
-                    <div class="main-article">
-                        <p class="price">ETH 0,003</p>
-                        <p class="discount">5% off</p>
-                        <h4 class="description">Van Gogh incredible </h4>
-                    </div>
-                </article>
-            </div>
+        <section class="last-visit">
+            <h3>Van Gogh</h3>
+            
+                <div class="products"> <!-- main section div.products -->
+                    <% coleccionJ.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                        100)).toFixed(0) %>
+                    <article>
+                        <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">
+                            <img src="/images/<%= product.imagen %>" class="product_img">
+                            <div class="main-article">
+                                <p class="price"><img alt="ETH" class="Price--eth-icon"
+                                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                                </p>
+                                <h4 class="description">
+                                    <%= product.descripcion %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                    <% }) %>
+                </div>
+               
         </section>
 
 
         <section class="last-visit">
-           <h3>Lucas Collection</h3>
+           <h3>Punks</h3>
             <div class="products"> <!-- main section div.products -->
-                <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                <% coleccionL.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
                     100)).toFixed(0) %>
                 <article>
                     <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">
@@ -100,9 +86,9 @@
         </section>
 
         <section class="last-visit">
-            <h3>Nico Collection</h3>
+            <h3>Magic</h3>
              <div class="products"> <!-- main section div.products -->
-                 <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                 <% coleccionN.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
                      100)).toFixed(0) %>
                  <article>
                      <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">

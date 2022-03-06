@@ -17,7 +17,7 @@ const coleccionN = products.filter(function(product){
 	return product.coleccion == 'Magic'
 })
 const coleccionJ = products.filter(function(product){
-	return product.coleccion == 'Van Gogh' 
+	return product.coleccion == 'Van-Gogh' 
 })
 const controlador = {    
     list: (req, res) => {        

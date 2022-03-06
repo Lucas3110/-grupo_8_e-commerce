@@ -38,7 +38,7 @@
  {
   "id": 5,
   "nombre": "Van Gohg azzurro medio",
-  "coleccion": "Van-Gogh",
+  "coleccion": "Van-Gogh", 
   "precio": 0.02,
   "descripcion": "NFT Van Gohg azzurro medio original de un cuadro pintado con inspiracion en Van Gohg, hecho por el artista Simon Leviev",
   "imagen": "coleccionJ/VanGogh1.jpg", 
@@ -113,7 +113,7 @@
    "coleccion": "Magic",
    "precio": 0.0065,
    "descripcion": "Magic invade los NFT para quedarse", 
-   "imagen": "coleccionN/mtg1.jpg", 
+   "imagen": "coleccionN/mtg5.jpg", 
    "creador": ""
 }, {
    "id": 14,
@@ -121,7 +121,7 @@
    "coleccion": "Magic",
    "precio": 0.0008,
    "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
-   "imagen": "coleccionN/mgt2.jpg", 
+   "imagen": "coleccionN/mtg2.jpg", 
    "creador": ""
 }, {
    "id": 15,
@@ -129,7 +129,7 @@
    "coleccion": "Magic",
    "precio": 0.007,
    "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
-   "imagen": "coleccionN/mgt3.jpg", 
+   "imagen": "coleccionN/mtg3.jpg", 
    "creador": ""
 }, {
    "id": 16,
@@ -137,7 +137,7 @@
    "coleccion": "Magic",
    "precio": 0.0008,
    "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
-   "imagen": "coleccionN/mgt4.jpg", 
+   "imagen": "coleccionN/mtg4.jpg", 
    "creador": ""
 }
 ]
