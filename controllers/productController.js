@@ -11,13 +11,13 @@ const coleccionJo = products.filter(function(product){
 	return product.coleccion == 'Genshin'
 })
 const coleccionL = products.filter(function(product){
-	return product.coleccion == 'in-sale'
+	return product.coleccion == 'Punks'
 })
 const coleccionN = products.filter(function(product){
-	return product.coleccion == 'visited'
+	return product.coleccion == 'Magic'
 })
 const coleccionJ = products.filter(function(product){
-	return product.coleccion == 'VanGogh' 
+	return product.coleccion == 'Van Gogh' 
 })
 const controlador = {    
     list: (req, res) => {        

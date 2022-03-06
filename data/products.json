@@ -38,7 +38,7 @@
  {
   "id": 5,
   "nombre": "Van Gohg azzurro medio",
-  "coleccion": "Van Gohg",
+  "coleccion": "Van-Gogh",
   "precio": 0.02,
   "descripcion": "NFT Van Gohg azzurro medio original de un cuadro pintado con inspiracion en Van Gohg, hecho por el artista Simon Leviev",
   "imagen": "coleccionJ/VanGogh1.jpg", 
@@ -47,7 +47,7 @@
  {
   "id": 6,
   "nombre": "Van Gogh inspiration",
-  "coleccion": "Van Gohg",
+  "coleccion": "Van-Gogh",
   "precio": 0.001,
   "descripcion": "NFT original de Van Gogh inspiration, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
   "imagen": "coleccionJ/VanGogh2.jpg", 
@@ -56,7 +56,7 @@
  {
   "id": 7,
   "nombre": "Van Goghh Purple tibio",
-  "coleccion": "Van Gohg",
+  "coleccion": "Van-Gogh",
   "precio": 0.01,
   "descripcion": "NFT original de Van Goghh Purple tibio, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
   "imagen": "coleccionJ/VanGogh3.jpg", 
@@ -65,7 +65,7 @@
  {
   "id": 8,
   "nombre": "Van Gogh incredible",
-  "coleccion": "Van Gohg",
+  "coleccion": "Van-Gogh",
   "precio": 0.003,
   "descripcion": "NFT original de Van Gogh incredible, un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg", 
   "imagen": "coleccionJ/VanGogh4.jpg", 
@@ -74,7 +74,7 @@
  {
   "id": 9,
   "nombre": "1",
-  "coleccion": "Lucas Collection",
+  "coleccion": "Punks",
   "precio": 0.1,
   "descripcion": "Clásico NFT especial para usar de avatar donde quieras", 
   "imagen": "coleccionL/nft1.jpg", 
@@ -83,7 +83,7 @@
  {
    "id": 10,
    "nombre": "1",
-   "coleccion": "volvo",
+   "coleccion": "Punks",
    "precio": 0.02,
    "descripcion": "Especial avatar vintage para lucir en el mundo digital", 
    "imagen": "coleccionL/nft2.jpg", 
@@ -92,7 +92,7 @@
 {
    "id": 11,
    "nombre": "1",
-   "coleccion": "volvo",
+   "coleccion": "Punks",
    "precio": 0.003,
    "descripcion": "John te acompañará en el metaverso adonde quieras", 
    "imagen": "coleccionL/nft3.jpg", 
@@ -101,7 +101,7 @@
 {
     "id": 12,
     "nombre": "1",
-    "coleccion": "volvo",
+    "coleccion": "Punks",
     "precio": 0.0023,
     "descripcion": "Alex te promete que será la mejor inversión de tu vida", 
     "imagen": "coleccionL/nft4.jpg", 
@@ -110,7 +110,7 @@
 {
    "id": 13,
    "nombre": "1",
-   "coleccion": "volvo",
+   "coleccion": "Magic",
    "precio": 0.0065,
    "descripcion": "Magic invade los NFT para quedarse", 
    "imagen": "coleccionN/mtg1.jpg", 
@@ -118,7 +118,7 @@
 }, {
    "id": 14,
    "nombre": "1",
-   "coleccion": "volvo",
+   "coleccion": "Magic",
    "precio": 0.0008,
    "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
    "imagen": "coleccionN/mgt2.jpg", 
@@ -126,7 +126,7 @@
 }, {
    "id": 15,
    "nombre": "1",
-   "coleccion": "volvo",
+   "coleccion": "Magic",
    "precio": 0.007,
    "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
    "imagen": "coleccionN/mgt3.jpg", 
@@ -134,7 +134,7 @@
 }, {
    "id": 16,
    "nombre": "1",
-   "coleccion": "volvo",
+   "coleccion": "Magic",
    "precio": 0.0008,
    "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos", 
    "imagen": "coleccionN/mgt4.jpg", 
