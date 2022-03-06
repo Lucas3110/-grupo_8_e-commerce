@@ -20,16 +20,10 @@ p{
     font-size: 12px;
 }
 
-
-div.last-visit,
-div.offers{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .price{
     font-size: 18px;
     width: 30%;
+    color: white;
 }
 
 .discount{
@@ -44,16 +38,12 @@ div.offers{
 
 h4,
 .description{
-    color: #0d1117;
+    color: white
 }
 
 .description{
     display: none;
     margin-top: 20px;
-}
-
-section.banner img{
-    width: 100%;
 }
 
 main{
@@ -62,31 +52,24 @@ main{
 }
 
 main section article{
-    background-color: #fff;    
+    display: flexbox;
+    background-color: #333;
     margin: 10px 0px;
+    transition: transform 0.7s;
+    transform: translateY(-5px);
 }
 
 main section article img{
     width: 100%;
 }
 
+main section article img:hover{
+    transform: translateY(-5px);
+}
+
 main section article i,
 .discount{
     color: #39b54a;
-}
-
-main section article i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
 }
 
 main section h3{
@@ -103,45 +86,6 @@ article div.main-article{
     padding: 15px;
 }
 
-footer article{
-    text-align: center;
-    margin: 15px;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-footer h4{
-    font-weight: bold;
-    color: #0d1117;
-}
-
-
-
-footer{
- background-color: #Fff;
- text-align: center;
-
-}
-footer i{
- font-size: 2em;
- margin-bottom: 10px;
- margin-left:1em;
- margin-right: 1em;
- size: 2em;
- margin-top: 15px;
- color: #1259c3;
- }
-
- footer h3{
- font-size: 16px;
- margin-bottom: 0.5em;
-}
-footer p {
- font-size: 12px;
- margin-bottom: 10px;
- display: flex;
- justify-content: center;
-}
 .Price--eth-icon{
     width: 24px;
     height: 24px;
@@ -163,6 +107,7 @@ footer p {
         justify-content: space-between;
         align-items: flex-start;
     }
+
     
     main section div.products article{
         width: 45%;

@@ -10,29 +10,29 @@
     },
     {
     "id": 1,
-    "nombre": "Jessica",
+    "nombre": "Joan",
     "contrasena": "*****",
     "contrasena2": "*****",
     "wallet": "",
     "wallet2": "", 
-    "email": "jessica@gmail.com"
+    "email": "joan@gmail.com"
     },
     {
     "id": 1,
-    "nombre": "Jessica",
+    "nombre": "Lucas",
     "contrasena": "*****",
     "contrasena2": "*****",
     "wallet": "",
     "wallet2": "", 
-    "email": "jessica@gmail.com"
+    "email": "lucas@gmail.com"
     },
     {
     "id": 1,
-    "nombre": "Jessica",
+    "nombre": "Nico",
     "contrasena": "*****",
     "contrasena2": "*****",
     "wallet": "",
     "wallet2": "", 
-    "email": "jessica@gmail.com"
+    "email": "nico@gmail.com"
     }  
 ]

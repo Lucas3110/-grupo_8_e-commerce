@@ -17,7 +17,7 @@ const coleccionN = products.filter(function(product){
 	return product.coleccion == 'visited'
 })
 const coleccionJ = products.filter(function(product){
-	return product.coleccion == 'Van-Gohg' //cambiar el JSON con "-" en vez de espacio
+	return product.coleccion == 'VanGogh' 
 })
 const controlador = {    
     list: (req, res) => {        
