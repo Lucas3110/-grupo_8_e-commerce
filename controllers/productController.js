@@ -20,8 +20,8 @@ const coleccionJ = products.filter(function(product){
 	return product.coleccion == 'Van-Gogh' 
 })
 const controlador = {    
-    list: (req, res) => {        
-        res.render('list', {
+    product: (req, res) => {        
+        res.render('product', {
             coleccionJo,
             coleccionL,
             coleccionN,
