@@ -1,0 +1,35 @@
+{"productos": [
+    {
+        "id": "1",
+        "nombre": "Naruto",
+        "coleccion":"Naruto",
+        "precio": 0.2,
+        "descripcion": "NFT de Naruto antes de enfrentar una batalla"
+        } , {
+        "id": "2",
+        "nombre": "Sasuke",
+        "coleccion": "Naruto",
+        "precio": 0.01,
+        "descripcion": "NFT de Sasuke preocupado porque va a perder una batalla "
+        } , {
+        "id": "3",
+        "nombre": "Madara",
+        "coleccion": "Naruto",
+        "precio": 0.02,
+        "descripcion": "NFT de Madara confiada porque va a ganar la batalla con ayuda"
+        } , {
+        "id": "4",
+        "nombre": "Van Gohg azzurro", 
+        "coleccion": "Van Gohg", 
+        "precio": 0.1,
+        "descripcion": "NFT original de un cuadro pintado con inspiracion en los cuadros de Van Gohg, hecho por el artista Simon Leviev"
+        } , {
+        "id": "5",
+        "nombre": "Van Gohg rosso", 
+        "coleccion": "Van Gohg", 
+        "precio": 0.1,
+        "descripcion": "NFT original de un cuadro pintado por el artista Simon Leviev inspirado en Van Gohg"
+            } 
+
+    ]
+}

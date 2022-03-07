@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- head --> <%- include ('./partials/head') %>  
+  <link rel="stylesheet" href="/css/productDetail.css">
+  <script src="https://kit.fontawesome.com/a25985a1fb.js" crossorigin="anonymous"></script>
+  <title>Name NFT</title>
+</head>
+
+<body>
+  <main>
+    <!-- no funciona menu hamburguesa -->
+    <%- include ('./partials/header') %>
+    <div class="main2">
+      <div class="container-nft">
+        <img src="images/genshin3.jpg" alt="" height="auto" width="97%" class="imagen">
+        <button class="topright"><a href="edit"><i class="fas fa-share-alt"></i></a></button>
+      </div>
+      <article class="precio">
+          <h4 class="item1">Nombre</h4>
+          <h4 class="item2">Coleccion</h4>
+          <h4 class="item3">Precio</h4>
+          <button type='submit' class="description item4">Comprar</button>
+      </article>
+      <article class="description">
+        <p >Descripcion: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, laudantium dolores atque tenetur impedit soluta vero repudiandae at nobis dolor a,
+          quam totam. Veniam qui sint iusto itaque suscipit debitis!</p>
+        <p >Creador: X</p>
+      </article>
+      <article>
+        <h1 class="color">También podría interesarte</h1>
+      </article>
+      <article class="slides-grid">
+        
+        <br>
+        <div class="slideshow-container">
+          
+          <div class="mySlides fade">
+            
+            <img src="images/genshin1.jpg" style="width:100%">
+            <!-- <div class="text">Hinata</div> -->
+          </div>
+        
+          <div class="mySlides fade">
+            
+            <img src="images/genshin4.jpg" style="width:100%">
+            <!-- <div class="text">Madara</div> -->
+          </div>
+        
+          <div class="mySlides fade">
+            
+            <img src="images/genshin2.jpg" style="width:100%">
+            <!-- <div class="text">Sasuke</div> -->
+          </div>
+
+          <div class="mySlides fade">
+            
+            <img src="images/genshin5.jpg" style="width:100%">
+            <!-- <div class="text">Sasuke</div> -->
+          </div>
+        
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <!-- <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+      </article>
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          // dots[slideIndex-1].className += " active";
+        }
+      </script>
+    </div>
+    <%- include ('./partials/footer') %> 
+  </main>
+</body>
+</html>

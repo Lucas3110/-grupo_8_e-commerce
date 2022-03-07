@@ -1,8 +1,7 @@
 html {
-    background: #1B262C;
-    font: 62.5%/1.5em 'Lato', sans-serif;
-  }
-  
+    background: #0d1117;
+    
+  }  
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;    
@@ -46,12 +45,12 @@ html {
   }
   
   .container {
-    max-width: 75em;
+    max-width: 110em;
     width: 95%;
     margin: 40px auto;  
     overflow: hidden;
     position: relative;
-    
+    font: 62.5%/1.5em 'Lato', sans-serif; 
     border-radius: 0.6em;
     background: #ecf0f1;
     box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
@@ -161,6 +160,11 @@ html {
     padding: 0 0.22em 0 0.25em ;
   }
   
+  .visibility-cart:hover{    
+      background-color: #8d1010;
+      border-radius: 10px;
+      transition: all 250ms;    
+  }
   .col-qty > * {
     vertical-align: middle; 
   }
@@ -192,11 +196,13 @@ html {
     font-weight: bold;
     background: #43ace3;
     color: #fff;
-    box-shadow: 0 3px 0 rgba(59,154,198, 1)
+    
   }
   
   .btn:hover {
-    box-shadow: 0 3px 0 rgba(59,154,198, 0)
+    background-color: #0F4C75;
+    border-radius: 10px;
+    transition: all 250ms;
   }
   
   .btn-update {

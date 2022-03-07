@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head --> <%- include('./partials/head') %>  
+    <link rel="stylesheet" href="/css/edit.css">  <!-- aca uso el css del edit pq es lo mismo -->
+    <title>Create</title>
+</head>
+<body>
+    
+    <!-- header --> <%- include('./partials/header') %> 
+   
+   <main>
+    <form action="/product" method="POST">
+        <div class="form-control">
+            <label for="name">Nombre de producto </label>
+            <input type="text" id="name" name="nombre" class="control" required>
+        </div>
+
+        <div class="form-control">
+            <label for="imagen">Selecciona una imagen:</label>
+            <input type="file" id="imagen" name="imagen">
+            <input type="submit" name="submit" value="Upload">
+        </div>
+        
+        <div class="form-control">
+            <label for="coleccion">Elige la colección:</label>
+            <select id="coleccion" name="coleccion">
+            <option value="volvo">Genshin</option>
+            <option value="saab">Van Gogh inspiration</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="descripcion">Descripción </label>
+           <textarea name="descripcion" id="descripcion" cols="30" rows="10"> </textarea>
+        </div>
+       
+      
+        <div class="form-control">
+            <label for="precio">Precio</label><br>
+            <input type="number" id="precio" name="precio"><br>
+        </div>
+        
+        
+        <button type="reset" class="button">Borrar</button>
+        <button type="submit" class="button">Guardar</button>
+    </form>
+   </main>
+    <!-- footer --> <%- include('./partials/footer') %> 
+</body>
+</html>

@@ -1,39 +1,341 @@
 *{
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 body {
-    margin: 0;
+  margin: 0;  
 }
 html,body{
-    overflow-x: hidden;
-}
-/* borrar las lineas sobrantes de la navbar ya que las tenes en el mq de 1200px*/
-.navbar {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: white;
+  overflow-x: hidden;
 }
 
-.brand-title {
-  font-size: 1.5rem;
-  margin: .5rem;
+.logo {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
+  border: none;
+}
+
+/* borrar las lineas sobrantes de la navbar ya que las tenes en el mq de 1200px*/
+.navbar {
+display: flex;
+position: relative;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: white;
 }
 
 .navbar-links {
-  height: 100%;
+height: 100%;
 }
 
 .navbar-links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
+display: flex;
+margin: 0;
+padding: 0;
 }
 
 .navbar-links li {
+list-style: none;
+}
+
+.navbar-links li a {
+display: block;
+text-decoration: none;
+color: white;
+padding: 1rem;
+font-weight: bold;  
+}
+
+.navbar-links li:hover {
+background-color: #0F4C75;
+border-radius: 10px;
+transition: all 250ms;
+}
+
+.toggle-button {
+position: absolute;
+top: .75rem;
+right: 1rem;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+/* CSS de lupa falta ubicarlo bien*/
+header .form{
+  width: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;    
+  font-size: 11px;    
+ 
+}
+header .form .input{
+  background-color: #FFF;
+  border: 1px solid #000;
+  outline: none;
+  color: #666;
+  padding: 2px;
+}
+/* CSS lupa fin */
+.banner{
+background-image: url('/images/banner.jpeg');
+background-size: cover;
+background-position: center center;    
+height: 60vh;
+width: 100%;    
+
+}
+/* slider de imagen*/
+
+#slider {
+  position: relative;
+  width: 500px;
+  height: 265px;
+  margin: 11rem 50rem -4rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+}
+.fondo-sliders div a{
+  display: block;
+  text-decoration: none;
+  margin: 10rem 63rem -8rem;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;   
+  
+}
+.fondo-sliders div a:hover{
+  font-weight: bold;
+  color: #BBE1FA;
+  
+}
+#slider ul {
+  position: relative;
   list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+ 
+  float: left;
+}
+#slider ul li img{
+  width: 500px;
+  height: 265px;
+}
+ 
+#slider #prev, #slider #next {
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+#slider #prev:hover, #slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+#slider #prev {
+  left: 10px;
+}
+#slider #next {
+  right: 10px;
+}
+
+
+/* slider de imagen fin*/
+
+h2{
+  color: #BBE1FA;
+  left: 965px;
+  top: 133px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;    
+}
+
+.fondo-sliders{
+  background: #333;       
+  margin: 2.5rem auto;
+  max-width: 110em;
+  width: 72%;
+  height: 1288px;    
+  overflow: hidden;    
+  border-radius: 0.6em;    
+  box-shadow: 0 0.5em 0 rgb(138 148 152 / 20%);
+} 
+
+
+.final{
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  justify-content: space-evenly;
+  background-color: #0d1117;
+  color: white;
+}
+.final a{   
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;  
+}
+
+.final a:hover{    
+  font-weight: bold;
+  color: #BBE1FA;  
+}
+
+.color-fondo{
+  background-color: transparent;
+}
+
+@media (min-width: 375px){
+
+.navbar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggle-button {
+  display: flex;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links ul {
+  width: 100%;
+  flex-direction: column;
+}
+
+.navbar-links ul li {
+  text-align: center;
+}
+
+.navbar-links ul li a {
+  padding: .5rem 1rem;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+/* fin navbar*/
+
+#slider{
+width: 349px;
+height: 198px;
+margin: 10rem 0rem 15rem;
+
+}
+
+.fondo-sliders div a{
+margin: 9rem 9rem -9rem;
+}
+}
+
+@media (min-width: 630px){
+
+#slider{
+  margin: 11rem 8rem -4rem;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 22rem -9rem;
+}
+
+#slider{
+  margin: 11rem 8rem -4rem;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 22rem -9rem;
+}
+}
+
+@media (min-width: 800px)
+/*todo esto es el navbar*/
+{
+
+
+#slider{
+  margin: 11rem 8rem -4rem;
+  width: 500px;
+  height: 265px;
+  
+}
+
+.fondo-sliders div a{
+  margin: 9rem 22rem -9rem;
+}
+}
+
+@media (min-width: 1200px){
+
+#slider {
+  position: relative;
+  width: 500px;
+  height: 265px;
+  margin: 11rem 10rem -4rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
+}
+.fondo-sliders div a{
+  display: block;
+  text-decoration: none;
+  margin: 10rem 22rem -8rem;
+  color: white;
+  font-weight: 500; 
+  transition: all 25ms;   
+  
+}
+
+#titular{
+  top: 1rem;
+  margin: -7rem 0rem -8rem;   
+  
+}
+
+/* fix de navbar*/
+.navbar-links{
+  display: flex;    
+  position: absolute;
+}
+.navbar-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .navbar-links li a {
@@ -44,293 +346,7 @@ html,body{
   font-weight: bold;  
 }
 
-.navbar-links li:hover {
-  background-color: #0F4C75;
-  border-radius: 10px;
-  transition: all 250ms;
-}
-
 .toggle-button {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
 }
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-/* CSS de lupa falta ubicarlo bien*/
-header .form{
-    width: 50%;
-    position: absolute;
-    display: flex;
-    align-items: center;    
-    font-size: 11px;    
-   
-}
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-/* CSS lupa fin */
-.banner{
-  background-image: url('/images/fondo prueba posta.jpg');
-  background-size: cover;
-  background-position: center center;    
-  height: 29vh;
-  width: 100%;    
-  
-}
-/* slider de imagen*/
-  
-  #slider {
-    position: relative;
-    width: 500px;
-    height: 265px;
-    margin: 11rem 50rem -4rem;
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
-  }
-  .fondo-sliders div a{
-    display: block;
-    text-decoration: none;
-    margin: 10rem 63rem -8rem;
-    color: white;
-    font-weight: 500; 
-    transition: all 25ms;   
-    
-  }
-  .fondo-sliders div a:hover{
-    font-weight: bold;
-    color: #BBE1FA;
-    
-  }
-  #slider ul {
-    position: relative;
-    list-style: none;
-    height: 100%;
-    width: 10000%;
-    padding: 0;
-    margin: 0;
-    transition: all 750ms ease;
-    left: 0;
-  }
-  #slider ul li {
-    position: relative;
-    height: 100%;
-   
-    float: left;
-  }
-  #slider ul li img{
-    width: 500px;
-    height: 265px;
-  }
-   
-  #slider #prev, #slider #next {
-    width: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    font-size: 2rem;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 150ms ease;
-  }
-  #slider #prev:hover, #slider #next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 0;
-  }
-  #slider #prev {
-    left: 10px;
-  }
-  #slider #next {
-    right: 10px;
-  }
-  
-
-  /* slider de imagen fin*/
-  
-h2{
-    position: relative;
-    color: #BBE1FA;
-    left: 965px;
-    top: 133px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0;    
-}
-/*
-.fondo-sliders{
-    background-color: white;       
-    margin-left: 10px;
-    margin-right: 20px;
-}  funca pero hay que ajustar el fondo para que quede las medidas correctas como en solana
-*/
-
-
-.final{
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    justify-content: space-evenly;
-    background-color: #1B262C;
-    color: white;
-}
-.final a{   
-    display: block;
-    text-decoration: none;
-    color: white;
-    font-weight: 500; 
-    transition: all 25ms;  
-}
-
-.final a:hover{    
-    font-weight: bold;
-    color: #BBE1FA;
-        
-      
-}
-@media (min-width: 375px){
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.toggle-button {
-    display: flex;
-}
-
-.navbar-links {
-    display: none;
-    width: 100%;
-}
-
-.navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-}
-
-.navbar-links ul li {
-    text-align: center;
-}
-
-.navbar-links ul li a {
-    padding: .5rem 1rem;
-}
-
-.navbar-links.active {
-    display: flex;
-}
-/* fin navbar*/
-
-#slider{
-  width: 349px;
-  height: 198px;
-  margin: 10rem 0rem 15rem;
-  
-}
-
-.fondo-sliders div a{
-  margin: 9rem 9rem -9rem;
-}
-}
-
-@media (min-width: 630px){
-
-  #slider{
-    margin: 11rem 8rem -4rem;
-    
-  }
-  
-  .fondo-sliders div a{
-    margin: 9rem 22rem -9rem;
-  }
-
-  #slider{
-    margin: 11rem 8rem -4rem;
-    
-  }
-  
-  .fondo-sliders div a{
-    margin: 9rem 22rem -9rem;
-  }
-}
-
-@media (min-width: 800px)
-/*todo esto es el navbar*/
-{
-  
-
-  #slider{
-    margin: 11rem 8rem -4rem;
-    width: 500px;
-    height: 265px;
-    
-  }
-  
-  .fondo-sliders div a{
-    margin: 9rem 22rem -9rem;
-  }
-}
-
-@media (min-width: 1200px){
-
-  #slider {
-    position: relative;
-    width: 500px;
-    height: 265px;
-    margin: 11rem 50rem -4rem;
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
-  }
-  .fondo-sliders div a{
-    display: block;
-    text-decoration: none;
-    margin: 10rem 63rem -8rem;
-    color: white;
-    font-weight: 500; 
-    transition: all 25ms;   
-    
-  }
-
-  /* fix de navbar*/
-  .navbar-links{
-    display: flex;    
-    position: absolute;
-  }
-  .navbar-links ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    font-weight: bold;  
-  }
-
-  .toggle-button {
-    display: none;
-  }
 }

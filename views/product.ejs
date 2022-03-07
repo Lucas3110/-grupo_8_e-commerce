@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- head -->
+    <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/css/list.css">
+        <title>productos</title>
+</head>
+
+<body>
+    <header>
+        <!-- header -->
+        <%- include('./partials/header') %>
+    </header>
+
+    <main>
+        <section class="last-visit">
+            <h3>Genshin</h3>
+            
+                <div class="products"> <!-- main section div.products -->
+                    <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                        100)).toFixed(0) %>
+                    <article>
+                        <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">
+                            <img src="/images/<%= product.imagen %>" class="product_img">
+                            <div class="main-article">
+                                <p class="price"><img alt="ETH" class="Price--eth-icon"
+                                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                                </p>
+                                <h4 class="description">
+                                    <%= product.descripcion %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                    <% }) %>
+                </div>
+               
+        </section>
+        <section class="last-visit">
+            <h3>Van Gogh</h3>
+            
+                <div class="products"> <!-- main section div.products -->
+                    <% coleccionJ.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                        100)).toFixed(0) %>
+                    <article>
+                        <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">
+                            <img src="/images/<%= product.imagen %>" class="product_img">
+                            <div class="main-article">
+                                <p class="price"><img alt="ETH" class="Price--eth-icon"
+                                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                                </p>
+                                <h4 class="description">
+                                    <%= product.descripcion %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                    <% }) %>
+                </div>
+               
+        </section>
+
+
+        <section class="last-visit">
+           <h3>Punks</h3>
+            <div class="products"> <!-- main section div.products -->
+                <% coleccionL.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                    100)).toFixed(0) %>
+                <article>
+                    <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">
+                        <img src="/images/<%= product.imagen %>" class="product_img">
+                        <div class="main-article">
+                            <p class="price"><img alt="ETH" class="Price--eth-icon"
+                            src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                            </p>
+                            <h4 class="description">
+                                <%= product.descripcion %>
+                            </h4>
+                        </div>
+                    </a>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+
+        <section class="last-visit">
+            <h3>Magic</h3>
+             <div class="products"> <!-- main section div.products -->
+                 <% coleccionN.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
+                     100)).toFixed(0) %>
+                 <article>
+                     <a href="/product/detail/<%= product.id %>" style="text-decoration: none;">
+                         <img src="/images/<%= product.imagen %>" class="product_img">
+                         <div class="main-article">
+                             <p class="price"><img alt="ETH" class="Price--eth-icon"
+                             src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                             </p>
+                             <h4 class="description">
+                                 <%= product.descripcion %>
+                             </h4>
+                         </div>
+                     </a>
+                 </article>
+                 <% }) %>
+             </div>
+         </section>
+
+    </main>
+
+    <footer>
+        <!-- footer -->
+        <%- include('./partials/footer') %>
+    </footer>
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head --> <%- include('./partials/head') %>  
+    <link rel="stylesheet" href="/css/edit.css">
+    <title>Edit</title>
+</head>
+<body>
+    
+    <!-- header --> <%- include('./partials/header') %> 
+   
+   <main>
+    <form action="/product/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="register-form">
+        <div class="form-control">
+            <label for="name">Nombre de producto </label>
+            <input type="text" id="name" name="nombre" class="control">
+        </div>
+
+        <div class="form-control">
+            <label for="imagen">Selecciona una imagen:</label>
+            <input type="file" id="imagen" name="imagen">
+            <input type="submit" name="submit" value="Upload">
+        </div>
+        
+        <div class="form-control">
+            <label for="coleccion">Elige la colección:</label>
+            <select id="coleccion" name="coleccion">
+            <option value="none" selected disabled hidden><%= productToEdit.coleccion %></option>
+            <option value="Genshin">Genshin</option>
+            <option value="Van-Gogh">Van Gogh</option>
+            <option value="Punks">Punks</option>
+            <option value="Magic">Magic</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="descripcion">Descripción </label>
+           <textarea name="descripcion" id="descripcion" cols="30" rows="10"><%= productToEdit.descripcion %></textarea>
+        </div>
+       
+      
+        <div class="form-control">
+            <label for="precio">Precio</label><br>
+            <input type="number" id="precio" name="precio"><br>
+        </div>
+
+        <button type="submit" class="button">Guardar</button> 
+             
+        
+    </form>
+
+    <form action="/product/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="button">Borrar</button>
+    </form>  
+   </main>
+    <!-- footer --> <%- include('./partials/footer') %> 
+</body>
+</html>

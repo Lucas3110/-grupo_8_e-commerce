@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- head --> <%- include('./partials/head') %>  
+        <link rel="stylesheet" href="/css/login.css">
+        <title>login</title>
+      </head>
+        <!-- header --> <%- include('./partials/header') %>
+      <body class="bodylogin">
+
+      <section class="sectionlogin">
+        <login>
+            <h2 class="inicio">
+                Inicia sesión con:
+            </h2>
+                <button type="button">
+                      Gmail    
+                </button>
+                <br></br>
+                <button type="button">
+                    <i class="fi fi-rr-bank"></i> Wallet     
+                </button>
+              </div>
+               
+            
+            <h2 class="Registrarse">
+                Ingresa a tu cuenta: 
+            </h2>
+                <div id="form">
+                    <input type="email" placeholder="Email">     
+                </div>
+                <div id="form">
+                    <input type="password" placeholder="Contraseña">     
+                </div>
+                
+                <div class="recuerdame">
+                <input id="recordarme" name="recordarme" type="checkbox" value="1" checked="checked">
+                <label class="recordarme" for="recordarme">Recordarme</label>
+                </div>   
+
+                <div class="olvido">
+                    <a href="#" class="textolvido">¿Olvidaste tu Contraseña?</a>
+                </div>
+                
+                    <button type="submit" class="registro">
+                        Iniciar Sesión 
+                    </button>
+
+                <div class="crearcuenta">
+                    <p class="nuevacuenta">¿No tienes una cuenta?</p>
+                    <a href="/users/register" class="crear">Crear cuenta </a>
+                </div>
+                
+
+        </login>
+    </section>
+ 
+    <!-- footer --> <%- include('./partials/footer') %>
+
+</body>

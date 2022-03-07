@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head --> <%- include('./partials/head') %>  
+    <title>register</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    
+    <!-- header --> <%- include('./partials/header') %> 
+   
+   <main>
+    <form action="#" method="post" class="register-form">
+        <div class="form-control">
+            <label>Nombre de usuario</label>
+            <input type="text" name="user" class="control" required>
+        </div>
+        <div class="form-control">
+            <label>Contraseña</label>
+            <input type="password" name="password" class="control" required>
+        </div>
+        <div class="form-control">
+            <label>Confirma tú contraseña</label>
+            <input type="password" name="confirm-P" class="control" required>
+        </div>
+        <div class="form-control">
+            <label>Wallet</label>
+            <input type="text" name="wallet" class="control" required>
+        </div>
+        <div class="form-control">
+            <label>Confirma tú wallet</label>
+            <input type="text" name="confirm-W" class="control" required>
+        </div>
+        <div class="form-control">
+            <label>e-mail</label>
+            <input type="email" name="email" class="control" placeholder="example01@gmail.com" required>
+        </div>
+        <button type="reset" class="button">Borrar</button>
+        <button type="submit" class="button">Guardar</button>
+    </form>
+   </main>
+    <!-- footer --> <%- include('./partials/footer') %> 
+</body>
+</html>
