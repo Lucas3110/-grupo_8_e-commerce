@@ -11,12 +11,14 @@
     background-position: center;
     position: relative;
     overflow: hidden;
+    animation: banner 21s infinite linear;
+    transition: all .1s ease-in-out;
 }
-.logo{
+.logo1{
     width: 75px;
     cursor: pointer;
 }
-.navbar{
+.navbar1{
     width: 85%;
     height: 15%;
     margin: auto;
@@ -93,6 +95,38 @@ h1{
     bottom: -70px;
 }
 
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(/images/banner.png);
+    animation: banner 21s infinite linear;
+}
+
+@keyframes banner{
+    0% {
+        background-image: url(/images/banner.png);
+    }
+    32% {
+        background-image: url(/images/banner.png);
+    }
+    33% {
+        background-image: url(/images/wallpaper1.jpg);
+    }
+    65% {
+        background-image: url(/images/wallpaper1.jpg);
+    }
+    66%{
+        background-image: url(/images/wallpaper2.jpg);
+    }
+    100%{
+        background-image: url(/images/wallpaper2.jpg);
+    }
+}
 @keyframes bubble{
     0%{
         transform: translateY(0);

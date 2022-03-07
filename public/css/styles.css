@@ -88,17 +88,17 @@ header .form .input{
   padding: 2px;
 }
 /* CSS lupa fin */
-.banner{
+/* .banner{
 background-image: url('/images/banner.jpeg');
 background-size: cover;
 background-position: center center;    
 height: 60vh;
-width: 100%;    
+width: 100%;     */
 
-}
+/* } */
 /* slider de imagen*/
 
-#slider {
+/* #slider {
   position: relative;
   width: 500px;
   height: 265px;
@@ -164,7 +164,7 @@ width: 100%;
 }
 #slider #next {
   right: 10px;
-}
+} */
 
 
 /* slider de imagen fin*/
@@ -178,7 +178,7 @@ h2{
   padding: 0;    
 }
 
-.fondo-sliders{
+/* .fondo-sliders{
   background: #333;       
   margin: 2.5rem auto;
   max-width: 110em;
@@ -187,7 +187,7 @@ h2{
   overflow: hidden;    
   border-radius: 0.6em;    
   box-shadow: 0 0.5em 0 rgb(138 148 152 / 20%);
-} 
+}  */
 
 
 .final{
@@ -195,8 +195,8 @@ h2{
   justify-content: center;
   align-items: center;    
   justify-content: space-evenly;
-  background-color: #0d1117;
   color: white;
+  position: relative;
 }
 .final a{   
   display: block;

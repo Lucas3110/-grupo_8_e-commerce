@@ -7,9 +7,24 @@
     <link rel=”stylesheet” href=”https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css”>    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <div class="hero">
+    <section class="banner">
+        <div class="hero">
+            <div class="navbar1">
+                <img src="images/logoW.png" class="logo1">
+                <a href="/users/register"><button type="button">Wallet</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <small>Welcome to our</small>
+            <h1>NFTs<br>Creative Collections</h1>
+            <a href="/product"><button type="button">Take a tour</button></a>
+        </div>
+    </section>
+    <!-- footer --> <%- include('./partials/footer') %>
+    <!-- <div class="hero">
         <div class="navbar">
             <img src="images/logoW.png" class="logo">
             <a href="/users/register"><button type="button">Wallet</button></a>
@@ -19,8 +34,6 @@
             <h1>NFTs<br>Creative Collections</h1>
             <a href="/product"><button type="button">Take a tour</button></a>
         </div>  
-        
-    </div>
-    
+    </div> -->
 </body>
 </html>
