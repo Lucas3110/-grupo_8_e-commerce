@@ -7,21 +7,23 @@ router.get('/', productController.product);
 
 router.get('/cart', productController.cart);
 
+router.get('/create', productController.create);
 //router.get('/productDetail', productController.productDetail);
 
 /*** GET ONE PRODUCT ***/ 
-router.get('/detail/:id', productController.detail); 
+router.get('/:id', productController.detail); 
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/create', productController.create);
-router.post('/', productController.store); 
+
+router.post('/', productController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:id', productController.edit); 
-router.patch('/edit/:id', productController.update); 
+router.get('/:id/edit', productController.edit); 
+router.patch('/:id/edit', productController.update); 
+ 
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', productController.destroy); 
+router.delete('/:id', productController.destroy); 
 
 
 
