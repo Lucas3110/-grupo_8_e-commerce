@@ -10,7 +10,7 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
-    <form action="/product/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" class="register-form">
+    <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
         <div class="form-control">
             <label for="name">Nombre de producto </label>
             <input type="text" id="name" name="nombre" class="control">
@@ -49,7 +49,7 @@
         
     </form>
 
-    <form action="/product/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+    <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
         <button type="submit" class="button">Borrar</button>
     </form>  
    </main>
