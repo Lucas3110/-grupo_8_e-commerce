@@ -135,11 +135,12 @@
   "creador": ""
  },
  {
-  "id": 16,
-  "nombre": "",
-  "imagen": "",
+ "id": 16,
+  "nombre": "1",
   "coleccion": "Magic",
+  "precio": 0.007,
   "descripcion": "Si te gusta el mundo de Magic, este es el NFT para vos",
-  "precio": ""
+  "imagen": "coleccionN/mtg4.jpg",
+  "creador": ""
  }
 ]
