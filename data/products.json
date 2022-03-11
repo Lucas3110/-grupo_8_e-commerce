@@ -1,37 +1,37 @@
 [
  {
   "id": 1,
-  "nombre": "Genshin wonder great",
+  "nombre": "Genshin 1",
   "coleccion": "Genshin",
   "precio": 0.001,
-  "descripcion": "Genshin glorious great",
+  "descripcion": "Ayaka and Yoimiya concurring Inazuman streets",
   "imagen": "coleccionJo/genshin1.jpg",
   "creador": ""
  },
  {
   "id": 2,
-  "nombre": "Genshin glorious great",
+  "nombre": "Genshin 2",
   "coleccion": "Genshin",
   "precio": 0.1,
-  "descripcion": "Genshin glorious great",
+  "descripcion": "Archons and Travelers on a sunny day",
   "imagen": "coleccionJo/genshin2.jpg",
   "creador": ""
  },
  {
   "id": 3,
-  "nombre": "Genshin fabulous great",
+  "nombre": "Genshin 3",
   "coleccion": "Genshin",
   "precio": 0.002,
-  "descripcion": "Genshin fabulous great",
+  "descripcion": "The truth of the Inazuma Region",
   "imagen": "coleccionJo/genshin3.jpg",
   "creador": ""
  },
  {
   "id": 4,
-  "nombre": "Genshin incredible great",
+  "nombre": "Genshin 4",
   "coleccion": "Genshin",
   "precio": 0.0015,
-  "descripcion": "Genshin incredible great",
+  "descripcion": "Adeptis on the Lantern Rite",
   "imagen": "coleccionJo/genshin4.jpg",
   "creador": ""
  },
