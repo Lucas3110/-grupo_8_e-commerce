@@ -104,28 +104,41 @@ h1{
     background-position: center;
     transition: all .1s ease-in-out;
     background-image: url(/images/banner.png);
-    animation: banner 21s infinite linear;
+    animation: banner 35s infinite linear;
 }
 
 @keyframes banner{
     0% {
         background-image: url(/images/banner.png);
     }
-    32% {
+    20% {
         background-image: url(/images/banner.png);
     }
-    33% {
+    21%{
         background-image: url(/images/wallpaper1.jpg);
     }
-    65% {
+    40%{
         background-image: url(/images/wallpaper1.jpg);
     }
-    66%{
+    41%{
         background-image: url(/images/wallpaper2.jpg);
+    }
+    60%{
+        background-image: url(/images/wallpaper2.jpg);
+    }
+    61%{
+        background-image: url(/images/wallpaper3.jpg);
+    }
+    80%{
+        background-image: url(/images/wallpaper3.jpg);
+    }
+    81%{
+        background-image: url(/images/wallpaper4.jpg);
     }
     100%{
-        background-image: url(/images/wallpaper2.jpg);
+        background-image: url(/images/wallpaper4.jpg);
     }
+
 }
 @keyframes bubble{
     0%{
