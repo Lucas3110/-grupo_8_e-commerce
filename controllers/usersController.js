@@ -5,7 +5,10 @@ let fs = require('fs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-const controlador = {    
+const controlador = {
+    index: (req, res) => {        
+        res.render("home");        
+    },         
     login: (req, res) => {        
         res.render("login");        
     },    
@@ -25,9 +28,6 @@ const controlador = {
         } else{
              res.send('/')
         }
-
-
-
 	}    
 };
 

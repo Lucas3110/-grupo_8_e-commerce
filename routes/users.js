@@ -18,7 +18,7 @@ const upload = multer({ storage: storage });
 
 
 
-
+router.get('/', usersController.index);
 
 router.get('/login', usersController.login);
 
