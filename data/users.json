@@ -1,38 +1,47 @@
 [
-    {
-     "id": 1,
-     "nombre": "Jessica",
-     "contrasena": "*****",
-     "contrasena2": "*****",
-     "wallet": "",
-     "wallet2": "", 
-     "email": "jessica@gmail.com"
-    },
-    {
-    "id": 1,
-    "nombre": "Joan",
-    "contrasena": "*****",
-    "contrasena2": "*****",
-    "wallet": "",
-    "wallet2": "", 
-    "email": "joan@gmail.com"
-    },
-    {
-    "id": 1,
-    "nombre": "Lucas",
-    "contrasena": "*****",
-    "contrasena2": "*****",
-    "wallet": "",
-    "wallet2": "", 
-    "email": "lucas@gmail.com"
-    },
-    {
-    "id": 1,
-    "nombre": "Nico",
-    "contrasena": "*****",
-    "contrasena2": "*****",
-    "wallet": "",
-    "wallet2": "", 
-    "email": "nico@gmail.com"
-    }  
+ {
+  "id": 1,
+  "nombre": "Jessica",
+  "apellido": "Martinez",
+  "email": "",
+  "contrasena": "",
+  "categoria": "jessica@gmail.com",
+  "imagen": ""
+ },
+ {
+  "id": 2,
+  "nombre": "Lucas",
+  "apellido": "R",
+  "email": "",
+  "contrasena": "",
+  "categoria": "lucas@gmail.com",
+  "imagen": ""
+ },
+ {
+  "id": 3,
+  "nombre": "Joan",
+  "apellido": "",
+  "email": "",
+  "contrasena": "",
+  "categoria": "joan@gmail.com",
+  "imagen": ""
+ },
+ {
+  "id": 4,
+  "nombre": "Nicolas",
+  "apellido": "Tracz",
+  "email": "",
+  "contrasena": "",
+  "categoria": "nico@gmail.com",
+  "imagen": ""
+ },
+ {
+  "id": 5,
+  "nombre": "hola",
+  "apellido": "hola",
+  "contrasena": "123",
+  "email": "email@hmail.com",
+  "categoria": "Artista",
+  "imagen": ""
+ }
 ]

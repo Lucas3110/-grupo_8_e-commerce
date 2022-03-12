@@ -5,7 +5,11 @@ const usersController = require('../controllers/usersController');
 
 
 router.get('/login', usersController.login);
+
+/*** CREATE A USER ***/ 
 router.get('/register', usersController.register);
+router.post('/', usersController.store);
+
 
 
 

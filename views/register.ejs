@@ -10,18 +10,18 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
-    <form action="#" method="post" class="register-form">
+    <form action="/users" method="POST" class="register-form">
         <div class="form-control">
             <label>Nombre de usuario</label>
-            <input type="text" name="user" class="control" required>
+            <input type="text" name="nombre" class="control" required>
         </div>
         <div class="form-control">
             <label>Apellido de usuario</label>
-            <input type="text" name="user" class="control" required>
+            <input type="text" name="apellido" class="control" required>
         </div>
         <div class="form-control">
             <label>Contraseña</label>
-            <input type="password" name="password" class="control" required>
+            <input type="password" name="contrasena" class="control" required>
         </div>       
         <div class="form-control">
             <label>e-mail</label>
