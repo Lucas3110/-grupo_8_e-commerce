@@ -13,14 +13,21 @@ const controlador = {
         res.render("register");        
     },
     store: (req, res) => {
-		let newUser = {
-			id: users[users.length - 1].id + 1,
-			...req.body,
-			/*image: 'default-image.png'*/
-		};
-		users.push(newUser)
-		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		res.redirect('/');
+		if(req.file){
+            let newUser = {
+                id: users[users.length - 1].id + 1,
+                ...req.body,
+                imagen: req.file.filename,
+            };
+            users.push(newUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+            res.redirect('/');
+        } else{
+             res.send('/')
+        }
+
+
+
 	}    
 };
 

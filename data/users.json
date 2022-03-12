@@ -34,22 +34,5 @@
   "contrasena": "",
   "categoria": "nico@gmail.com",
   "imagen": ""
- },
- {
-  "id": 5,
-  "nombre": "hola",
-  "apellido": "hola",
-  "contrasena": "123",
-  "email": "email@hmail.com",
-  "categoria": "Artista",
-  "imagen": ""
- },
- {
-  "id": 6,
-  "nombre": "asasas",
-  "apellido": "dasdsadasd",
-  "contrasena": "123",
-  "email": "hola@gmail.com",
-  "categoria": "Artista"
  }
 ]
