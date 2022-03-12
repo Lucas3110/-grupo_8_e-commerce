@@ -6,7 +6,7 @@ const usersController = require('../controllers/usersController');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/images/profiles'))
+        cb(null, path.join(__dirname, '../public/images/users'))
     },
     filename: (req, file, cb) => {
         const newFilename = 'imagen-' + Date.now() + path.extname(file.originalname);
