@@ -1,5 +1,6 @@
 let path = require ("path");
 let fs = require('fs');
+const bcrypt = require('bcryptjs')
 
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
@@ -21,6 +22,7 @@ const controlador = {
                 id: users[users.length - 1].id + 1,
                 ...req.body,
                 imagen: req.file.filename,
+                contrasena: bcrypt.hashSync(req.body.contrasena,10)
             };
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));

@@ -3,36 +3,36 @@
   "id": 1,
   "nombre": "Jessica",
   "apellido": "Martinez",
-  "email": "",
-  "contrasena": "",
-  "categoria": "jessica@gmail.com",
+  "email": "jessica@gmail.com",
+  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "categoria": "",
   "imagen": ""
  },
  {
   "id": 2,
   "nombre": "Lucas",
   "apellido": "R",
-  "email": "",
-  "contrasena": "",
-  "categoria": "lucas@gmail.com",
+  "email": "lucas@gmail.com",
+  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "categoria": "",
   "imagen": ""
  },
  {
   "id": 3,
   "nombre": "Joan",
   "apellido": "",
-  "email": "",
-  "contrasena": "",
-  "categoria": "joan@gmail.com",
+  "email": "joan@gmail.com",
+  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "categoria": "",
   "imagen": ""
  },
  {
   "id": 4,
   "nombre": "Nicolas",
   "apellido": "Tracz",
-  "email": "",
-  "contrasena": "",
-  "categoria": "nico@gmail.com",
+  "email": "nico@gmail.com",
+  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "categoria": "",
   "imagen": ""
- }
+ } 
 ]
