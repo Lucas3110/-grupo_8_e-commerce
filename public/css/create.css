@@ -1,0 +1,154 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    /*display: flex;*/
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    background: linear-gradient(135deg, #0d1117, #0F4C75);
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #0F4C75, #71b7e6);
+
+}
+
+.container form .productDetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .productDetails .inputBox{ 
+    margin-bottom: 15px;   
+    width: calc(100% / 2 -20px);    
+}
+
+.productDetails .inputBox .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.productDetails .inputBox input,
+select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.productDetails .inputBox input:focus,
+.productDetails .inputBox input:valid{
+    border-color: #0F4C75;
+}
+
+.container form .description{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 12px 0;
+}
+
+form .description .detailText{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.description .detailText .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.description .detailText textarea{
+    width: 100%;
+    height: 150px; 
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.description .detailText textarea:focus{
+    border-color: #0F4C75;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #0d1117, #0F4C75);
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #0F4C75, #0d1117); 
+}
+
+@media (max-width:584px){
+    .container{
+        max-width: 100%;
+    }
+
+    form .productDetails .inputBox{ 
+        margin-bottom: 15px;   
+        width: 100%;    
+    }
+    
+    .container form .productDetails{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .productDetails::-webkit-scrollbar{
+        width: 0;
+    }
+}
