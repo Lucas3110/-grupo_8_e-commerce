@@ -10,7 +10,7 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
-    <form action="/users" method="POST" class="register-form">
+    <form action="/users" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="form-control">
             <label>Nombre de usuario</label>
             <input type="text" name="nombre" class="control" required>

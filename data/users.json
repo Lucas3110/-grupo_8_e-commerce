@@ -43,5 +43,13 @@
   "email": "email@hmail.com",
   "categoria": "Artista",
   "imagen": ""
+ },
+ {
+  "id": 6,
+  "nombre": "asasas",
+  "apellido": "dasdsadasd",
+  "contrasena": "123",
+  "email": "hola@gmail.com",
+  "categoria": "Artista"
  }
 ]
