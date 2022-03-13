@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+let session = require('express-session');
 
 
 var productRouter = require('./routes/productRoutes');
@@ -22,6 +23,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(session({
+  secret: 'secret word!',
+  resave: false,
+  saveUninitialized: true,
+}))
 
 
 app.get('/', (req, res) => {
@@ -34,6 +40,7 @@ app.use('/product', productRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
