@@ -4,7 +4,7 @@
   "nombre": "Jessica",
   "apellido": "Martinez",
   "email": "jessica@gmail.com",
-  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
   "categoria": "",
   "imagen": ""
  },
@@ -13,7 +13,7 @@
   "nombre": "Lucas",
   "apellido": "R",
   "email": "lucas@gmail.com",
-  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
   "categoria": "",
   "imagen": ""
  },
@@ -22,7 +22,7 @@
   "nombre": "Joan",
   "apellido": "",
   "email": "joan@gmail.com",
-  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
   "categoria": "",
   "imagen": ""
  },
@@ -31,7 +31,7 @@
   "nombre": "Nicolas",
   "apellido": "Tracz",
   "email": "nico@gmail.com",
-  "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
+  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
   "categoria": "",
   "imagen": ""
  },
