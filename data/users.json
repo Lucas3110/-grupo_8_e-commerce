@@ -34,5 +34,14 @@
   "contrasena": "$2a$10$9QPgCgulLJ8tEhZAZJ3nl.FzGMRBIXzBDHLRjzfLelPAFJ1Wy5pGW",
   "categoria": "",
   "imagen": ""
- } 
+ },
+ {
+  "id": 5,
+  "nombre": "test",
+  "apellido": "test",
+  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW", 
+  "email": "test@gmail.com",
+  "categoria": "Usuario",
+  "imagen": "imagen-1647283343489.jpg"
+ }
 ]

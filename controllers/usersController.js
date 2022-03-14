@@ -48,10 +48,9 @@ const controlador = {
                 return res.render('login', {errors: [
                     {msg: 'Credenciales invalidas'}
                 ]})
-            }
-
+            }            
             req.session.usuarioALogueado = usuarioALoguearse;
-            res.send(usuarioALogueado);
+            res.send('hola ' + req.session.usuarioALogueado.nombre);
         } else{
             return res.render('login', {errors: errors.errors})
         }
