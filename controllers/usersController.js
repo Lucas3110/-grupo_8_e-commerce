@@ -50,7 +50,7 @@ const controlador = {
                 ]})
             }            
             req.session.usuarioALogueado = usuarioALoguearse;
-            res.send('hola ' + req.session.usuarioALogueado.nombre);
+            return res.render('login', {user: req.session.usuarioALogueado})
         } else{
             return res.render('login', {errors: errors.errors})
         }
