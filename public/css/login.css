@@ -5,6 +5,9 @@
     background-color: #0d1117;
 }
 
+.bodylogin li{
+    color: white;
+}
 .sectionlogin{
     border-style: solid;
     border-color: #4b4b4b;

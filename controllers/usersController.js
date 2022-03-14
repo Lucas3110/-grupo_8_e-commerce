@@ -37,8 +37,8 @@ const controlador = {
         if(errors.isEmpty()){
             for (let i = 0; i < users.length; i++){
                 if (users[i].email == req.body.email){
-                    if(bcrypt.compareSync(req.body.contrasena, users[i].password)){
-                        let usuarioALoguearse = users[i];
+                    if(bcrypt.compareSync(req.body.contrasena, users[i].contrasena)){
+                        var usuarioALoguearse = users[i];
                         break;
                     }
                 }
@@ -51,7 +51,7 @@ const controlador = {
             }
 
             req.session.usuarioALogueado = usuarioALoguearse;
-
+            res.send(usuarioALogueado);
         } else{
             return res.render('login', {errors: errors.errors})
         }

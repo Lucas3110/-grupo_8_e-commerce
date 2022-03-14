@@ -21,16 +21,19 @@ const upload = multer({ storage: storage });
 
 router.get('/', usersController.index);
 
+
+/*** LOGIN USER ***/ 
 router.get('/login', usersController.login);
 router.post('/', [
     check('email').isEmail().withMessage('Email invalido'),
     check('contrasena').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
 ], usersController.processLogin);
 
+
+
 /*** CREATE A USER ***/ 
 router.get('/register', usersController.register);
 router.post('/', upload.single('imagen') , usersController.store);
-
 
 
 
