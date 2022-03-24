@@ -16,20 +16,25 @@ const controlador = {
     register: (req, res) => {        
         res.render("register");        
     },
-    store: (req, res) => {
-		if(req.file){
-            let newUser = {
-                id: users[users.length - 1].id + 1,
-                ...req.body,
-                imagen: req.file.filename,
-                contrasena: bcrypt.hashSync(req.body.contrasena,10)
-            };
-            users.push(newUser)
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-            res.redirect('/');
-        } else{
-             res.send('/')
+    processRegister: function(req, res){
+        const errors = validationResult(req)
+        if(errors.errors.length > 0){
+           return res.render("register", {errors: errors.mapped()})
         }
+        
+        const newUser = {
+            id: users.length + 1,            
+            ...req.body,           
+            contrasena: bcrypt.hashSync(req.body.contrasena,10),           
+            imagen: req.file ? req.file.filename : "defaultPic"
+        }
+
+        users.push(newUser);
+
+        writeFile(users)
+
+        res.redirect("/users/login");
+
 	},
     processLogin: function(req, res) {
         let errors = validationResult(req);

@@ -4,6 +4,7 @@ const path = require('path');
 const multer = require('multer');
 const usersController = require('../controllers/usersController');
 const { check } = require('express-validator');
+const validator = require("../validator/validationForm");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -33,7 +34,7 @@ router.post('/login', [
 
 /*** CREATE A USER ***/ 
 router.get('/register', usersController.register);
-router.post('/', upload.single('imagen') , usersController.store);
+router.post('/', upload.single('imagen'), validator.register ,usersController.processRegister);;
 
 
 
