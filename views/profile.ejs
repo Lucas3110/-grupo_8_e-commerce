@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+<!-- ------ESTO SOLO TIENE LA LOGICA PARA TRAER LOS DATOS----------------
+
     <% if(locals.userLocals){ %>       
        <ul>
             <li>Hola <%= userLocals.nombre %> <%= userLocals.apellido %></a></li></li>
@@ -13,9 +8,47 @@
             <li>Y tu foto de perfil es: <img src="/images/users/<%= userLocals.imagen %>" class="product_img"></li>
         </ul>           
         <% } %> 
-    
+
+--> 
+
+
+<!-- ESTE PROFILE lo agregue para ver que onda como quedaba si queres tunealo--> 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 </head>
 <body>
-    
+    <!-- header --> <%- include('./partials/header') %> 
+    <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="front-face">
+                    <img src="/images/users/<%= userLocals.imagen %>">  
+                </div>
+                <div class="back-face">
+                    <h2><%= userLocals.nombre %></h2>                           
+                    <p><%= userLocals.email %></p>
+                    <p><%= userLocals.categoria %></p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/EasyTutorialsVideo">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <i class="fab fa-instagram"></i>
+                        </a>                  
+                    </div>
+                    <a href="/product" class="btn">Collections</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer por alguna razon no funciona sale todo feo --> 
 </body>
 </html>
