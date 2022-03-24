@@ -17,6 +17,7 @@ function recordame (req, res , next){
             id: usuarioCookies.id,
             nombre: usuarioCookies.nombre,
             apellido: usuarioCookies.apellido,
+            categoria: usuarioCookies.categoria,
             imagen: usuarioCookies.imagen,
         }
 

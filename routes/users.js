@@ -32,6 +32,9 @@ router.post('/login', validator.login , usersController.processLogin);
 router.get('/register', usersController.register);
 router.post('/', upload.single('imagen'), validator.register ,usersController.processRegister);;
 
+/*** PROFILE PAGE ***/ 
+router.get('/profile', usersController.profile);
+
 router.post("/logout", usersController.logout);
 
 module.exports = router;

@@ -57,6 +57,7 @@ const controlador = {
                 id: userFound.id,
                 nombre: userFound.nombre,
                 apellido: userFound.apellido,
+                categoria: userFound.categoria,
                 imagen: userFound.imagen,
             }
 
@@ -71,6 +72,9 @@ const controlador = {
         }else{
             res.render("login", {errorMsg: "Error credenciales invalidas"})
         }
+    },
+    profile:(req, res) => {        
+        res.render("profile");  
     },
     logout:function(req, res){
         req.session.destroy();       
