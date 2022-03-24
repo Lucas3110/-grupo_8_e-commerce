@@ -15,28 +15,28 @@
             <label>Nombre de usuario</label>
             <input type="text" name="nombre" class="control">
             <% if(locals.errors && locals.errors.nombre){ %>
-                <span> <%= errors.nombre.msg  %> </span>
+                <span style="color: red;"> <%= errors.nombre.msg  %> </span>
               <%} %> 
         </div>
         <div class="form-control">
             <label>Apellido de usuario</label>
             <input type="text" name="apellido" class="control">
             <% if(locals.errors && locals.errors.apellido){ %>
-                <span> <%= errors.apellido.msg  %> </span>
+                <span style="color: red;"> <%= errors.apellido.msg  %> </span>
               <%} %> 
         </div>
         <div class="form-control">
             <label>Contraseña</label>
             <input type="password" name="contrasena" class="control">
             <% if(locals.errors && locals.errors.contrasena){ %>
-                <span> <%= errors.contrasena.msg  %> </span>
+                <span style="color: red;"> <%= errors.contrasena.msg  %> </span>
               <% } %> 
         </div>       
         <div class="form-control">
             <label>e-mail</label>
             <input type="email" name="email" class="control" placeholder="example01@gmail.com">
             <% if(locals.errors && locals.errors.email){ %>
-                <span> <%= errors.email.msg  %> </span>
+                <span style="color: red;"> <%= errors.email.msg  %> </span>
               <% } %> 
         </div>
         <div class="form-control">
