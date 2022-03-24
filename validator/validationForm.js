@@ -11,15 +11,15 @@ const validator = {
     login:[
         check("email")
             .notEmpty()
-            .withMessage("campo email vacio"),
+            .withMessage("Email vacio"),
         check("contrasena")
             .notEmpty()
-            .withMessage("campo password vacio")
+            .withMessage("Contraseña vacio")
     ],
     register:[
         check("email")
             .notEmpty()
-            .withMessage("Email incompleto")
+            .withMessage("Email vacio")
             .bail()
             .isEmail()
             .withMessage("formato de email incorrecto")
@@ -40,13 +40,13 @@ const validator = {
             ,
         check("nombre")
             .notEmpty()
-            .withMessage("Nombre incompleto"),
+            .withMessage("Nombre vacio"),
         check("apellido")
             .notEmpty()
-            .withMessage("Apellido incompleto"),
+            .withMessage("Apellido vacio"),
         check("contrasena")
             .notEmpty()
-            .withMessage("Contraseña incompleto")
+            .withMessage("Contraseña vacio")
     ]
 }
 

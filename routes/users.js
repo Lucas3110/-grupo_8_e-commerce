@@ -25,11 +25,7 @@ router.get('/', usersController.index);
 
 /*** LOGIN USER ***/ 
 router.get('/login', usersController.login);
-router.post('/login', [
-    check('email').isEmail().withMessage('Email invalido'),
-    check('contrasena').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
-], usersController.processLogin);
-
+router.post('/login', validator.login , usersController.processLogin);
 
 
 /*** CREATE A USER ***/ 

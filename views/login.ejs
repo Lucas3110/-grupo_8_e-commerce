@@ -9,18 +9,8 @@
       <body class="bodylogin">        
         <% if(typeof user !='undefined'){ %>
             <p>Hola <%= user.nombre %> <%= user.apellido %>, tenes la categoria <%= user.categoria %> y tu email es: <%= user.email %></p>
-        <% } %>  
-        
-          <% if (typeof errors != 'undefined') { %>
-            <p style="color: red">ERROR</p>
-            <ul>
-                <% for (let i = 0; i < errors.length; i++) { %>
-                    <li>
-                        <%=errors[i].msg%>
-                    </li>
-                <% } %>
-            </ul>
-         <% } %>
+        <% } %>    
+          
 
       <section class="sectionlogin">
         <login>
@@ -41,10 +31,16 @@
                 Ingresa a tu cuenta: 
             </h2>
                 <div id="form">
-                    <input type="email" name="email">     
+                    <input type="email" name="email">   
+                    <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+                        <span style="color: red;"> <%= locals.errorsLogin.email.msg %> </span>
+                      <% } %>   
                 </div>
                 <div id="form">
-                    <input type="password" name="contrasena">          
+                    <input type="password" name="contrasena">
+                    <% if(locals.errorsLogin && locals.errorsLogin.contrasena){ %>
+                        <span style="color: red;"> <%= locals.errorsLogin.contrasena.msg %> </span>
+                      <% } %>           
                 </div>
                 
                 <div class="recuerdame">
@@ -64,7 +60,10 @@
                     <p class="nuevacuenta">¿No tienes una cuenta?</p>
                     <a href="/users/register" class="crear">Crear cuenta </a>
                 </div>
-        </form>         
+        </form> 
+          <% if(locals.errorMsg){ %>
+            <span style="color: red;"> <%= errorMsg %> </span>
+          <% } %>         
 
         </login>
     </section>

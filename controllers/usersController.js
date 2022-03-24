@@ -36,30 +36,38 @@ const controlador = {
         res.redirect("/users/login");
 
 	},
-    processLogin: function(req, res) {
-        let errors = validationResult(req);
+    processLogin: function(req, res){
+        const errors = validationResult(req);
+        
+        if(errors.errors.length > 0){
+            res.render("login", {errorsLogin: errors.mapped()})
+        }
 
-        if(errors.isEmpty()){
-            for (let i = 0; i < users.length; i++){
-                if (users[i].email == req.body.email){
-                    if(bcrypt.compareSync(req.body.contrasena, users[i].contrasena)){
-                        var usuarioALoguearse = users[i];
-                        break;
-                    }
-                }
+        const userFound = users.find(function(user){
+            return user.email == req.body.email && bcrypt.compareSync(req.body.contrasena, user.contrasena)
+        })
+
+        if(userFound){
+            //proceso session
+            let user = {
+                id: userFound.id,
+                nombre: userFound.nombre,
+                apellido: userFound.apellido,
+                imagen: userFound.imagen,
             }
 
-            if(usuarioALoguearse == undefined) {
-                return res.render('login', {errors: [
-                    {msg: 'Credenciales invalidas'}
-                ]})
-            }            
-            req.session.usuarioALogueado = usuarioALoguearse;
-            return res.render('login', {user: req.session.usuarioALogueado})
-        } else{
-            return res.render('login', {errors: errors.errors})
+            req.session.usuarioLogueado = user
+
+            if(req.body.remember){
+                res.cookie("user", user.id, {maxAge: 60000 * 24})
+            }
+
+            res.redirect("/")
+
+        }else{
+            res.render("login", {errorMsg: "Error credenciales invalidas"})
         }
-    }    
+    }
 };
 
 module.exports = controlador;
