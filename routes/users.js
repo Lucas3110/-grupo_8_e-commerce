@@ -32,6 +32,6 @@ router.post('/login', validator.login , usersController.processLogin);
 router.get('/register', usersController.register);
 router.post('/', upload.single('imagen'), validator.register ,usersController.processRegister);;
 
-
+router.post("/logout", usersController.logout);
 
 module.exports = router;

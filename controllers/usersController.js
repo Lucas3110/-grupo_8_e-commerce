@@ -71,7 +71,12 @@ const controlador = {
         }else{
             res.render("login", {errorMsg: "Error credenciales invalidas"})
         }
-    }
+    },
+    logout:function(req, res){
+        req.session.destroy();       
+        res.clearCookie("user");
+        res.redirect("/");
+    }        
 };
 
 module.exports = controlador;
