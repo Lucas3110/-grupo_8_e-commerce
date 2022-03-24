@@ -62,7 +62,7 @@ const controlador = {
 
             req.session.usuarioLogueado = user
 
-            if(req.body.remember){
+            if(req.body.recordame){
                 res.cookie("user", user.id, {maxAge: 60000 * 24})
             }
 
