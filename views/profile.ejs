@@ -10,7 +10,7 @@
             <li>Hola <%= userLocals.nombre %> <%= userLocals.apellido %></a></li></li>
             <li>Tu email es <%= userLocals.email %></li>
             <li>Sos: <%= userLocals.categoria %></li>
-            <li>Y tu foto de perfil es: <%= userLocals.imagen %></li>
+            <li>Y tu foto de perfil es: <img src="/images/users/<%= userLocals.imagen %>" class="product_img"></li>
         </ul>           
         <% } %> 
     
