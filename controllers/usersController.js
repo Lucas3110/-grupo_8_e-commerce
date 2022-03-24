@@ -58,6 +58,7 @@ const controlador = {
                 nombre: userFound.nombre,
                 apellido: userFound.apellido,
                 categoria: userFound.categoria,
+                email: userFound.email,
                 imagen: userFound.imagen,
             }
 
