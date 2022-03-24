@@ -1,10 +1,14 @@
 let path = require ("path");
 let fs = require('fs');
 const bcrypt = require('bcryptjs');
-let { check, validationResult, body } = require('express-validator');
-
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const { validationResult } = require('express-validator');
+
+function writeFile(array){
+    const arrayString = JSON.stringify(array, null, 4)
+    fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayString);
+}
 
 const controlador = {
     index: (req, res) => {        
@@ -26,7 +30,7 @@ const controlador = {
             id: users.length + 1,            
             ...req.body,           
             contrasena: bcrypt.hashSync(req.body.contrasena,10),           
-            imagen: req.file ? req.file.filename : "defaultPic"
+            imagen: req.file ? req.file.filename : "defaultPic.jpg"
         }
 
         users.push(newUser);

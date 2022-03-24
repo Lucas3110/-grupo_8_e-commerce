@@ -1,47 +1,47 @@
 [
- {
-  "id": 1,
-  "nombre": "Jessica",
-  "apellido": "Martinez",
-  "email": "jessica@gmail.com",
-  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-  "categoria": "",
-  "imagen": ""
- },
- {
-  "id": 2,
-  "nombre": "Lucas",
-  "apellido": "R",
-  "email": "lucas@gmail.com",
-  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-  "categoria": "",
-  "imagen": ""
- },
- {
-  "id": 3,
-  "nombre": "Joan",
-  "apellido": "",
-  "email": "joan@gmail.com",
-  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-  "categoria": "",
-  "imagen": ""
- },
- {
-  "id": 4,
-  "nombre": "Nicolas",
-  "apellido": "Tracz",
-  "email": "nico@gmail.com",
-  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-  "categoria": "",
-  "imagen": ""
- },
- {
-  "id": 5,
-  "nombre": "test",
-  "apellido": "test",
-  "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW", 
-  "email": "test@gmail.com",
-  "categoria": "Usuario",
-  "imagen": "imagen-1647283343489.jpg"
- }
+    {
+        "id": 1,
+        "nombre": "Jessica",
+        "apellido": "Martinez",
+        "email": "jessica@gmail.com",
+        "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
+        "categoria": "",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Lucas",
+        "apellido": "R",
+        "email": "lucas@gmail.com",
+        "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
+        "categoria": "",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "nombre": "Joan",
+        "apellido": "",
+        "email": "joan@gmail.com",
+        "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
+        "categoria": "",
+        "imagen": ""
+    },
+    {
+        "id": 4,
+        "nombre": "Nicolas",
+        "apellido": "Tracz",
+        "email": "nico@gmail.com",
+        "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
+        "categoria": "",
+        "imagen": ""
+    },
+    {
+        "id": 5,
+        "nombre": "test",
+        "apellido": "test",
+        "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
+        "email": "test@gmail.com",
+        "categoria": "Usuario",
+        "imagen": "imagen-1647283343489.jpg"
+    }    
 ]
