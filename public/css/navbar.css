@@ -1,10 +1,8 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{    /* ===== hay q limpiar los margin 0, top 0  y capaz algun box-sizing: border-box de mas ===== */    
+    
     font-family: 'Poppins', sans-serif;
     transition: all 0.4s ease;;
 }
@@ -17,11 +15,16 @@
     --text-color: #FFF;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     height: 100vh;
     background-color: var(--body-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body.dark{
@@ -30,6 +33,8 @@ body.dark{
     --side-nav: #242526;
     --text-color: #CCC;
     --search-bar: #242526;
+    margin: 0;
+    padding: 0;
 }
 
 nav{
@@ -41,10 +46,15 @@ nav{
     width: 100%;
     background-color: var(--nav-color);
     z-index: 100;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body.dark nav{
     border: 1px solid #393838;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -59,16 +69,18 @@ nav .nav-bar{
     display: flex;
     align-items: center;
     justify-content: space-evenly;  /*le saque el space between */
+    box-sizing: border-box;
 }
 .button-solid {  /*Cerrar sesion boton */
     background-color: #242526;      
-    border: none;
-    padding: 0;        
+    border: none;          
     position: relative;
     font-size: 17px;
     font-weight: 400;
     color: var(--text-color);    
     padding: 10px;
+    
+
 }
 
 .button-solid::before{
@@ -83,10 +95,14 @@ nav .nav-bar{
     background-color: var(--text-color);
     opacity: 0;
     transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
 }
 
 .button-solid li:hover button::before{    
     opacity: 1;
+    margin: 0;
+    padding: 0;
 } /*Cerrar sesion boton termina aca, no puedo hacer q ande el efecto de hover */
 
 nav .nav-bar .sidebarOpen{
@@ -95,6 +111,7 @@ nav .nav-bar .sidebarOpen{
     padding: 5px;
     cursor: pointer;
     display: none;
+    margin: 0;    
 }
 
 nav .nav-bar .logo a{
@@ -102,20 +119,27 @@ nav .nav-bar .logo a{
     font-weight: 500;
     color: var(--text-color);
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu .logo-toggle{
     display: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar .nav-links{
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar .nav-links li{
     margin: 0 5px;
-    list-style: none;
+    list-style: none;    
+    padding: 0;
 }
 
 .nav-links li a{
@@ -125,6 +149,7 @@ nav .nav-bar .logo a{
     color: var(--text-color);
     text-decoration: none;
     padding: 10px;
+    margin: 0;    
 }
 
 .nav-links li a::before{
@@ -139,15 +164,22 @@ nav .nav-bar .logo a{
     background-color: var(--text-color);
     opacity: 0;
     transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li:hover a::before{
     opacity: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-bar .darkLight-searchBox{
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .darkLight-searchBox .dark-light,
@@ -157,7 +189,9 @@ nav .nav-bar .logo a{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;      
+    margin: 0 5px;        
+    padding: 0;  
+    box-sizing: border-box;
 }
 
 .dark-light i,
@@ -167,25 +201,37 @@ nav .nav-bar .logo a{
     font-size: 22px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .searchToggle i.cancel{
     opacity: 0;
     pointer-events: none;
+    margin: 0;
+    padding: 0;
 }
 
 .searchToggle.active i.cancel{
     opacity: 1;
     pointer-events: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .searchToggle.active i.search{
     opacity: 0;
     pointer-events: none;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .searchBox{
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .searchBox .search-field{
@@ -203,12 +249,15 @@ nav .nav-bar .logo a{
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    margin: 0;    
 }
 
 .searchToggle.active ~ .search-field{
     bottom: -74px;
     opacity: 1;
     pointer-events: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .search-field::before{
@@ -221,6 +270,8 @@ nav .nav-bar .logo a{
     background-color: var(--nav-color);
     transform: rotate(-45deg);
     z-index: -1;
+    margin: 0;
+    padding: 0;
 }
 
 .search-field input{
@@ -234,10 +285,14 @@ nav .nav-bar .logo a{
     font-weight: 400;
     color: var(--search-text);
     background-color: var(--search-bar);
+    margin: 0;    
+    
 }
 
 body.dark .search-field input{
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
 .search-field i{
@@ -246,15 +301,21 @@ body.dark .search-field input{
     right: 15px;
     font-size: 22px;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
 body.dark .search-field i{
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 790px) {
     nav .nav-bar .sidebarOpen{
         display: block;
+        margin: 0;
+        padding: 0;
     }
 
     .menu{
@@ -267,15 +328,20 @@ body.dark .search-field i{
         background-color: var(--side-nav);
         z-index: 100;
         transition: all 0.4s ease;
+        margin: 0;    
     }
 
     nav.active .menu{
         left: -0%;
+        margin: 0;
+        padding: 0;
     }
 
     nav.active .nav-bar .navLogo a{
         opacity: 0;
         transition: all 0.3s ease;
+        margin: 0;
+        padding: 0;
     }
 
     .menu .logo-toggle{
@@ -284,21 +350,29 @@ body.dark .search-field i{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 0;
+        padding: 0;
     }
 
     .logo-toggle .siderbarClose{
         color: var(--text-color);
         font-size: 24px;
         cursor: pointer;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-bar .nav-links{
         flex-direction: column;
         padding-top: 30px;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-links li a{
         display: block;
         margin-top: 20px;
+        margin: 0;
+        padding: 0;
     }
 }
