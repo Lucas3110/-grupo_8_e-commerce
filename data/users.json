@@ -5,17 +5,17 @@
         "apellido": "Martinez",
         "email": "jessica@gmail.com",
         "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-        "categoria": "",
+        "categoria": "Artista",
         "imagen": ""
     },
     {
         "id": 2,
         "nombre": "Lucas",
-        "apellido": "R",
+        "apellido": "Rodriguez",
         "email": "lucas@gmail.com",
         "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-        "categoria": "",
-        "imagen": ""
+        "categoria": "Artista",
+        "imagen": "imagen-1648210245860.jpg"
     },
     {
         "id": 3,
@@ -23,7 +23,7 @@
         "apellido": "",
         "email": "joan@gmail.com",
         "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-        "categoria": "",
+        "categoria": "Artista",
         "imagen": ""
     },
     {
@@ -32,7 +32,7 @@
         "apellido": "Tracz",
         "email": "nico@gmail.com",
         "contrasena": "$2a$10$Xr3dpjN/qri8jt9N6ZwRX.qCbXQ5Kui4uWGRvUdjErunhg7Ek0PzW",
-        "categoria": "",
+        "categoria": "Artista",
         "imagen": ""
     },
     {
@@ -43,5 +43,5 @@
         "email": "test@gmail.com",
         "categoria": "Usuario",
         "imagen": "imagen-1647283343489.jpg"
-    }
+    }   
 ]
