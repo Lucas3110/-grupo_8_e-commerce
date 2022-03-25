@@ -33,7 +33,8 @@ body.dark{
 }
 
 nav{
-    position: fixed;
+    position: -webkit-sticky; /* Safari */
+    position: sticky; /* le saque el fixed para q deje de joder el css */
     top: 0;
     left: 0;
     height: 65px;
