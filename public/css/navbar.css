@@ -60,7 +60,13 @@ nav .nav-bar{
     align-items: center;
     justify-content: space-evenly;  /*le saque el space between */
 }
-
+.button-solid {
+    background-color: #242526;
+    color: #CCC;    
+    border: none;
+    padding: 0;
+    background: none;       
+}
 nav .nav-bar .sidebarOpen{
     color: var(--text-color);
     font-size: 25px;
