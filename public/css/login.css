@@ -46,10 +46,18 @@ input{
 }
 
 .registro{
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    padding: 5px;
+    text-decoration: #0F4C75;
+    font-size: 16px;
+    color: white;
+    width: 120px;
+    background-color: #333;
     margin: 10px;
 }
 
-button{
+.boton-login{
     border-radius: 7px;
     -webkit-border-radius: 7px;
     padding: 5px;
@@ -60,7 +68,7 @@ button{
     background-color: #333;
 }
 
-button:hover{ 
+.boton-login:hover{ 
 background-color: #0F4C75;
 transition: all 250ms;
 }
