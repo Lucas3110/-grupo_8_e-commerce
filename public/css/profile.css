@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #0d1117;
+    background-color: #0d1117 !important; /* agregue important pq sino lo pisa el navbar */
 }
 .container{
     width: 100%;
