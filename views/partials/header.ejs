@@ -33,11 +33,10 @@
                     <li><a href="/users/login">Wallet</a></li>
                     <% if(locals.userLocals){ %>
                     <li><a href="/users/profile">Hola <%= userLocals.nombre %></a></li>
-                    <li><a>
+                    <li>
                         <form action="/users/logout" method="post">
                             <button type="submit" class="button-solid" >Cerrar sesion</button>
-                        </form>
-                    </a>
+                        </form>                    
                     </li>                   
                     <% } %> 
                                        

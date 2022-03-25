@@ -12,8 +12,7 @@
 
 /* ===== Colours ===== */
 :root{
-    --body-color: #E4E9F7;
-    --nav-color: #4070F4;
+    --body-color: #E4E9F7;    
     --side-nav: #010718;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
@@ -60,13 +59,35 @@ nav .nav-bar{
     align-items: center;
     justify-content: space-evenly;  /*le saque el space between */
 }
-.button-solid {
-    background-color: #242526;
-    color: #CCC;    
+.button-solid {  /*Cerrar sesion boton */
+    background-color: #242526;      
     border: none;
-    padding: 0;
-    background: none;       
+    padding: 0;        
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);    
+    padding: 10px;
 }
+
+.button-solid::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.button-solid li:hover button::before{    
+    opacity: 1;
+} /*Cerrar sesion boton termina aca, no puedo hacer q ande el efecto de hover */
+
 nav .nav-bar .sidebarOpen{
     color: var(--text-color);
     font-size: 25px;
