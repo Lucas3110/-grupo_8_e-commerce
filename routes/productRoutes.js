@@ -2,12 +2,13 @@ let express = require('express');
 
 let router = express.Router();
 const productController = require('../controllers/productController');
+const authMiddleware = require("../middlewares/authMiddleware");
 
 router.get('/', productController.product);
 
-router.get('/cart', productController.cart);
+router.get('/cart', authMiddleware, productController.cart);
 
-router.get('/create', productController.create);
+router.get('/create', authMiddleware , productController.create);
 //router.get('/productDetail', productController.productDetail);
 
 /*** GET ONE PRODUCT ***/ 
@@ -18,7 +19,7 @@ router.get('/:id', productController.detail);
 router.post('/', productController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', productController.edit); 
+router.get('/:id/edit', authMiddleware, productController.edit); 
 router.patch('/:id/edit', productController.update); 
  
 
