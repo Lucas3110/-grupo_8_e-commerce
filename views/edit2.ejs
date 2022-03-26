@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- head -->
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/edit2.css" />
+    <title>Edit2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- header -->
+    <%- include('./partials/header') %>
+    <div class="container">
+      <div class="title">Editar producto</div>
+      <form action="/product" method="POST">
+        <div class="productDetails">
+          <div class="inputBox">
+            <span class="details">Selecciona una imagen</span>
+            <input type="file" id="imagen" name="imagen" />
+            <div class="button">
+              <input type="submit" name="submit" value="Upload" />
+            </div>
+          </div>
+
+          <div class="inputBox">
+            <span class="details">Nombre de producto</span>
+            <input
+              type="text"
+              placeholder="Ingresa el nombre de tú producto"
+              required
+            />
+          </div>
+
+          <div class="inputBox">
+            <span class="details">Precio</span>
+            <input type="number" placeholder="0.0001ETH">
+          </div>
+
+          <div class="inputBox">
+            <span class="details">Elige la colección</span>
+            <select id="coleccion" name="coleccion" class="control">
+              <option value="none" selected disabled hidden>
+                <%= productToEdit.coleccion %>
+              </option>
+              <option value="Genshin">Genshin</option>
+              <option value="Van-Gogh">Van Gogh</option>
+              <option value="Punks">Punks</option>
+              <option value="Magic">Magic</option>
+            </select>
+          </div>
+        </div>
+        <div class="description">
+          <div class="detailText">
+            <span class="details">Descripción</span>
+            <textarea name="description" id="description" cols="30" rows="10">
+ <%= productToEdit.descripcion %> </textarea
+            >
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Guardar" />
+        </div>
+        <div class="button">
+            <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="button">Borrar</button>
+            </form>
+        </div>
+      <!-- ESTE ES EL BOTON DE BORRAR DEL FORMULARIO ANTERIOR. ESTÁ COMENTADO PORQUE NO ME TOMA EL ESTILO DE LOS OTROS BOTONES-->   
+      </form>
+    </div>
+    <!-- footer -->
+    <%- include('./partials/footer') %>
+  </body>
+</html>

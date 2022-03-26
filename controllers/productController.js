@@ -57,7 +57,7 @@ const controlador = {
 	edit: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('edit', {productToEdit})
+		res.render('edit2', {productToEdit})
 	},
 	// Update - Method to update
 	update: (req, res) => {
