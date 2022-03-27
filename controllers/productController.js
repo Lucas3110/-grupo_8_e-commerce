@@ -44,7 +44,7 @@ const controlador = {
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
-			/*image: 'default-image.png'*/
+			/*image: 'default-image.png' aca hay q agregar el multer*/
 		};
 		products.push(newProduct)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
@@ -67,7 +67,7 @@ const controlador = {
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
-			image: productToEdit.image,
+			imagen: productToEdit.imagen,
 		};
 		
 		let newProducts = products.map(product => {
