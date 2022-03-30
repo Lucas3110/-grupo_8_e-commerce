@@ -17,23 +17,19 @@
           <div class="inputBox">
             <span class="details">Selecciona una imagen</span>
             <input type="file" id="imagen" name="imagen" />
-            <div class="button">
-              <input type="submit" name="submit" value="Upload" />
-            </div>
+            <!--<div class="button">
+              <input type="submit" name="submit" value="Upload">
+            </div>-->
           </div>
 
           <div class="inputBox">
             <span class="details">Nombre de producto</span>
-            <input
-              type="text"
-              placeholder="Ingresa el nombre de tú producto"
-              required
-            />
+            <input type="text" placeholder="Ingresa el nombre de tú producto" name="nombre">
           </div>
 
           <div class="inputBox">
             <span class="details">Precio</span>
-            <input type="number" placeholder="0.0001ETH">
+            <input type="number" placeholder="0.0001ETH" name="precio">
           </div>
 
           <div class="inputBox">
@@ -52,20 +48,18 @@
         <div class="description">
           <div class="detailText">
             <span class="details">Descripción</span>
-            <textarea name="description" id="description" cols="30" rows="10">
+            <textarea name="descripcion" id="description" cols="30" rows="10">
  <%= productToEdit.descripcion %> </textarea
             >
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Guardar" />
+          <input type="submit" value="Guardar">
         </div>
         <div class="button">
-            <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="button">Borrar</button>
-            </form>
+          <input type="#" action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" value="BORRAR x_x">
         </div>
-      <!-- ESTE ES EL BOTON DE BORRAR DEL FORMULARIO ANTERIOR. ESTÁ COMENTADO PORQUE NO ME TOMA EL ESTILO DE LOS OTROS BOTONES-->   
+        <!-- ESTE ES EL BOTON DE BORRAR DEL FORMULARIO ANTERIOR. ESTÁ COMENTADO PORQUE NO ME TOMA EL ESTILO DE LOS OTROS BOTONES-->
       </form>
     </div>
     <!-- footer -->
