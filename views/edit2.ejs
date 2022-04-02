@@ -56,10 +56,10 @@
         <div class="button">
           <input type="submit" value="Guardar">
         </div>
-        <div class="button">
-          <input type="#" action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" value="BORRAR x_x">
+        <div class="button"><!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO EDIT-->
+          <input type="submit" action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" value="BORRAR x_x">
         </div>
-        <!-- ESTE ES EL BOTON DE BORRAR DEL FORMULARIO ANTERIOR. ESTÁ COMENTADO PORQUE NO ME TOMA EL ESTILO DE LOS OTROS BOTONES-->
+        
       </form>
     </div>
     <!-- footer -->
