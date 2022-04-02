@@ -17,5 +17,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Collection = sequelize.define(alias, cols, config)
 
-    return Collection
+    Collection.associate = function(models){
+        Collection.hasMany(models.Product, {
+            foreignKey:"collection_id",
+            as:"collection"
+            });
+
+        return Collection
+    }
 }

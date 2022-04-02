@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         collection_id: {
             type: dataTypes.INT
-        }
+        },        
     };
     let config = {
         tableName: 'products',
@@ -28,5 +28,12 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Product = sequelize.define(alias, cols, config)
 
-    return Product
+    Product.associate = function(models){
+        Product.belongsTo(models.Collection, {
+            foreignKey:"collection_id",
+            as:"collection"
+            });
+
+        return Product
+    }
 }

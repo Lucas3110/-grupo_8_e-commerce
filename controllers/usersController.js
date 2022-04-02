@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
+const db = require('../database/models'); // aca agregamos lo de db
+const sequelize = db.sequelize; // aca agregamos lo de db
 
 function writeFile(array){
     const arrayString = JSON.stringify(array, null, 4)
@@ -25,20 +27,17 @@ const controlador = {
         if(errors.errors.length > 0){
            return res.render("register", {errors: errors.mapped()})
         }
+        db.User.create({
+            name: req.body.name,
+            last_name: req.body.last_name,
+            password: req.body.password,           
+            email: req.body.email,
+            //image: req.file ? req.file.filename : "defaultPic.jpg"          
+        })
+        .then(movie => {
+            res.redirect('/usersList');
+         })
         
-        const newUser = {
-            id: users.length + 1,            
-            ...req.body,           
-            contrasena: bcrypt.hashSync(req.body.contrasena,10),           
-            imagen: req.file ? req.file.filename : "defaultPic.jpg"
-        }
-
-        users.push(newUser);
-
-        writeFile(users)
-
-        res.redirect("/users/login");
-
 	},
     processLogin: function(req, res){
         const errors = validationResult(req);

@@ -13,42 +13,31 @@
     <form action="/users" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="form-control">
             <label>Nombre de usuario</label>
-            <input type="text" name="nombre" class="control">
-            <% if(locals.errors && locals.errors.nombre){ %>
-                <span style="color: red;"> <%= errors.nombre.msg  %> </span>
-              <%} %> 
+            <input type="text" name="name" class="control">            
         </div>
         <div class="form-control">
             <label>Apellido de usuario</label>
-            <input type="text" name="apellido" class="control">
-            <% if(locals.errors && locals.errors.apellido){ %>
-                <span style="color: red;"> <%= errors.apellido.msg  %> </span>
-              <%} %> 
+            <input type="text" name="last_name" class="control">            
         </div>
         <div class="form-control">
             <label>Contraseña</label>
-            <input type="password" name="contrasena" class="control">
-            <% if(locals.errors && locals.errors.contrasena){ %>
-                <span style="color: red;"> <%= errors.contrasena.msg  %> </span>
-              <% } %> 
+            <input type="password" name="password" class="control">            
         </div>       
         <div class="form-control">
             <label>e-mail</label>
-            <input type="email" name="email" class="control" placeholder="example01@gmail.com">
-            <% if(locals.errors && locals.errors.email){ %>
-                <span style="color: red;"> <%= errors.email.msg  %> </span>
-              <% } %> 
+            <input type="email" name="email" class="control" placeholder="example01@gmail.com">            
         </div>
-        <div class="form-control">
+        <!--  <div class="form-control">
                 <label>Que quieres hacer?</label>
-                <select id="categoria" name="categoria" class="control">
+                <select id="categoria" name="category" class="control">
                     <option value="Usuario">Comprar</option>
                     <option value="Artista">Vender</option>                                      
                 </select>
-        </div>            
+        </div>   -->
+                 
         <div class="form-control">
             <label>Imagen de perfil</label>
-            <input type="file" name="imagen" class="control">
+            <input type="file" name="image" class="control">
         </div>
         <button type="reset" class="button">Borrar</button>
         <button type="submit" class="button">Guardar</button>

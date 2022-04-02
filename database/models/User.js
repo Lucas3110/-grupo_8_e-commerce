@@ -22,14 +22,22 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         category_id: {
-            type: dataTypes.INTEGER
-        }
+            type: dataTypes.INT
+        },             
     };
     let config = {
         tableName: 'users',
         timestamps: false
     };
     const User = sequelize.define(alias, cols, config)
+
+    User.associate = function(models){
+        User.belongsTo(models.Category, {
+            foreignKey:"category_id",
+            as:"category"
+            });
+    
+    }
 
     return User
 }

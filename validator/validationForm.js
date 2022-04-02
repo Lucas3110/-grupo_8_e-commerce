@@ -24,8 +24,8 @@ const validator = {
             .isEmail()
             .withMessage("formato de email incorrecto")
             .bail()
-            .custom(function(value){
-                let users = findAll()
+            /* .custom(function(value){
+                let users = findAll()   Habria q pasar esta logica a sequelize
                 //busco al usuario
                 let userFound = users.find(function(user){
                     return user.email == value
@@ -34,17 +34,17 @@ const validator = {
                 if(userFound){
                     throw new Error("Email ya registrado!");
                 }
-                //sino devuelvo true
+                //sino devuelvo true 
                 return true
-            })
+            }) */
             ,
-        check("nombre")
+        check("name")
             .notEmpty()
             .withMessage("Nombre vacio"),
-        check("apellido")
+        check("last_name")
             .notEmpty()
             .withMessage("Apellido vacio"),
-        check("contrasena")
+        check("password")
             .notEmpty()
             .withMessage("Contraseña vacio")
     ]
