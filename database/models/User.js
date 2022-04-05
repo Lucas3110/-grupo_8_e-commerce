@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         email: {
             type: dataTypes.STRING
-        }                 
+        }                 //le sacamos la foreing key de aca
     };
     let config = {
         tableName: 'users',

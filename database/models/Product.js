@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         image: {
             type: dataTypes.STRING
-        }
+        } //le sacamos la foreing key de aca
          
     };
     let config = {
