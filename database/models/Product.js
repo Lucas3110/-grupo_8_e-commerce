@@ -17,10 +17,8 @@ module.exports = (sequelize, dataTypes) => {
         },
         image: {
             type: dataTypes.STRING
-        },
-        collection_id: {
-            type: dataTypes.INT
-        },        
+        }
+         
     };
     let config = {
         tableName: 'products',
@@ -34,6 +32,7 @@ module.exports = (sequelize, dataTypes) => {
             as:"collection"
             });
 
-        return Product
+        
     }
+    return Product
 }

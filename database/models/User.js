@@ -20,10 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         email: {
             type: dataTypes.STRING
-        },
-        category_id: {
-            type: dataTypes.INT
-        },             
+        }                 
     };
     let config = {
         tableName: 'users',

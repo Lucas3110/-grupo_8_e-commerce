@@ -23,6 +23,7 @@ module.exports = (sequelize, dataTypes) => {
             as:"collection"
             });
 
-        return Collection
+       
     }
+    return Collection
 }
