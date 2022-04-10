@@ -1,5 +1,7 @@
 let path = require ("path");
 let fs = require('fs');
+const db = require('../database/models'); // aca agregamos lo de db
+const sequelize = db.sequelize; // aca agregamos lo de db
 
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -7,9 +9,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 
-const coleccionJo = products.filter(function(product){
+/*const coleccionJo = products.filter(function(product){
 	return product.coleccion == 'Genshin'
-})
+}) 
 const coleccionL = products.filter(function(product){
 	return product.coleccion == 'Punks'
 })
@@ -18,15 +20,15 @@ const coleccionN = products.filter(function(product){
 })
 const coleccionJ = products.filter(function(product){
 	return product.coleccion == 'Van-Gogh' 
-})
+}) */
 const controlador = {    
     product: (req, res) => {        
-        res.render('product', {
-            coleccionJo,
-            coleccionL,
-            coleccionN,
-            coleccionJ           
-        });   
+        db.Product.findAll({
+			include: [{association: "collection"}]
+		})  
+            .then(products => {
+                res.render('product', {products})
+            })
     },
     // Detail - Detail from one product
 	detail: (req, res) => {

@@ -19,45 +19,48 @@
             <h3>Genshin</h3>
             
                 <div class="products"> <!-- main section div.products -->
-                    <% coleccionJo.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
-                        100)).toFixed(0) %>
-                    <article>
-                        <a href="/product/<%= product.id %>" style="text-decoration: none;">
-                            <img src="/images/<%= product.imagen %>" class="product_img">
+                    <% for(let i = 0; i < products[i].collection.name; i++) { %>
+                    <article> <!-- hay que hacer for anidado? rompe sino
+                                    estamos tratando de q se vea solo la coleccion JO -->
+                        
+                        <a href="/product/<%= products[i].id %>" style="text-decoration: none;">
+                            <img src="/images/<%= products[i].image %>" class="product_img">
                             <div class="main-article">
                                 <p class="price"><img alt="ETH" class="Price--eth-icon"
-                                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= products[i].price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= product.descripcion %>
+                                    <%= products[i].description %>                                    
+                                    <%= products[i].collection.name %> <!-- esto funciona pero en el for no -->
+                                    
                                 </h4>
                             </div>
                         </a>
                     </article>
-                    <% }) %>
+                    <% } %>
                 </div>
                
         </section>
+        
         <section class="last-visit">
             <h3>Van Gogh</h3>
             
-                <div class="products"> <!-- main section div.products -->
-                    <% coleccionJ.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
-                        100)).toFixed(0) %>
+                <div class="products"> 
+                    <% for(let i = 0; i < products.length; i++) { %>
                     <article>
-                        <a href="/product/<%= product.id %>" style="text-decoration: none;">
-                            <img src="/images/<%= product.imagen %>" class="product_img">
+                        <a href="/product/<%= products[i].id %>" style="text-decoration: none;">
+                            <img src="/images/<%= products[i].image %>" class="product_img">
                             <div class="main-article">
                                 <p class="price"><img alt="ETH" class="Price--eth-icon"
-                                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
+                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= products[i].price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= product.descripcion %>
+                                    <%= products[i].description %>
                                 </h4>
                             </div>
                         </a>
                     </article>
-                    <% }) %>
+                    <% } %>
                 </div>
                
         </section>
@@ -65,48 +68,46 @@
 
         <section class="last-visit">
            <h3>Punks</h3>
-            <div class="products"> <!-- main section div.products -->
-                <% coleccionL.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
-                    100)).toFixed(0) %>
-                <article>
-                    <a href="/product/<%= product.id %>" style="text-decoration: none;">
-                        <img src="/images/<%= product.imagen %>" class="product_img">
-                        <div class="main-article">
-                            <p class="price"><img alt="ETH" class="Price--eth-icon"
-                            src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
-                            </p>
-                            <h4 class="description">
-                                <%= product.descripcion %>
-                            </h4>
-                        </div>
-                    </a>
-                </article>
-                <% }) %>
+            <div class="products"> 
+                <% for(let i = 0; i < products.length; i++) { %>
+                    <article>
+                        <a href="/product/<%= products[i].id %>" style="text-decoration: none;">
+                            <img src="/images/<%= products[i].image %>" class="product_img">
+                            <div class="main-article">
+                                <p class="price"><img alt="ETH" class="Price--eth-icon"
+                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= products[i].price %>
+                                </p>
+                                <h4 class="description">
+                                    <%= products[i].description %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                    <% } %>
             </div>
         </section>
 
         <section class="last-visit">
             <h3>Magic</h3>
-             <div class="products"> <!-- main section div.products -->
-                 <% coleccionN.forEach(function(product){ let finalPrice=(product.precio * ((100 - product.discount) /
-                     100)).toFixed(0) %>
-                 <article>
-                     <a href="/product/<%= product.id %>" style="text-decoration: none;">
-                         <img src="/images/<%= product.imagen %>" class="product_img">
-                         <div class="main-article">
-                             <p class="price"><img alt="ETH" class="Price--eth-icon"
-                             src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.precio %>
-                             </p>
-                             <h4 class="description">
-                                 <%= product.descripcion %>
-                             </h4>
-                         </div>
-                     </a>
-                 </article>
-                 <% }) %>
+             <div class="products">
+                  <% for(let i = 0; i < products.length; i++) { %>
+                    <article>
+                        <a href="/product/<%= products[i].id %>" style="text-decoration: none;">
+                            <img src="/images/<%= products[i].image %>" class="product_img">
+                            <div class="main-article">
+                                <p class="price"><img alt="ETH" class="Price--eth-icon"
+                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= products[i].price %>
+                                </p>
+                                <h4 class="description">
+                                    <%= products[i].description %>
+                                </h4>
+                            </div>
+                        </a>
+                    </article>
+                    <% } %>
              </div>
          </section>
-
+        
     </main>
 
     <footer>
