@@ -56,10 +56,12 @@
         <div class="button">
           <input type="submit" value="Guardar">
         </div>
-        <div class="button"><!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO EDIT-->
+      <!-- <div class="button">
           <input type="submit" action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" value="BORRAR x_x">
-        </div>
-        
+        </div>--> <!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO 'EDIT'-->
+        <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" class="button">
+          <button type="submit" class="button">Borrar</button>
+      </form>  
       </form>
     </div>
     <!-- footer -->
