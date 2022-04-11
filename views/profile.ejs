@@ -29,8 +29,8 @@
                 <div class="front-face">
                     <img src="/images/users/<%= userLocals.imagen %>">  
                 </div>
-                <div class="back-face">
-                    <h2><%= userLocals.nombre %></h2>                           
+                <div class="back-face">  <!--esto lo estoy trayendo de los middlewares, no del detail -->
+                    <h2><%= userLocals.nombre %></h2>                          
                     <p><%= userLocals.email %></p>
                     <p><%= userLocals.categoria %></p>
                     <div class="social-media">
@@ -48,8 +48,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- footer por alguna razon no funciona sale todo feo --> 
+    </div>   
     <!-- footer --> <%- include('./partials/footer') %>      
 </body>
 </html>
