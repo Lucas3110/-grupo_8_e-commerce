@@ -43,14 +43,19 @@ const controlador = {
     }, 
     // Create -  Method to store
 	store: (req, res) => {
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
+		db.Product.create({
+            name:req.body.name,
+            price:req.body.price,
+            description:req.body.description,
+            image:'default-image.png',//req.body.image, lo dejo asi hasta q tenga multer
+            collection_id: req.body.collection_id,
+        })
+        .then(function(){
+           return res.redirect("/")
+        });    
 			/*image: 'default-image.png' aca hay q agregar el multer*/
-		};
-		products.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/');
+		
+		
 	},
     cart: (req, res) => {        
         res.render("cart");        
