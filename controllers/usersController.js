@@ -32,10 +32,11 @@ const controlador = {
             last_name: req.body.last_name,
             password: req.body.password,           
             email: req.body.email,
-            image: req.file ? req.file.filename : "defaultPic.jpg"          
+            image: req.file ? req.file.filename : "defaultPic.jpg",
+            category_id: req.body.category_id         
         })
         .then(movie => {
-            res.redirect('/usersList');
+            res.redirect('/users/login');
          })
         
 	},

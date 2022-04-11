@@ -4,7 +4,8 @@ const path = require("path");
 
 function findAll(){
     const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")));
-    return users;
+    return users; //donde uso este users? lo copie de algo de mati creo
+                    //sera por esto q no funca el errores ahora?
 }
 
 const validator = {
