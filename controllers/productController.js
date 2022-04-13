@@ -56,7 +56,7 @@ const controlador = {
             name:req.body.name,
             price:req.body.price,
             description:req.body.description,
-            image:"users/defaultPic.jpg" ,//req.body.image, lo dejo asi hasta q tenga multer
+            image: "users/defaultPic.jpg" ,//req.file.filename, no me anda el multer
             collection_id: req.body.collection_id,
         })
         .then(function(){
