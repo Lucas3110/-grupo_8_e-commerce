@@ -38,7 +38,9 @@ const controlador = {
 
     // Detail - Detail from one product
 	detail: (req, res) => {
-		db.Product.findByPk(req.params.id)
+		db.Product.findByPk(req.params.id, {
+            include: [{association: "collection"}] //esto es para saber el collection name en el detail
+        })       
         .then(function(product){
             res.render('detail', {product});
         });
