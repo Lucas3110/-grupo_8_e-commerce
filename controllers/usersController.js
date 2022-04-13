@@ -47,36 +47,37 @@ const controlador = {
         
         if(errors.errors.length > 0){
             res.render("login", {errorsLogin: errors.mapped()})
-        }/* 
+        } 
+        /* SERIA algo asi? me falta alguna coma y me tira error no puedo hacerlo andar
          const userFound = db.User.findOne({
             where: { email: req.body.email, password: req.body.password }
             
             }).then(function(userFound) {
 
-                if(userFound !== null) {                   
+                if(userFound){
+                    //proceso session
                     let user = {
-                    id: userFound.id,
-                    nombre: userFound.nombre,
-                    apellido: userFound.apellido,
-                    categoria: userFound.categoria,
-                    email: userFound.email,
-                    imagen: userFound.imagen,
-                }
-
-                req.session.usuarioLogueado = user
-
-                if(req.body.recordame){
-                    res.cookie("user", user.id, {maxAge: 60000 * 24})
-                }
-
-                res.redirect("/")
-
-                }
-                else {
+                        id: userFound.id,
+                        nombre: userFound.nombre,
+                        apellido: userFound.apellido,
+                        categoria: userFound.categoria,
+                        email: userFound.email,
+                        imagen: userFound.imagen,
+                    }
+        
+                    req.session.usuarioLogueado = user
+        
+                    if(req.body.recordame){
+                        res.cookie("user", user.id, {maxAge: 60000 * 24})
+                    }
+        
+                    res.redirect("/")
+        
+                }else{
                     res.render("login", {errorMsg: "Error credenciales invalidas"})
                 }
-            } 
-*/
+            } */
+
        
         const userFound = users.find(function(user){
             return user.email == req.body.email && bcrypt.compareSync(req.body.contrasena, user.contrasena)
