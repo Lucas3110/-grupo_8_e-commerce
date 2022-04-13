@@ -42,13 +42,42 @@ const controlador = {
          })
         
 	},
-    processLogin: function(req, res){
+    processLogin: function(req, res){   
         const errors = validationResult(req);
         
         if(errors.errors.length > 0){
             res.render("login", {errorsLogin: errors.mapped()})
-        }
+        }/* 
+         const userFound = db.User.findOne({
+            where: { email: req.body.email, password: req.body.password }
+            
+            }).then(function(userFound) {
 
+                if(userFound !== null) {                   
+                    let user = {
+                    id: userFound.id,
+                    nombre: userFound.nombre,
+                    apellido: userFound.apellido,
+                    categoria: userFound.categoria,
+                    email: userFound.email,
+                    imagen: userFound.imagen,
+                }
+
+                req.session.usuarioLogueado = user
+
+                if(req.body.recordame){
+                    res.cookie("user", user.id, {maxAge: 60000 * 24})
+                }
+
+                res.redirect("/")
+
+                }
+                else {
+                    res.render("login", {errorMsg: "Error credenciales invalidas"})
+                }
+            } 
+*/
+       
         const userFound = users.find(function(user){
             return user.email == req.body.email && bcrypt.compareSync(req.body.contrasena, user.contrasena)
         })
@@ -74,7 +103,7 @@ const controlador = {
 
         }else{
             res.render("login", {errorMsg: "Error credenciales invalidas"})
-        }
+        }  
     },
     profile:(req, res) => {        
         res.render("profile");  
