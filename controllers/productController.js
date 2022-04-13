@@ -5,12 +5,35 @@ const sequelize = db.sequelize; // aca agregamos lo de db
 
 const controlador = {    
     product: (req, res) => {        
-        db.Product.findAll({
-			include: [{association: "collection"}]
-		})  
-            .then(products => {
-                res.render('product', {products})
-            })
+        let coleccionJo = db.Product.findAll({
+            where: {
+             collection_id: 1,
+            },
+            include:[{association: "collection"}]
+        })
+        let coleccionJ = db.Product.findAll({ 
+            where: {
+             collection_id: 2,
+            },
+            include:[{association: "collection"}]
+        })
+        let coleccionL = db.Product.findAll({ //AGREGAR ESTOS 2 DE ABAJO EN PRCT VIEW CUANDO ESTEN EN LA DB
+            where: {
+             collection_id: 3,
+            },
+            include:[{association: "collection"}]
+        }) 
+        let coleccionN = db.Product.findAll({
+            where: {
+             collection_id: 4,
+            },
+            include:[{association: "collection"}]
+        })   
+            Promise.all([coleccionJo, coleccionJ, coleccionL, coleccionN])
+            .then(function([coleccionJo, coleccionJ, coleccionL, coleccionN]){
+                return res.render('product', {coleccionJo, coleccionJ, coleccionL, coleccionN})
+            })               
+            
     },
 
     // Detail - Detail from one product
