@@ -17,7 +17,7 @@ const controlador = {
             },
             include:[{association: "collection"}]
         })
-        let coleccionL = db.Product.findAll({ //AGREGAR ESTOS 2 DE ABAJO EN PRCT VIEW CUANDO ESTEN EN LA DB
+        let coleccionL = db.Product.findAll({ //AGREGAR ESTOS 2 DE ABAJO EN PRDCT VIEW CUANDO ESTEN EN LA DB
             where: {
              collection_id: 3,
             },

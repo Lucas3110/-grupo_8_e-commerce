@@ -24,13 +24,15 @@ const controlador = {
     },
     processRegister: function(req, res){
         const errors = validationResult(req)
+
         if(errors.errors.length > 0){
            return res.render("register", {errors: errors.mapped()})
         }
+        
         db.User.create({
             name: req.body.name,
             last_name: req.body.last_name,
-            password: req.body.password,           
+            password: bcrypt.hashSync(req.body.password,10),           
             email: req.body.email,
             image: req.file ? req.file.filename : "defaultPic.jpg",
             category_id: req.body.category_id         

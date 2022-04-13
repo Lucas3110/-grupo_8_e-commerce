@@ -32,7 +32,7 @@ router.post('/login', validator.login , usersController.processLogin);
 
 /*** CREATE A USER ***/ 
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/', upload.single('image'), validator.register ,usersController.processRegister);
+router.post('/', upload.single('image'), validator.register , usersController.processRegister);
 
 /*** PROFILE PAGE ***/ 
 router.get('/profile', authMiddleware , usersController.profile);
