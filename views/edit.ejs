@@ -23,9 +23,8 @@
         
         <div class="form-control">
             <label for="coleccion">Elige la colección:</label>
-            <select id="coleccion" name="collection_id">    <!-- no se como hacer q imprima esto
-                                                                estoy tratando de entrar en el alias -->
-            <option value="none" selected disabled hidden><%= productToEdit.collection %></option>
+            <select id="coleccion" name="collection_id">    
+            <option value="none" selected disabled hidden><%= productToEdit.collection.name %></option>
             <option value="1">Genshin</option>
             <option value="2">Van Gogh</option>
             <option value="3">Punks</option>

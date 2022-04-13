@@ -50,7 +50,7 @@ const controlador = {
         } 
         /* SERIA algo asi? me falta alguna coma y me tira error no puedo hacerlo andar
          const userFound = db.User.findOne({
-            where: { email: req.body.email, password: req.body.password }
+            where: { email: req.body.email, password: bcrypt.compareSync(req.body.password) }
             
             }).then(function(userFound) {
 

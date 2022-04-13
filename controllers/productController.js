@@ -70,10 +70,12 @@ const controlador = {
 
     // Update - Form to edit
 	edit: function(req, res) {
-		let productToEdit = db.Product.findByPk(req.params.id)
+		let productToEdit = db.Product.findByPk(req.params.id ,{
+            include: [{association: "collection"}]
+        })
 			.then(productToEdit => {
 				res.render('edit', {productToEdit})
-			})       
+			});            
 	},
 
 	// Update - Method to update
