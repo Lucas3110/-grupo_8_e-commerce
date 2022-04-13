@@ -58,11 +58,11 @@ const controlador = {
                     //proceso session
                     let user = {
                         id: userFound.id,
-                        nombre: userFound.nombre,
-                        apellido: userFound.apellido,
-                        categoria: userFound.categoria,
+                        nombre: userFound.name,
+                        apellido: userFound.last_name,
+                        categoria: userFound.category.name,  //creo q seria asi para acceder el FK
                         email: userFound.email,
-                        imagen: userFound.imagen,
+                        imagen: userFound.image,
                     }
         
                     req.session.usuarioLogueado = user
