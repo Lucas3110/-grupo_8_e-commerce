@@ -10,7 +10,7 @@ const validator = {
         check("email")
             .notEmpty()
             .withMessage("Email vacio"),
-        check("contrasena")
+        check("password")
             .notEmpty()
             .withMessage("Contraseña vacio")
     ],
