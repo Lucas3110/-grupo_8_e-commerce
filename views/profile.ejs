@@ -1,18 +1,3 @@
-<!-- ------ESTO SOLO TIENE LA LOGICA PARA TRAER LOS DATOS----------------
-
-    <% if(locals.userLocals){ %>       
-       <ul>
-            <li>Hola <%= userLocals.nombre %> <%= userLocals.apellido %></a></li></li>
-            <li>Tu email es <%= userLocals.email %></li>
-            <li>Sos: <%= userLocals.categoria %></li>
-            <li>Y tu foto de perfil es: <img src="/images/users/<%= userLocals.imagen %>" class="product_img"></li>
-        </ul>           
-        <% } %> 
-
---> 
-
-
-<!-- ESTE PROFILE lo agregue para ver que onda como quedaba si queres tunealo--> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,8 +14,8 @@
                 <div class="front-face">
                     <img src="/images/users/<%= userLocals.imagen %>">  
                 </div>
-                <div class="back-face">
-                    <h2><%= userLocals.nombre %></h2>                           
+                <div class="back-face">  <!--esto lo estoy trayendo de los middlewares, no del detail -->
+                    <h2><%= userLocals.nombre %></h2>                          
                     <p><%= userLocals.email %></p>
                     <p><%= userLocals.categoria %></p>
                     <div class="social-media">
@@ -48,8 +33,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- footer por alguna razon no funciona sale todo feo --> 
+    </div>   
     <!-- footer --> <%- include('./partials/footer') %>      
 </body>
 </html>

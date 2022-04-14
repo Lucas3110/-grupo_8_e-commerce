@@ -1,18 +1,16 @@
 const { check, body } = require("express-validator")
 const fs = require("fs");
 const path = require("path");
+const db = require('../database/models'); // aca agregamos lo de db
 
-function findAll(){
-    const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")));
-    return users;
-}
+
 
 const validator = {
     login:[
         check("email")
             .notEmpty()
             .withMessage("Email vacio"),
-        check("contrasena")
+        check("password")
             .notEmpty()
             .withMessage("Contraseña vacio")
     ],
@@ -25,7 +23,14 @@ const validator = {
             .withMessage("formato de email incorrecto")
             .bail()
             .custom(function(value){
-                let users = findAll()
+                return db.User.findOne({where: {email: value}}).then(function(res){
+                    if(res){
+                        return Promise.reject('Email ya registrado');
+                    }                              
+                })
+            }),
+
+                /* VIEJO CODIGO
                 //busco al usuario
                 let userFound = users.find(function(user){
                     return user.email == value
@@ -34,17 +39,17 @@ const validator = {
                 if(userFound){
                     throw new Error("Email ya registrado!");
                 }
-                //sino devuelvo true
+                //sino devuelvo true 
                 return true
-            })
-            ,
-        check("nombre")
+            }) */
+            
+        check("name")
             .notEmpty()
             .withMessage("Nombre vacio"),
-        check("apellido")
+        check("last_name")
             .notEmpty()
             .withMessage("Apellido vacio"),
-        check("contrasena")
+        check("password")
             .notEmpty()
             .withMessage("Contraseña vacio")
     ]
