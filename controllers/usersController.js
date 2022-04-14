@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
+const db = require('../database/models'); // aca agregamos lo de db
+const sequelize = db.sequelize; // aca agregamos lo de db
 
 function writeFile(array){
     const arrayString = JSON.stringify(array, null, 4)
@@ -22,31 +24,62 @@ const controlador = {
     },
     processRegister: function(req, res){
         const errors = validationResult(req)
+
         if(errors.errors.length > 0){
            return res.render("register", {errors: errors.mapped()})
         }
         
-        const newUser = {
-            id: users.length + 1,            
-            ...req.body,           
-            contrasena: bcrypt.hashSync(req.body.contrasena,10),           
-            imagen: req.file ? req.file.filename : "defaultPic.jpg"
-        }
-
-        users.push(newUser);
-
-        writeFile(users)
-
-        res.redirect("/users/login");
-
+        db.User.create({
+            name: req.body.name,
+            last_name: req.body.last_name,
+            password: bcrypt.hashSync(req.body.password,10),           
+            email: req.body.email,
+            image: req.file ? req.file.filename : "defaultPic.jpg",
+            category_id: req.body.category_id         
+        })
+        .then(movie => {
+            res.redirect('/users/login');
+         })
+        
 	},
-    processLogin: function(req, res){
+    processLogin: function(req, res){   
         const errors = validationResult(req);
         
         if(errors.errors.length > 0){
             res.render("login", {errorsLogin: errors.mapped()})
-        }
+        } 
+         
+            db.User.findOne({
+            where: { email: req.body.email},
+            include:[{association: "category"}]
+            
+            }).then(function(userFound) {
+                               
+                if(userFound && bcrypt.compareSync(req.body.password, userFound.password)){
+                    //proceso session
+                    let user = {
+                        id: userFound.id,
+                        nombre: userFound.name,
+                        apellido: userFound.last_name,
+                        categoria: userFound.category.name,  //creo q seria asi para acceder el FK
+                        email: userFound.email,
+                        imagen: userFound.image,
+                    }
+        
+                    req.session.usuarioLogueado = user
+        
+                    if(req.body.recordame){
+                        res.cookie("user", user.id, {maxAge: 60000 * 24})
+                    }
+                    
+                    res.redirect("/")
+        
+                }else{
+                    res.render("login", {errorMsg: "Error credenciales invalidas"})
+                }
+            }) 
 
+       /*
         const userFound = users.find(function(user){
             return user.email == req.body.email && bcrypt.compareSync(req.body.contrasena, user.contrasena)
         })
@@ -72,7 +105,7 @@ const controlador = {
 
         }else{
             res.render("login", {errorMsg: "Error credenciales invalidas"})
-        }
+        }  */
     },
     profile:(req, res) => {        
         res.render("profile");  
