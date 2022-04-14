@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head --> <%- include('./partials/head') %>  
+    <link rel="stylesheet" href="/css/edit.css">
+    <title>Edit</title>
+</head>
+<body>
+    
+    <!-- header --> <%- include('./partials/header') %> 
+   
+   <main>
+    <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
+        <div class="form-control">
+            <label for="name">Nombre de producto </label>
+            <input type="text" id="name" name="name" class="control" value="<%= productToEdit.name %>">
+        </div>
+
+        <div class="form-control">
+            <label for="imagen">Selecciona una imagen:</label>
+            <input type="file" id="imagen" name="image">            
+        </div>        
+
+        <div class="form-control">
+            <label for="descripcion">Descripción </label>
+           <textarea name="description" id="descripcion" cols="30" rows="10"><%= productToEdit.description %></textarea>
+        </div>
+       
+      
+        <div class="form-control">
+            <label for="precio">Precio</label><br>
+            <input type="number" id="precio" name="price" value="<%= productToEdit.price %>"<br>
+        </div>
+
+        <button type="submit" class="button">Guardar</button> 
+             
+        
+    </form>
+
+    <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="button">Borrar</button>
+    </form>  
+   </main>
+    <!-- footer --> <%- include('./partials/footer') %> 
+</body>
+</html>

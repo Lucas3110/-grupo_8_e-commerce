@@ -78,34 +78,7 @@ const controlador = {
                     res.render("login", {errorMsg: "Error credenciales invalidas"})
                 }
             }) 
-
-       /*
-        const userFound = users.find(function(user){
-            return user.email == req.body.email && bcrypt.compareSync(req.body.contrasena, user.contrasena)
-        })
-
-        if(userFound){
-            //proceso session
-            let user = {
-                id: userFound.id,
-                nombre: userFound.nombre,
-                apellido: userFound.apellido,
-                categoria: userFound.categoria,
-                email: userFound.email,
-                imagen: userFound.imagen,
-            }
-
-            req.session.usuarioLogueado = user
-
-            if(req.body.recordame){
-                res.cookie("user", user.id, {maxAge: 60000 * 24})
-            }
-
-            res.redirect("/")
-
-        }else{
-            res.render("login", {errorMsg: "Error credenciales invalidas"})
-        }  */
+       
     },
     profile:(req, res) => {        
         res.render("profile");  
