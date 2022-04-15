@@ -38,12 +38,37 @@ const controlador = {
 
     // Detail - Detail from one product
 	detail: (req, res) => {
-		db.Product.findByPk(req.params.id, {
+		let product = db.Product.findByPk(req.params.id, {
             include: [{association: "collection"}] //esto es para saber el collection name en el detail
-        })       
-        .then(function(product){
-            res.render('detail', {product});
-        });
+        })        
+        let coleccionJo = db.Product.findAll({
+            where: {
+             collection_id: 1,
+            },
+            include:[{association: "collection"}]
+        })
+        let coleccionJ = db.Product.findAll({ 
+            where: {
+             collection_id: 2,
+            },
+            include:[{association: "collection"}]
+        })
+        let coleccionL = db.Product.findAll({ 
+            where: {
+             collection_id: 3,
+            },
+            include:[{association: "collection"}]
+        }) 
+        let coleccionN = db.Product.findAll({
+            where: {
+             collection_id: 4,
+            },
+            include:[{association: "collection"}]
+        })   
+            Promise.all([coleccionJo, coleccionJ, coleccionL, coleccionN, product])
+            .then(function([coleccionJo, coleccionJ, coleccionL, coleccionN, product]){
+                return res.render('detail', {coleccionJo, coleccionJ, coleccionL, coleccionN, product})
+            })               
     },    
 
     create: (req, res) => {        
@@ -56,7 +81,7 @@ const controlador = {
             name:req.body.name,
             price:req.body.price,
             description:req.body.description,
-            image: "users/defaultPic.jpg" ,//req.file.filename, no me anda el multer
+            image: "users/defaultPic.jpg" ,
             collection_id: req.body.collection_id,
         })
         .then(function(){
