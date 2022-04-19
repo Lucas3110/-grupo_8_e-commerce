@@ -12,7 +12,7 @@
     <%- include('./partials/header') %>
     <div class="container">
       <div class="title">Editar producto</div>
-      <form action="/product" method="POST">
+      <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" enctype="multipart/form-data">
         <div class="productDetails">
           <div class="inputBox">
             <span class="details">Selecciona una imagen</span>
