@@ -1,18 +1,3 @@
-<!-- ------ESTO SOLO TIENE LA LOGICA PARA TRAER LOS DATOS----------------
-
-    <% if(locals.userLocals){ %>       
-       <ul>
-            <li>Hola <%= userLocals.nombre %> <%= userLocals.apellido %></a></li></li>
-            <li>Tu email es <%= userLocals.email %></li>
-            <li>Sos: <%= userLocals.categoria %></li>
-            <li>Y tu foto de perfil es: <img src="/images/users/<%= userLocals.imagen %>" class="product_img"></li>
-        </ul>           
-        <% } %> 
-
---> 
-
-
-<!-- ESTE PROFILE lo agregue para ver que onda como quedaba si queres tunealo--> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +29,7 @@
                             <i class="fab fa-instagram"></i>
                         </a>                  
                     </div>
-                    <a href="/product" class="btn">Collections</a>
+                    <a href="/users/<%= userLocals.id %>/userEdit" class="btn">Edit</a>
                 </div>
             </div>
         </div>

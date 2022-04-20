@@ -1,31 +1,34 @@
 const fs = require("fs");
 const path = require("path");
+const db = require('../database/models'); 
 
-function findAll(){
-    const users = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/users.json")));
-    return users;
-}
+
 
 function recordame (req, res , next){
+
     if(!req.session.usuarioLogueado && req.cookies.user){
-        let users = findAll()
-        const usuarioCookies = users.find(function(user){
-            return user.id == req.cookies.user
+
+        db.User.findByPk(req.cookies.user,{
+           include:["category"] 
         })
-
-        let user = {
-            id: usuarioCookies.id,
-            nombre: usuarioCookies.nombre,
-            apellido: usuarioCookies.apellido,
-            categoria: usuarioCookies.categoria,
-            email: usuarioCookies.email,
-            imagen: usuarioCookies.imagen,
-        }
-
-        req.session.usuarioLogueado = user;
-
-        return next()
-
+        .then(function(userRemember){
+           if(userRemember){
+            let user = {
+                id: userRemember.id,
+                nombre: userRemember.nombre,
+                apellido: userRemember.apellido,
+                categoria: userRemember.category.name,
+                email: userRemember.email,
+                imagen: userRemember.image,
+            }
+    
+            req.session.usuarioLogueado = user;
+    
+            return next()                
+            }else{
+             return next()
+            }           
+        })    
     }else{
         return next()
     }

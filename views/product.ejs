@@ -28,7 +28,7 @@
                                     src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= coleccionJo[i].price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= coleccionJo[i].description %>                               
+                                    <%= coleccionJo[i].name %>                               
                                 </h4>
                             </div>
                         </a>
@@ -51,7 +51,7 @@
                                     src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= coleccionJ[i].price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= coleccionJ[i].description %>
+                                    <%= coleccionJ[i].name %>
                                 </h4>
                             </div>
                         </a>
@@ -65,16 +65,16 @@
         <section class="last-visit">
            <h3>Punks</h3>
             <div class="products"> 
-                <% for(let i = 0; i < coleccionJo.length; i++) { %>
+                <% for(let i = 0; i < coleccionL.length; i++) { %>
                     <article>
-                        <a href="/product/<%= coleccionJo[i].id %>" style="text-decoration: none;">
-                            <img src="/images/<%= coleccionJo[i].image %>" class="product_img">
+                        <a href="/product/<%= coleccionL[i].id %>" style="text-decoration: none;">
+                            <img src="/images/<%= coleccionL[i].image %>" class="product_img">
                             <div class="main-article">
                                 <p class="price"><img alt="ETH" class="Price--eth-icon"
-                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= coleccionJo[i].price %>
+                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= coleccionL[i].price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= coleccionJo[i].description %>
+                                    <%= coleccionL[i].name %>
                                 </h4>
                             </div>
                         </a>
@@ -86,16 +86,16 @@
         <section class="last-visit">
             <h3>Magic</h3>
              <div class="products">
-                  <% for(let i = 0; i < coleccionJo.length; i++) { %>
+                  <% for(let i = 0; i < coleccionN.length; i++) { %>
                     <article>
-                        <a href="/product/<%= coleccionJo[i].id %>" style="text-decoration: none;">
-                            <img src="/images/<%= coleccionJo[i].image %>" class="product_img">
+                        <a href="/product/<%= coleccionN[i].id %>" style="text-decoration: none;">
+                            <img src="/images/<%= coleccionN[i].image %>" class="product_img">
                             <div class="main-article">
                                 <p class="price"><img alt="ETH" class="Price--eth-icon"
-                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= coleccionJo[i].price %>
+                                    src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= coleccionN[i].price %>
                                 </p>
                                 <h4 class="description">
-                                    <%= coleccionJo[i].description %>
+                                    <%= coleccionN[i].name %>
                                 </h4>
                             </div>
                         </a>

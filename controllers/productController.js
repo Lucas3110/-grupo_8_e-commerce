@@ -38,12 +38,14 @@ const controlador = {
 
     // Detail - Detail from one product
 	detail: (req, res) => {
-		db.Product.findByPk(req.params.id, {
+		let product = db.Product.findByPk(req.params.id, {
             include: [{association: "collection"}] //esto es para saber el collection name en el detail
-        })       
-        .then(function(product){
-            res.render('detail', {product});
-        });
+        })        
+        let random = db.Product.findAll({ order: sequelize.literal('rand()'), limit: 4 })
+            Promise.all([product, random])
+            .then(function([product, random]){
+                return res.render('detail', {product, random})
+            })               
     },    
 
     create: (req, res) => {        
@@ -56,7 +58,7 @@ const controlador = {
             name:req.body.name,
             price:req.body.price,
             description:req.body.description,
-            image: "users/defaultPic.jpg" ,//req.file.filename, no me anda el multer
+            image: req.file.filename,
             collection_id: req.body.collection_id,
         })
         .then(function(){

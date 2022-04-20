@@ -2,52 +2,54 @@
 <html lang="en">
 
 <head>
-  <!-- head --> <%- include('./partials/head') %>  
-  <link rel="stylesheet" href="/css/detail.css">
-  <script src="https://kit.fontawesome.com/a25985a1fb.js" crossorigin="anonymous"></script>
-  <title>Name NFT</title>
+  <!-- head -->
+  <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/detail.css">
+    <script src="https://kit.fontawesome.com/a25985a1fb.js" crossorigin="anonymous"></script>
+    <title>Name NFT</title>
 </head>
 
 <body>
   <main>
     <%- include('./partials/header') %>
-    <div class="small-container single-product">
-      <div class="row">
-        <div class="col-2">
-          <img src="/images/<%= product.image %>" alt="" width="100%">  
-        </div>
-        <div class="col-2">  <!-- como imrpimo el collectionid name?? -->
-          <p><%= product.collection.name %><i class="fa-solid fa-square-check"></i></p>   
-          <h1><%= product.name %></h1>  
-          <h4><img alt="ETH" class="Price--eth-icon" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"> <%= product.price %></h4> 
-          <a href="" class="btn">Add to cart</a>
-          <h3><%= product.description %></h3>               
+      <div class="small-container single-product">
+        <div class="row">
+          <div class="col-2">
+            <img src="/images/<%= product.image %>" alt="" width="100%">
+          </div>
+          <div class="col-2">
+            <h1>
+              <%= product.name %>
+            </h1>
+            <h4><img alt="ETH" class="Price--eth-icon"
+                src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg">
+              <%= product.price %>
+            </h4>
+            <a href="" class="btn">Add to cart</a>
+            <h3>
+              <%= product.description %>
+            </h3>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="small-container">
-      <h2>Tambien podria interesarte</h2>
-      <div class="row">
-        <div class="col-4">
-          <img src="/images/coleccionJo/genshin4.jpg" alt="">
-          <h4>Genshin 4</h4>
-        </div>
-        <div class="col-4">
-          <img src="/images/coleccionJo/genshin2.jpg" alt="">
-          <h4>Genshin 2</h4>
-        </div>
-        <div class="col-4">
-          <img src="/images/coleccionJo/genshin3.jpg" alt="">
-          <h4>Genshin 3</h4>
-        </div>
-        <div class="col-4">
-          <img src="/images/coleccionJo/genshin5.jpg" alt="">
-          <h4>Genshin 5</h4>
+      <div class="small-container">
+        <h2>Tambien podria interesarte</h2>
+        <div class="row">
+          <% random.forEach(function(product){ %>
+            <div class="col-4">
+              <a href="/product/<%= product.id %>">
+                <img src="/images/<%= product.image %>">
+              </a>
+              <h4>
+                <%= product.name %>
+              </h4>
+            </div>
+          <% }) %>
         </div>
       </div>
-    </div>
-    <%- include('./partials/footer') %> 
+      <%- include('./partials/footer') %>
   </main>
 </body>
+
 </html>
