@@ -41,35 +41,10 @@ const controlador = {
 		let product = db.Product.findByPk(req.params.id, {
             include: [{association: "collection"}] //esto es para saber el collection name en el detail
         })        
-        let coleccionJo = db.Product.findAll({
-            where: {
-             collection_id: 1,
-            },
-            include:[{association: "collection"}]
-        })
-        let coleccionJ = db.Product.findAll({ 
-            where: {
-             collection_id: 2,
-            },
-            include:[{association: "collection"}]
-        })
-        let coleccionL = db.Product.findAll({ 
-            where: {
-             collection_id: 3,
-            },
-            include:[{association: "collection"}]
-        }) 
-        let coleccionN = db.Product.findAll({
-            where: {
-             collection_id: 4,
-            },
-            include:[{association: "collection"}]
-        })
         let random = db.Product.findAll({ order: sequelize.literal('rand()'), limit: 4 })
-
-            Promise.all([coleccionJo, coleccionJ, coleccionL, coleccionN, product, random])
-            .then(function([coleccionJo, coleccionJ, coleccionL, coleccionN, product, random]){
-                return res.render('detail', {coleccionJo, coleccionJ, coleccionL, coleccionN, product, random})
+            Promise.all([product, random])
+            .then(function([product, random]){
+                return res.render('detail', {product, random})
             })               
     },    
 

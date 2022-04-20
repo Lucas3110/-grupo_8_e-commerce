@@ -29,8 +29,6 @@
             <h3>
               <%= product.description %>
             </h3>
-            <br>
-            <h3>Creador</h3>
           </div>
         </div>
       </div>
@@ -38,15 +36,16 @@
       <div class="small-container">
         <h2>Tambien podria interesarte</h2>
         <div class="row">
-          
-            <% random.forEach(function(product){ %>
-              <div class="col-4">
+          <% random.forEach(function(product){ %>
+            <div class="col-4">
               <a href="/product/<%= product.id %>">
                 <img src="/images/<%= product.image %>">
               </a>
-              <h4><%= product.name %></h4>
+              <h4>
+                <%= product.name %>
+              </h4>
             </div>
-            <% }) %>
+          <% }) %>
         </div>
       </div>
       <%- include('./partials/footer') %>
