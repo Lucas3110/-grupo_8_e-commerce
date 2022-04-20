@@ -64,10 +64,12 @@ const controlador = {
              collection_id: 4,
             },
             include:[{association: "collection"}]
-        })   
-            Promise.all([coleccionJo, coleccionJ, coleccionL, coleccionN, product])
-            .then(function([coleccionJo, coleccionJ, coleccionL, coleccionN, product]){
-                return res.render('detail', {coleccionJo, coleccionJ, coleccionL, coleccionN, product})
+        })
+        let random = db.Product.findAll({ order: sequelize.literal('rand()'), limit: 4 })
+
+            Promise.all([coleccionJo, coleccionJ, coleccionL, coleccionN, product, random])
+            .then(function([coleccionJo, coleccionJ, coleccionL, coleccionN, product, random]){
+                return res.render('detail', {coleccionJo, coleccionJ, coleccionL, coleccionN, product, random})
             })               
     },    
 
