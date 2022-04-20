@@ -10,36 +10,38 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
-    <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
+    <form action="/users/<%= userToEdit.id %>/userEdit?_method=PATCH" method="POST" class="register-form">
         <div class="form-control">
-            <label for="name">Nombre de producto </label>
-            <input type="text" id="name" name="name" class="control" value="<%= productToEdit.name %>">
+            <label for="name">Nombre </label>
+            <input type="text" id="name" name="name" class="control" value="<%= userToEdit.name %>">
+        </div>
+
+        <div class="form-control">
+            <label for="name">Apellido </label>
+            <input type="text" id="last_name" name="last_name" class="control" value="<%= userToEdit.last_name %>">
+        </div>
+
+        <div class="form-control">
+            <label for="name">Contraseña </label>
+            <input type="password" id="password" name="password" class="control" value="<%= userToEdit.password %>">
+        </div>
+
+        <div class="form-control">
+            <label for="name">Email </label>
+            <input type="email" id="email" name="email" class="control" value="<%= userToEdit.email %>">
         </div>
 
         <div class="form-control">
             <label for="imagen">Selecciona una imagen:</label>
-            <input type="file" id="imagen" name="image">            
-        </div>        
-
-        <div class="form-control">
-            <label for="descripcion">Descripción </label>
-           <textarea name="description" id="descripcion" cols="30" rows="10"><%= productToEdit.description %></textarea>
-        </div>
-       
+            <input type="file" id="imagen" name="image" value="<%= userToEdit.image %>">            
+        </div>             
       
-        <div class="form-control">
-            <label for="precio">Precio</label><br>
-            <input type="number" id="precio" name="price" value="<%= productToEdit.price %>"<br>
-        </div>
-
+       
         <button type="submit" class="button">Guardar</button> 
              
         
     </form>
-
-    <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
-        <button type="submit" class="button">Borrar</button>
-    </form>  
+    
    </main>
     <!-- footer --> <%- include('./partials/footer') %> 
 </body>
