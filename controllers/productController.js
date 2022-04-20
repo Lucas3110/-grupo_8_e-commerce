@@ -58,7 +58,7 @@ const controlador = {
             name:req.body.name,
             price:req.body.price,
             description:req.body.description,
-            image: "users/defaultPic.jpg" ,
+            image: req.file.filename,
             collection_id: req.body.collection_id,
         })
         .then(function(){
