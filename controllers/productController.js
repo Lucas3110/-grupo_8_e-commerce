@@ -2,6 +2,9 @@ let path = require ("path");
 let fs = require('fs');
 const db = require('../database/models'); // aca agregamos lo de db
 const sequelize = db.sequelize; // aca agregamos lo de db
+const { Op } = require("sequelize");
+
+
 
 const controlador = {    
     product: (req, res) => {        
@@ -46,7 +49,19 @@ const controlador = {
             .then(function([product, random]){
                 return res.render('detail', {product, random})
             })               
-    },    
+    },
+    
+    search: (req, res) => {
+        const { findP } = req.query;//viene de la form del header
+        db.Product.findAll({
+            where: {
+                name: { [Op.like]: '%'+ findP +'%' }
+            }
+        })
+        .then(resultados => {
+            res.render('search', {resultados})
+        })
+    },
 
     create: (req, res) => {        
         res.render("create");        
