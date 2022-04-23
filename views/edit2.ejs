@@ -12,56 +12,51 @@
     <%- include('./partials/header') %>
     <div class="container">
       <div class="title">Editar producto</div>
-      <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" enctype="multipart/form-data">
+      <form action="/product/<%= productToEdit.id %>/edit2?_method=PATCH" method="POST" class="register-form">
         <div class="productDetails">
           <div class="inputBox">
             <span class="details">Selecciona una imagen</span>
-            <input type="file" id="imagen" name="imagen" />
-            <!--<div class="button">
-              <input type="submit" name="submit" value="Upload">
-            </div>-->
+            <input type="file" id="imagen" name="image">
           </div>
 
           <div class="inputBox">
             <span class="details">Nombre de producto</span>
-            <input type="text" placeholder="Ingresa el nombre de tú producto" name="nombre">
+            <input type="text" name="name" value="<%= productToEdit.name %>">
           </div>
 
           <div class="inputBox">
             <span class="details">Precio</span>
-            <input type="number" placeholder="0.0001ETH" name="precio">
+            <input type="number" id="precio" name="price" value="<%= productToEdit.price %>"<br>
           </div>
 
           <div class="inputBox">
             <span class="details">Elige la colección</span>
-            <select id="coleccion" name="coleccion" class="control">
-              <option value="none" selected disabled hidden>
-                <%= productToEdit.coleccion %>
-              </option>
-              <option value="Genshin">Genshin</option>
-              <option value="Van-Gogh">Van Gogh</option>
-              <option value="Punks">Punks</option>
-              <option value="Magic">Magic</option>
+            <select id="coleccion" name="collection_id" class="control">   
+                <option value="none" selected disabled hidden><%= productToEdit.collection.name %></option>
+                <option value="1">Genshin</option>
+                <option value="2">Van Gogh</option>
+                <option value="3">Punks</option>
+                <option value="4">Magic</option>
             </select>
           </div>
         </div>
         <div class="description">
           <div class="detailText">
             <span class="details">Descripción</span>
-            <textarea name="descripcion" id="description" cols="30" rows="10">
- <%= productToEdit.descripcion %> </textarea
-            >
+            <textarea name="description" id="description" cols="30" rows="10" value=""><%= productToEdit.description %></textarea>
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Guardar">
+          <input type="submit" value="Guardar" />
         </div>
-      <!-- <div class="button">
+        <div class="button">
           <input type="submit" action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" value="BORRAR x_x">
-        </div>--> <!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO 'EDIT'-->
-        <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" class="button">
+        </div>
+        <!---->
+        <!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO 'EDIT'-->
+        <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
           <button type="submit" class="button">Borrar</button>
-      </form>  
+        </form> 
       </form>
     </div>
     <!-- footer -->
