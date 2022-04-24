@@ -54,9 +54,11 @@
         </div>
         <!---->
         <!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO 'EDIT'-->
-        <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
-          <button type="submit" class="button">Borrar</button>
-        </form> 
+        
+      </form>
+
+      <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="button">Borrar</button>
       </form>
     </div>
     <!-- footer -->
