@@ -22,7 +22,7 @@ body{
     color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
-    margin: 4rem 0 0 0;
+    margin: 20rem 0 0 0;
 
 }
 
@@ -117,8 +117,7 @@ form .button{
     margin: 45px 0;
 }
 
-form .button input,
-.botonAzul{
+form .button input{
     height: 100%;
     width: 100%;
     outline: none;

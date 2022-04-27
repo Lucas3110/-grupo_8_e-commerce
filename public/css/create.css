@@ -7,7 +7,8 @@
 }
 
 body{
-    /*display: flex;*/
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -22,7 +23,7 @@ body{
     color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
-    margin: 30px;
+    margin: 20rem 0 0 0;
 }
 
 .container .title{
