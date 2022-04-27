@@ -6,7 +6,8 @@
 }
 
 body{
-    /*display: flex;*/
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -21,7 +22,8 @@ body{
     color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
-    margin: 30px;
+    margin: 4rem 0 0 0;
+
 }
 
 .container .title{
@@ -115,7 +117,8 @@ form .button{
     margin: 45px 0;
 }
 
-form .button input{
+form .button input,
+.botonAzul{
     height: 100%;
     width: 100%;
     outline: none;

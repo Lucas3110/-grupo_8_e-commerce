@@ -49,16 +49,13 @@
         <div class="button">
           <input type="submit" value="Guardar" />
         </div>
-        <div class="button">
-          <input type="submit" action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST" value="BORRAR x_x">
-        </div>
-        <!---->
-        <!--PROBAR ENCERRANDO LA LOGICA EN UN FORMULARIO, COMO EN EL FORMULARIO 'EDIT'-->
         
       </form>
 
       <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
-        <button type="submit" class="button">Borrar</button>
+        <div class="button">
+          <input type="submit" value="BORRAR x_x">
+        </div>
       </form>
     </div>
     <!-- footer -->
