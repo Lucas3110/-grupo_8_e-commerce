@@ -39,7 +39,7 @@ router.get('/profile', authMiddleware , usersController.profile);
 
 /*** EDIT PAGE ***/ 
 router.get('/:id/userEdit', authMiddleware , usersController.edit); 
-router.patch('/:id/userEdit', validator.register, usersController.update); 
+router.patch('/:id/userEdit', upload.single('image'), validator.register, usersController.update); 
 
 router.post("/logout", usersController.logout);
 
