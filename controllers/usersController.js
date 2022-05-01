@@ -96,7 +96,7 @@ const controlador = {
         db.User.update({
             name: req.body.name,
             last_name: req.body.last_name,
-            password: req.body.password,          
+            password: req.body.password ? bcrypt.hashSync(req.body.password,10) :  db.User.password,          
             email: req.body.email,
             image: req.file ? req.file.filename : "defaultPic.jpg",
         }, {
