@@ -193,7 +193,6 @@ h2{
 .final{
   display: flex;
   margin-top:26px; /* con esto bajas el footer para abajo pero rompe la home*/
-  justify-content: center;
   align-items: center;    
   justify-content: space-evenly;
   color: white;

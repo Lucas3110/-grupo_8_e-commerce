@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <!-- head --> <%- include('./partials/head') %> 
-    <link rel="stylesheet" href="/css/create.css"> 
-    <title>Create</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- head -->
+    <%- include('./partials/head') %>
+        <link rel="stylesheet" href="/css/create.css">
+        <title>Create</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<!-- header -->
+<%- include('./partials/header') %>
 <body>
-    <!-- header --> <%- include('./partials/header') %> 
-   <div class="container">
-       <div class="title">Nuevo producto</div>
-           <form action="/product" method="POST" enctype="multipart/form-data"> 
-           <div class="productDetails">
-               
-               <div class="inputBox">                   
-                   <span class="details">Selecciona una imagen</span>
-                   <input type="file" name="image">                   
-               </div>
+    
+        <div class="container">
+            <div class="title">Nuevo producto</div>
+            <form action="/product" method="POST" enctype="multipart/form-data">
+                <div class="productDetails">
 
-               <div class="inputBox">
-                   <span class="details">Nombre de producto</span>
-                   <input type="text" name="name" placeholder="Ingresa el nombre de tú producto" required>
-               </div>
+                    <div class="inputBox">
+                        <span class="details">Selecciona una imagen</span>
+                        <input type="file" name="image">
+                    </div>
 
-               <div class="inputBox">
-                   <span class="details">Precio</span>
-                   <input type="number" name="price" placeholder="0.0001ETH">
-               </div>
-                <div class="inputBox">
-                   <span class="details">Elige la colección</span>
-                   <select id="coleccion" name="collection_id" class="control">
-                        <option value="1">Genshin</option>
-                        <option value="2">Van Gogh inspiration</option>
-                        <option value="3">Punks</option>
-                        <option value="4">Magic</option>
-                   </select>     
-               </div> 
-               
-           </div>
-           <div class="description">
-             <div class="detailText">
-                <span class="details">Descripción</span>
-                <textarea name="description" id="description" cols="30" rows="10"> </textarea>
-             </div>
-           </div>
-           <div class="button">
-               <input type="submit" value="Guardar">
-           </div>
-           <div class="button">
-            <input type="reset" value="Cancelar">
+                    <div class="inputBox">
+                        <span class="details">Nombre de producto</span>
+                        <input type="text" name="name" placeholder="Ingresa el nombre de tú producto" required>
+                    </div>
+
+                    <div class="inputBox">
+                        <span class="details">Precio</span>
+                        <input type="number" name="price" placeholder="0.0001ETH">
+                    </div>
+                    <div class="inputBox">
+                        <span class="details">Elige la colección</span>
+                        <select id="coleccion" name="collection_id" class="control">
+                            <option value="1">Genshin</option>
+                            <option value="2">Van Gogh inspiration</option>
+                            <option value="3">Punks</option>
+                            <option value="4">Magic</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="description">
+                    <div class="detailText">
+                        <span class="details">Descripción</span>
+                        <textarea name="description" id="description" cols="30" rows="10"> </textarea>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Guardar">
+                </div>
+                <div class="button">
+                    <input type="reset" value="Cancelar">
+                </div>
+            </form>
         </div>
-       </form>
-   </div>
-    <!-- footer --> <%- include('./partials/footer') %> 
+       
+
 </body>
+ <!-- footer -->
+ <%- include('./partials/footer') %>
+
 </html>
