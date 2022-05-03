@@ -6,11 +6,9 @@
 }
 
 body{
-    display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    align-items: center;
     padding-left: 10px;
     background: linear-gradient(135deg, #0d1117, #0F4C75);
 }
@@ -22,8 +20,9 @@ body{
     color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
-    margin: 20rem 0 0 0;
-
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
 }
 
 .container .title{
