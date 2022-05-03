@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,17 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="/css/navbar.css">
-        
+
     <!-- ===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!--<title>Responsive Navigation Menu Bar</title>-->
 </head>
+
 <body>
     <nav>
         <div class="nav-bar">
-            <i class='bx bx-menu sidebarOpen' ></i>
+            <i class='bx bx-menu sidebarOpen'></i>
             <span class="logo navLogo"><a href="/product">Unforged</a></span>
 
             <div class="menu">
@@ -32,81 +34,69 @@
                     <li><a href="/product/create">Sell</a></li>
                     <li><a href="/users/login">Wallet</a></li>
                     <% if(locals.userLocals){ %>
-                    <li><a href="/users/profile">Hola <%= userLocals.nombre %></a></li>
-                    <li>
-                        <form action="/users/logout" method="post">
-                            <button type="submit" class="button-solid" >Cerrar sesion</button>
-                        </form>                    
-                    </li>                   
-                    <% } %> 
-                                       
+                        <li><a href="/users/profile">Hola <%= userLocals.nombre %></a></li>
+                        <li>
+                            <form action="/users/logout" method="post">
+                                <button type="submit" class="button-solid">Cerrar sesion</button>
+                            </form>
+                        </li>
+                        <% } %>
+
                 </ul>
             </div>
 
-            <div class="darkLight-searchBox">                
+            <div class="darkLight-searchBox">
 
                 <div class="searchBox">
-                   <div class="searchToggle">
-                    <i class='bx bx-x cancel'></i>
-                    <i class='bx bx-search search'></i>
-                   </div>
-
-                   <div class="search-field">
-                    <form action="/product/search">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+                    <form action="/product/search" class="search-field">
                         <input type="text" placeholder="Search..." name="findP">
-                        <input type="submit" value="Search">
-                        <i class='bx bx-search'></i>
+                        <button type="submit"><i class='bx bx-search'></i></button>
                     </form>
-                </div>
                 </div>
             </div>
         </div>
     </nav>
 
-<script>
+    <script>
 
-const body = document.querySelector("body"),
-      nav = document.querySelector("nav"),
-      modeToggle = document.querySelector(".dark-light"), // borrar esto dsp de hardcod el css
-      searchToggle = document.querySelector(".searchToggle"),
-      sidebarOpen = document.querySelector(".sidebarOpen"),
-      siderbarClose = document.querySelector(".siderbarClose");
-// tengo q borrar este codigo de abajo y hardcodear el color dark en css
-      
-            body.classList.add("dark");
-          
+        const body = document.querySelector("body"),
+            nav = document.querySelector("nav"),
+            modeToggle = document.querySelector(".dark-light"), // borrar esto dsp de hardcod el css
+            searchToggle = document.querySelector(".searchToggle"),
+            sidebarOpen = document.querySelector(".sidebarOpen"),
+            siderbarClose = document.querySelector(".siderbarClose");
+        // tengo q borrar este codigo de abajo y hardcodear el color dark en css
 
+        body.classList.add("dark");
 
 
-// js code to toggle search box
-        searchToggle.addEventListener("click" , () =>{
-        searchToggle.classList.toggle("active");
-      });
- 
-      
-//   js code to toggle sidebar
-sidebarOpen.addEventListener("click" , () =>{
-    nav.classList.add("active");
-});
 
-body.addEventListener("click" , e =>{
-    let clickedElm = e.target;
 
-    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
-        nav.classList.remove("active");
-    }
-});
+        // js code to toggle search box
+        searchToggle.addEventListener("click", () => {
+            searchToggle.classList.toggle("active");
+        });
 
-</script>
+
+        //   js code to toggle sidebar
+        sidebarOpen.addEventListener("click", () => {
+            nav.classList.add("active");
+        });
+
+        body.addEventListener("click", e => {
+            let clickedElm = e.target;
+
+            if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
+                nav.classList.remove("active");
+            }
+        });
+
+    </script>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
- 
