@@ -10,7 +10,7 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
-    <form action="/users/<%= userToEdit.id %>/userEdit?_method=PATCH" method="POST" class="register-form">
+    <form action="/users/<%= userToEdit.id %>/userEdit?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="form-control">
             <label for="name">Nombre </label>
             <input type="text" id="name" name="name" class="control" value="<%= userToEdit.name %>">
@@ -23,7 +23,7 @@
 
         <div class="form-control">
             <label for="name">Contraseña </label>
-            <input type="password" id="password" name="password" class="control" value="<%= userToEdit.password %>">
+            <input type="password" id="password" name="password" class="control">
         </div>
 
         <div class="form-control">

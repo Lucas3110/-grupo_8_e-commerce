@@ -79,7 +79,6 @@ main section h3{
 
 article div.main-article{
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     align-items: baseline;  
     position: relative;

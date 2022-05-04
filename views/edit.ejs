@@ -10,7 +10,7 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
-    <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
+    <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="form-control">
             <label for="name">Nombre de producto </label>
             <input type="text" id="name" name="name" class="control" value="<%= productToEdit.name %>">
@@ -20,6 +20,7 @@
             <label for="imagen">Selecciona una imagen:</label>
             <input type="file" id="imagen" name="image">            
         </div>
+        
         
         <div class="form-control">
             <label for="coleccion">Elige la colección:</label>
