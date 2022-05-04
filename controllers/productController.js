@@ -91,7 +91,7 @@ const controlador = {
             include: [{association: "collection"}]
         })
 			.then(productToEdit => {
-				res.render('edit2', {productToEdit})
+				res.render('edit', {productToEdit})
 			});            
 	},
 

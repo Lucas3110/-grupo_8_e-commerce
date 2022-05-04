@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- head --> <%- include('./partials/head') %>  
-    <link rel="stylesheet" href="/css/edit.css">
-    <title>Edit</title>
-</head>
-<body>
-    
-    <!-- header --> <%- include('./partials/header') %> 
-   
-   <main>
-    <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-form">
-        <div class="form-control">
-            <label for="name">Nombre de producto </label>
-            <input type="text" id="name" name="name" class="control" value="<%= productToEdit.name %>">
-        </div>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- head -->
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/edit.css" />
+    <title>Edit2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- header -->
+    <%- include('./partials/header') %>
+    <div class="container">
+      <div class="title">Editar producto</div>
+      <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
+        <div class="productDetails">
+          <div class="inputBox">
+            <span class="details">Selecciona una imagen</span>
+            <input type="file" id="imagen" name="image">
+          </div>
 
-        <div class="form-control">
-            <label for="imagen">Selecciona una imagen:</label>
-            <input type="file" id="imagen" name="image">            
-        </div>
-        
-        
-        <div class="form-control">
-            <label for="coleccion">Elige la colección:</label>
-            <select id="coleccion" name="collection_id">    
-            <option value="none" selected disabled hidden><%= productToEdit.collection.name %></option>
-            <option value="1">Genshin</option>
-            <option value="2">Van Gogh</option>
-            <option value="3">Punks</option>
-            <option value="4">Magic</option>
-            </select>
-        </div>
+          <div class="inputBox">
+            <span class="details">Nombre de producto</span>
+            <input type="text" name="name" value="<%= productToEdit.name %>">
+          </div>
 
-        <div class="form-control">
-            <label for="descripcion">Descripción </label>
-           <textarea name="description" id="descripcion" cols="30" rows="10"><%= productToEdit.description %></textarea>
-        </div>
-       
-      
-        <div class="form-control">
-            <label for="precio">Precio</label><br>
+          <div class="inputBox">
+            <span class="details">Precio</span>
             <input type="number" id="precio" name="price" value="<%= productToEdit.price %>"<br>
+          </div>
+
+          <div class="inputBox">
+            <span class="details">Elige la colección</span>
+            <select id="coleccion" name="collection_id" class="control">   
+                <option value="none" selected disabled hidden><%= productToEdit.collection.name %></option>
+                <option value="1">Genshin</option>
+                <option value="2">Van Gogh</option>
+                <option value="3">Punks</option>
+                <option value="4">Magic</option>
+            </select>
+          </div>
         </div>
-
-        <button type="submit" class="button">Guardar</button> 
-             
+        <div class="description">
+          <div class="detailText">
+            <span class="details">Descripción</span>
+            <textarea name="description" id="description" cols="30" rows="10" value=""><%= productToEdit.description %></textarea>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Guardar" />
+        </div>
         
-    </form>
+      </form>
 
-    <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
-        <button type="submit" class="button">Borrar</button>
-    </form>  
-   </main>
-    <!-- footer --> <%- include('./partials/footer') %> 
-</body>
+      <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
+        <div class="button">
+          <input type="submit" value="Borrar Producto">
+        </div>
+      </form>
+    </div>
+    <!-- footer -->
+    <%- include('./partials/footer') %>
+  </body>
 </html>
