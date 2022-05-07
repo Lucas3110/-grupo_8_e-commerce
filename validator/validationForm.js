@@ -1,58 +1,82 @@
 const { check, body } = require("express-validator")
 const fs = require("fs");
 const path = require("path");
-const db = require('../database/models'); // aca agregamos lo de db
-
+const db = require('../database/models');
 
 
 const validator = {
-    login:[
+    login: [
         check("email")
             .notEmpty()
-            .withMessage("Email vacio"),
+            .withMessage("Email vacio")
+            .isEmail(),
         check("password")
             .notEmpty()
             .withMessage("Contraseña vacio")
+
     ],
-    register:[
+    register: [
         check("email")
             .notEmpty()
             .withMessage("Email vacio")
             .bail()
             .isEmail()
             .withMessage("formato de email incorrecto")
-            .bail()
-            .custom(function(value){
-                return db.User.findOne({where: {email: value}}).then(function(res){
-                    if(res){
+            .custom(function (value) {
+                return db.User.findOne({ where: { email: value } }).then(function (res) {
+                    if (res) {
                         return Promise.reject('Email ya registrado');
-                    }                              
+                    }
                 })
             }),
 
-                /* VIEJO CODIGO
-                //busco al usuario
-                let userFound = users.find(function(user){
-                    return user.email == value
-                })
-                //si existe un usuario devuelvo el error
-                if(userFound){
-                    throw new Error("Email ya registrado!");
-                }
-                //sino devuelvo true 
-                return true
-            }) */
-            
         check("name")
             .notEmpty()
-            .withMessage("Nombre vacio"),
+            .withMessage("Nombre vacio")
+            .isLength({ min: 2 })
+            .withMessage("Ingrese minimo 2 caracteres"),
         check("last_name")
             .notEmpty()
-            .withMessage("Apellido vacio"),
+            .withMessage("Apellido vacio")
+            .isLength({ min: 2 })
+            .withMessage("Ingrese minimo 2 caracteres"),
         check("password")
             .notEmpty()
             .withMessage("Contraseña vacio")
+            .isLength({ min: 8 })
+            .withMessage("Ingrese minimo 8 caracteres"),
+    ],
+    product: [
+        check("name")
+            .notEmpty()
+            .withMessage("Nombre vacio")
+            .isLength({ min: 5 })
+            .withMessage("Ingrese minimo 5 caracteres"),
+        check("description")
+            .isLength({ min: 20 })
+            .withMessage("Ingrese minimo 20 caracteres"),
+        /*
+    check("image")
+        .customfunction(value, filename) {
+            let extension = (path.extname(filename)).toLowerCase();
+            switch (extension) {
+                case '.jpg': 
+                    return '.jpg'; esta bien asi? o return true?
+
+                case '.jpeg':
+                    return '.jpeg';
+
+                case  '.png':
+                    return '.png';
+
+                default:
+                    return false; 
+            }
+        }     nos falta algun parentesis o algo
+             */
+
     ]
+
 }
 
 module.exports = validator

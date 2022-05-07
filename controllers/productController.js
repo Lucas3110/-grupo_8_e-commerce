@@ -2,6 +2,7 @@ let path = require("path");
 let fs = require('fs');
 const db = require('../database/models'); // aca agregamos lo de db
 const sequelize = db.sequelize; // aca agregamos lo de db
+const { validationResult } = require('express-validator');
 const { Op } = require("sequelize");
 
 
@@ -45,6 +46,11 @@ const controlador = {
 
     // Create -  Method to store
     store: (req, res) => {
+        const errors = validationResult(req)
+
+        if(errors.errors.length > 0){
+           return res.render("create", {errors: errors.mapped()})
+        }
         db.Product.create({
             name: req.body.name,
             price: req.body.price,
@@ -62,7 +68,7 @@ const controlador = {
     },
 
     // Update - Form to edit
-    edit: function (req, res) {
+    edit: function (req, res) {        
         let productToEdit = db.Product.findByPk(req.params.id, {
             include: [{ association: "collection" }]
         })
@@ -73,6 +79,13 @@ const controlador = {
 
     // Update - Method to update
     update: (req, res) => {
+        const errors = validationResult(req)
+
+        if(errors.errors.length > 0){
+           return res.render("create", {errors: errors.mapped()}) //como hacemos para hacer un render
+           //de una url especifica por id? si solo se le puede pasar una view x ahora lo dejamos asi
+        }
+
         db.Product.update({
             name: req.body.name,
             price: req.body.price,

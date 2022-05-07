@@ -22,6 +22,9 @@
           <div class="inputBox">
             <span class="details">Nombre de producto</span>
             <input type="text" name="name" value="<%= productToEdit.name %>">
+            <% if(locals.errors && locals.errors.name){ %>
+              <span style="color: red;"> <%= errors.name.msg  %> </span>
+            <%} %>   
           </div>
 
           <div class="inputBox">
@@ -44,6 +47,9 @@
           <div class="detailText">
             <span class="details">Descripción</span>
             <textarea name="description" id="description" cols="30" rows="10" value=""><%= productToEdit.description %></textarea>
+            <% if(locals.errors && locals.errors.description){ %>
+              <span style="color: red;"> <%= errors.description.msg  %> </span>
+            <%} %>   
           </div>
         </div>
         <div class="button">
