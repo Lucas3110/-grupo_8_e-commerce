@@ -252,6 +252,10 @@ nav .nav-bar .logo a{
     margin: 0;    
 }
 
+button i.bx-search, button{
+    border-style: none;
+}
+
 .searchToggle.active ~ .search-field{
     bottom: -74px;
     opacity: 1;

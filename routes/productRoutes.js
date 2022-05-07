@@ -7,15 +7,18 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/images/products'))
+         cb(null, path.join(__dirname, '../public/images/users'))
+         console.log(req)
     },
     filename: (req, file, cb) => {
         const newFilename = 'imagen-' + Date.now() + path.extname(file.originalname);
         cb(null, newFilename);
     }
+
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({storage: storage});
+
 
 router.get('/', productController.product);
 
