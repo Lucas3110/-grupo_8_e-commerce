@@ -4,6 +4,8 @@ const path = require('path');
 const productController = require('../controllers/productController');
 const authMiddleware = require("../middlewares/authMiddleware");
 const multer = require('multer');
+const { check } = require('express-validator');
+const validator = require("../validator/validationForm");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -31,11 +33,11 @@ router.get('/:id', productController.detail);
 
 /*** CREATE ONE PRODUCT ***/ 
 
-router.post('/', upload.single('image'), productController.store);
+router.post('/', upload.single('image'), validator.product, productController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', authMiddleware, productController.edit); 
-router.patch('/:id/edit', productController.update); 
+router.patch('/:id/edit', validator.product, productController.update); 
  
 
 /*** DELETE ONE PRODUCT***/ 

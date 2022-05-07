@@ -34,8 +34,8 @@
                 </div>
                 <div id="form">
                     <input type="password" name="password">
-                    <% if(locals.errorsLogin && locals.errorsLogin.contrasena){ %>
-                        <span style="color: red;"> <%= locals.errorsLogin.contrasena.msg %> </span>
+                    <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
+                        <span style="color: red;"> <%= locals.errorsLogin.password.msg %> </span>
                       <% } %>           
                 </div>
                 
