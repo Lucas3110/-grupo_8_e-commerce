@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
         let nombre = document.querySelector('#name');
         let apellido = document.querySelector('#last_name');
         let password = document.querySelector('#password');
-        let email = document.querySelector('#email');        
+        let email = document.querySelector('#email');
         let ulErrores = document.getElementById("errores");
         let errores = [];
 
@@ -29,13 +29,21 @@ window.addEventListener('load', function () {
             errores.push("La contraseña debe tener al menos 5 caracteres");
         }
 
-        if (email.value == "") {
-            errores.push("El email no puede estar vacio");
+        //Validacion custom de email valido
+        valor = email.value;
+        function validateEmail(mail) {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(mail);
         }
 
+        if (!validateEmail(valor)) {
+            errores.push("El email no es valido");
+        }
+        //Fin validacion custom de email valido
+        
         if (errores.length > 0) {
             e.preventDefault();
-                        
+
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
@@ -48,3 +56,5 @@ window.addEventListener('load', function () {
     })
 
 })
+
+

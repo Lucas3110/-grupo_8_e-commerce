@@ -8,9 +8,18 @@ window.addEventListener('load', function () {
         let ulErrores = document.getElementById("errores");
         let errores = [];
 
-        if (email.value == "") {
-            errores.push("El nombre no puede estar vacio");
+        //Validacion custom de email valido
+        valor = email.value;
+        function validateEmail(mail) {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(mail);
         }
+
+        if (!validateEmail(valor)) {
+            errores.push("El email no es valido");
+        }
+        //Fin validacion custom de email valido
+        
 
         if (password.value == "") {
             errores.push("La contraseña no puede estar vacia");

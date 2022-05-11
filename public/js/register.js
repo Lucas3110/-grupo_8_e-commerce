@@ -29,9 +29,18 @@ window.addEventListener('load', function () {
             errores.push("La contraseña debe tener al menos 5 caracteres");
         }
 
-        if (email.value == "") {
-            errores.push("El email no puede estar vacio");
+        //Validacion custom de email valido
+        valor = email.value;
+        function validateEmail(mail) {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(mail);
         }
+
+        if (!validateEmail(valor)) {
+            errores.push("El email no es valido");
+        }
+        //Fin validacion custom de email valido
+        
 
         if (errores.length > 0) {
             e.preventDefault();
