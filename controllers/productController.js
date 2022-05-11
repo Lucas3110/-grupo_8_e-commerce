@@ -48,8 +48,8 @@ const controlador = {
     store: (req, res) => {
         const errors = validationResult(req)
 
-        if(errors.errors.length > 0){
-           return res.render("create", {errors: errors.mapped()})
+        if (errors.errors.length > 0) {
+            return res.render("create", { errors: errors.mapped() })
         }
         db.Product.create({
             name: req.body.name,
@@ -68,7 +68,7 @@ const controlador = {
     },
 
     // Update - Form to edit
-    edit: function (req, res) {        
+    edit: function (req, res) {
         let productToEdit = db.Product.findByPk(req.params.id, {
             include: [{ association: "collection" }]
         })
@@ -81,9 +81,15 @@ const controlador = {
     update: (req, res) => {
         const errors = validationResult(req)
 
-        if(errors.errors.length > 0){
-           return res.render("create", {errors: errors.mapped()}) //como hacemos para hacer un render
-           //de una url especifica por id? si solo se le puede pasar una view x ahora lo dejamos asi
+        if (errors.errors.length > 0) {
+            console.log(errors)
+            db.Product.findByPk(req.params.id, {
+                include: [{ association: "collection" }]
+            }).then(productToEdit => {
+                console.log(productToEdit)
+                res.render('edit', { productToEdit, errors: errors.mapped() })
+            });
+
         }
 
         db.Product.update({
@@ -96,10 +102,9 @@ const controlador = {
             where: {
                 id: req.params.id
             }
+        }).then(function () {
+            return res.redirect('/');
         })
-            .then(function () {
-                return res.redirect('/');
-            })
     },
 
     // Delete - Delete one product from DB
