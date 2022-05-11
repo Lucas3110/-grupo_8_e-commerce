@@ -8,6 +8,9 @@
 <body>
     
     <!-- header --> <%- include('./partials/header') %> 
+    <div id="errores">
+        <ul></ul>
+    </div>
    <div class="container">
     <form action="/users/<%= userToEdit.id %>/userEdit?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="productDetails">
@@ -29,7 +32,7 @@
             </div>
             <div class="inputBox">
                 <span class="details">Selecciona una imagen:</span>
-                <input type="file" id="imagen" name="image" value="<%= userToEdit.image %>">
+                <input type="file" id="image" name="image" value="<%= userToEdit.image %>">
             </div>
         </div>
         <div class="button">
@@ -37,39 +40,8 @@
         </div>
     </form>
    </div>
-   <!--<main>
-    
-        <div class="form-control">
-            
-        </div>
-
-        <div class="form-control">
-            <label for="name"> </label>
-            
-        </div>
-
-        <div class="form-control">
-            <label for="name"> </label>
-            
-        </div>
-
-        <div class="form-control">
-            <label for="name"> </label>
-            
-        </div>
-
-        <div class="form-control">
-            <label for="imagen"></label>
-                       
-        </div>             
-      
-       
-        <button type="submit" class="button">Guardar</button> 
-             
-        
-    
-    
-   </main>-->
+ 
     <!-- footer --> <%- include('./partials/footer') %> 
+    <script src="/js/userEdit.js"></script>   
 </body>
 </html>

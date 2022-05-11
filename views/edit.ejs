@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <!-- head -->
-    <%- include('./partials/head') %>
+
+<head>
+  <!-- head -->
+  <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/edit.css" />
     <title>Edit2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <!-- header -->
-    <%- include('./partials/header') %>
+</head>
+
+<body>
+  <!-- header -->
+  <%- include('./partials/header') %>
+    <div id="errores">
+      <ul></ul>
+    </div>
     <div class="container">
       <div class="title">Editar producto</div>
       <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
         <div class="productDetails">
           <div class="inputBox">
             <span class="details">Selecciona una imagen</span>
-            <input type="file" id="imagen" name="image">
+            <input type="file" id="image" name="image">
           </div>
 
           <div class="inputBox">
             <span class="details">Nombre de producto</span>
-            <input type="text" name="name" value="<%= productToEdit.name %>">
+            <input type="text" name="name" id="name" value="<%= productToEdit.name %>">
             <% if(locals.errors && locals.errors.name){ %>
-              <span style="color: red;"> <%= errors.name.msg  %> </span>
-            <%} %>   
+              <span style="color: red;">
+                <%= errors.name.msg %>
+              </span>
+              <%} %>
           </div>
 
           <div class="inputBox">
             <span class="details">Precio</span>
-            <input type="number" id="precio" name="price" value="<%= productToEdit.price %>"<br>
+            <input type="number" id="precio" name="price" value="<%= productToEdit.price %>" <br>
           </div>
 
           <div class="inputBox">
             <span class="details">Elige la colección</span>
-            <select id="coleccion" name="collection_id" class="control">   
-                <option value="none" selected disabled hidden><%= productToEdit.collection.name %></option>
-                <option value="1">Genshin</option>
-                <option value="2">Van Gogh</option>
-                <option value="3">Punks</option>
-                <option value="4">Magic</option>
+            <select id="coleccion" name="collection_id" class="control">
+              <option value="none" selected disabled hidden>
+                <%= productToEdit.collection.name %>
+              </option>
+              <option value="1">Genshin</option>
+              <option value="2">Van Gogh</option>
+              <option value="3">Punks</option>
+              <option value="4">Magic</option>
             </select>
           </div>
         </div>
         <div class="description">
           <div class="detailText">
             <span class="details">Descripción</span>
-            <textarea name="description" id="description" cols="30" rows="10" value=""><%= productToEdit.description %></textarea>
+            <textarea name="description" id="description" cols="30" rows="10"
+              value=""><%= productToEdit.description %></textarea>
             <% if(locals.errors && locals.errors.description){ %>
-              <span style="color: red;"> <%= errors.description.msg  %> </span>
-            <%} %>   
+              <span style="color: red;">
+                <%= errors.description.msg %>
+              </span>
+              <%} %>
           </div>
         </div>
         <div class="button">
           <input type="submit" value="Guardar" />
         </div>
-        
+
       </form>
 
       <form action="/product/<%= productToEdit.id %>?_method=DELETE" method="POST">
@@ -66,5 +78,7 @@
     </div>
     <!-- footer -->
     <%- include('./partials/footer') %>
-  </body>
+      <script src="/js/edit.js"></script>
+</body>
+
 </html>

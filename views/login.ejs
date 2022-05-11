@@ -1,69 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- head --> <%- include('./partials/head') %>            
+
+<head>
+    <!-- head -->
+    <%- include('./partials/head') %>
         <link rel="stylesheet" href="/css/login.css">
         <title>login</title>
-      </head>
-        <!-- header --> <%- include('./partials/header') %>
-      <body class="bodylogin">                 
+</head>
+<!-- header -->
+<%- include('./partials/header') %>
 
-      <section class="sectionlogin">
-        <login>
-            <h2 class="inicio">
-                Inicia sesión con:
-            </h2>
+    <body class="bodylogin">
+        <div id="errores">
+            <ul></ul>
+        </div>
+        <section class="sectionlogin">            
+            <login>
+                <h2 class="inicio">
+                    Inicia sesión con:
+                </h2>
                 <button type="button" class="boton-login">
-                      Gmail    
+                    Gmail
                 </button>
                 <br></br>
                 <button type="button" class="boton-login">
-                    <i class="fi fi-rr-bank"></i> Wallet     
+                    <i class="fi fi-rr-bank"></i> Wallet
                 </button>
-              </div>
-               
-        <form action="/users/login" method="POST">
-            <h2 class="Registrarse">
-                Ingresa a tu cuenta: 
-            </h2>
-                <div id="form">
-                    <input type="email" name="email">   
-                    <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
-                        <span style="color: red;"> <%= locals.errorsLogin.email.msg %> </span>
-                      <% } %>   
                 </div>
-                <div id="form">
-                    <input type="password" name="password">
-                    <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
-                        <span style="color: red;"> <%= locals.errorsLogin.password.msg %> </span>
-                      <% } %>           
-                </div>
-                
-                <div class="recuerdame">
-                <input id="recordarme" name="recordame" type="checkbox" value="1" checked="checked">
-                <label class="recordarme" for="recordame">Recordarme</label>
-                </div>   
 
-                <div class="olvido">
-                    <a href="#" class="textolvido">¿Olvidaste tu Contraseña?</a>
-                </div>
-                
-                    <button type="submit"  class="registro" >
-                        Iniciar Sesión 
+                <form action="/users/login" method="POST" class="login-form">
+                    <h2 class="Registrarse">
+                        Ingresa a tu cuenta:
+                    </h2>
+                    <div id="form">
+                        <input type="email" name="email" id="email">
+                        <% if(locals.errorsLogin && locals.errorsLogin.email){ %>
+                            <span style="color: red;">
+                                <%= locals.errorsLogin.email.msg %>
+                            </span>
+                            <% } %>
+                    </div>
+                    <div id="form">
+                        <input type="password" name="password" id="password">
+                        <% if(locals.errorsLogin && locals.errorsLogin.password){ %>
+                            <span style="color: red;">
+                                <%= locals.errorsLogin.password.msg %>
+                            </span>
+                            <% } %>
+                    </div>
+
+                    <div class="recuerdame">
+                        <input id="recordarme" name="recordame" type="checkbox" value="1" checked="checked">
+                        <label class="recordarme" for="recordame">Recordarme</label>
+                    </div>
+
+                    <div class="olvido">
+                        <a href="#" class="textolvido">¿Olvidaste tu Contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="registro">
+                        Iniciar Sesión
                     </button>
 
-                <div class="crearcuenta">
-                    <p class="nuevacuenta">¿No tienes una cuenta?</p>
-                    <a href="/users/register" class="crear">Crear cuenta </a>
-                </div>
-        </form> 
-          <% if(locals.errorMsg){ %>
-            <span style="color: red;"> <%= errorMsg %> </span>
-          <% } %>         
+                    <div class="crearcuenta">
+                        <p class="nuevacuenta">¿No tienes una cuenta?</p>
+                        <a href="/users/register" class="crear">Crear cuenta </a>
+                    </div>
+                </form>
+                <% if(locals.errorMsg){ %>
+                    <span style="color: red;">
+                        <%= errorMsg %>
+                    </span>
+                    <% } %>
 
-        </login>
-    </section>
- 
-    <!-- footer --> <%- include('./partials/footer') %>
+            </login>
+        </section>
 
-</body>
+        <!-- footer -->
+        <%- include('./partials/footer') %>
+        <script src="/js/login.js"></script> 
+
+    </body>
