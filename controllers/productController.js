@@ -82,29 +82,27 @@ const controlador = {
         const errors = validationResult(req)
 
         if (errors.errors.length > 0) {
-            console.log(errors)
             db.Product.findByPk(req.params.id, {
                 include: [{ association: "collection" }]
             }).then(productToEdit => {
-                console.log(productToEdit)
                 res.render('edit', { productToEdit, errors: errors.mapped() })
             });
 
+        } else {
+            db.Product.update({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: 'coleccionJo/genshin1.jpg',//req.body.image, lo dejo asi hasta q tenga multer
+                collection_id: req.body.collection_id
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function () {
+                return res.redirect('/');
+            })
         }
-
-        db.Product.update({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: 'coleccionJo/genshin1.jpg',//req.body.image, lo dejo asi hasta q tenga multer
-            collection_id: req.body.collection_id
-        }, {
-            where: {
-                id: req.params.id
-            }
-        }).then(function () {
-            return res.redirect('/');
-        })
     },
 
     // Delete - Delete one product from DB
