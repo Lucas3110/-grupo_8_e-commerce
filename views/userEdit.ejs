@@ -10,6 +10,9 @@
     <!-- header --> <%- include('./partials/header') %> 
    
    <main>
+       <div class="errores">
+        <ul></ul>
+       </div>
     <form action="/users/<%= userToEdit.id %>/userEdit?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="form-control">
             <label for="name">Nombre </label>
