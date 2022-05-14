@@ -40,11 +40,30 @@ window.addEventListener('load', function () {
             errores.push("El email no es valido");
         }
         //Fin validacion custom de email valido
-        
+
+        //Comiendo validacion custom imagen
+
+        function fileValidation() {
+            var fileInput =
+                document.getElementById('image');
+
+            var filePath = fileInput.value;
+
+            // Allowing file type
+            var allowedExtensions =
+                /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if (!allowedExtensions.exec(filePath)) { //no esta entrando aca, pq sera?
+                errores.push("El formato de imagen no es valido");
+
+            }
+
+        }
+        //Fin validacion custom de imagen
 
         if (errores.length > 0) {
             e.preventDefault();
-            ulErrores.innerHTML = "";            
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
@@ -57,3 +76,5 @@ window.addEventListener('load', function () {
     })
 
 })
+
+
