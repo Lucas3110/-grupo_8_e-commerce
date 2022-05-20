@@ -2,6 +2,11 @@ window.addEventListener('load', function () {
 
     let formulario = document.querySelector(".register-form");
 
+
+
+
+
+
     formulario.addEventListener("submit", function (e) {
         let nombre = document.querySelector('#name');
         let apellido = document.querySelector('#last_name');
@@ -41,23 +46,14 @@ window.addEventListener('load', function () {
         }
         //Fin validacion custom de email valido
 
-        //Comiendo validacion custom imagen
+        //Comienzo validacion custom imagen
+        const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; //capaz habia un error aca en el const
 
-        function fileValidation() {
-            var fileInput =
-                document.getElementById('image');
+        var fileInput =  document.getElementById('image');
 
-            var filePath = fileInput.value;
-
-            // Allowing file type
-            var allowedExtensions =
-                /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-
-            if (!allowedExtensions.exec(filePath)) { //no esta entrando aca, pq sera?
-                errores.push("El formato de imagen no es valido");
-
-            }
-
+        if (!allowedExtensions.exec(fileInput.value)) { //no esta entrando aca, pq sera? /(\.jpg|\.jpeg|\.png|\.gif)$/i
+            errores.push("Formato de imagen no valida");
+            console.log("llegue")
         }
         //Fin validacion custom de imagen
 
@@ -74,6 +70,8 @@ window.addEventListener('load', function () {
 
 
     })
+
+
 
 })
 

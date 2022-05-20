@@ -45,6 +45,19 @@ const validator = {
             .withMessage("Contraseña vacio")
             .isLength({ min: 8 })
             .withMessage("Ingrese minimo 8 caracteres"),
+
+            check("image")
+            .custom(function(value, {req}){ //valido si llega el file o no
+                return req.file;
+            })
+            .withMessage("Imagen Obligatoria")
+            .bail()
+            .custom(function(value, {req} ){
+                const imagenesValidas = [".jpg", ".jpeg", ".png"] //pueden venir en mayuscula
+                const extencion = path.extname(req.file.originalname);
+                return imagenesValidas.includes(extencion);               
+            })
+            .withMessage("archivo no valido")
     ],
     product: [
         check("name")
