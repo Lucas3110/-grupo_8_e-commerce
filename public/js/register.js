@@ -47,13 +47,11 @@ window.addEventListener('load', function () {
         //Fin validacion custom de email valido
 
         //Comienzo validacion custom imagen
-        const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; //capaz habia un error aca en el const
-
+        const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; 
         var fileInput =  document.getElementById('image');
 
-        if (!allowedExtensions.exec(fileInput.value)) { //no esta entrando aca, pq sera? /(\.jpg|\.jpeg|\.png|\.gif)$/i
-            errores.push("Formato de imagen no valida");
-            console.log("llegue")
+        if (!allowedExtensions.exec(fileInput.value)) { 
+            errores.push("Formato de imagen no valida");            
         }
         //Fin validacion custom de imagen
 

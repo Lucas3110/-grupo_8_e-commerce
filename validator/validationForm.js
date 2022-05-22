@@ -46,18 +46,18 @@ const validator = {
             .isLength({ min: 8 })
             .withMessage("Ingrese minimo 8 caracteres"),
 
-            check("image")
+        check("image")
             .custom(function(value, {req}){ //valido si llega el file o no
                 return req.file;
             })
             .withMessage("Imagen Obligatoria")
             .bail()
             .custom(function(value, {req} ){
-                const imagenesValidas = [".jpg", ".jpeg", ".png"] //pueden venir en mayuscula
-                const extencion = path.extname(req.file.originalname);
-                return imagenesValidas.includes(extencion);               
+                const imagenesValidas = [".jpg", ".jpeg", ".png", ".gif", ".JPG", ".PNG", ".JPEG", ".GIF"] //pueden venir en mayuscula
+                const extension = path.extname(req.file.originalname);
+                return imagenesValidas.includes(extension);               
             })
-            .withMessage("archivo no valido")
+            .withMessage("Archivo no valido")
     ],
     product: [
         check("name")
@@ -68,25 +68,18 @@ const validator = {
         check("description")
             .isLength({ min: 20 })
             .withMessage("Ingrese minimo 20 caracteres"),
-        /*
-    check("image")
-        .customfunction(value, filename) {
-            let extension = (path.extname(filename)).toLowerCase();
-            switch (extension) {
-                case '.jpg': 
-                    return '.jpg'; esta bien asi? o return true?
-
-                case '.jpeg':
-                    return '.jpeg';
-
-                case  '.png':
-                    return '.png';
-
-                default:
-                    return false; 
-            }
-        }     nos falta algun parentesis o algo
-             */
+        check("image")
+            .custom(function(value, {req}){ 
+                return req.file;
+            })
+            .withMessage("Imagen Obligatoria")             
+            .bail()
+            .custom(function(value, {req} ){
+                const imagenesValidas = [".jpg", ".jpeg", ".png", ".gif", ".JPG", ".PNG", ".JPEG", ".GIF"] //pueden venir en mayuscula
+                const extension = path.extname(req.file.originalname);
+                return imagenesValidas.includes(extension);               
+            })
+            .withMessage("Archivo no valido")
 
     ]
 
