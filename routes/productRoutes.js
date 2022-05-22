@@ -9,10 +9,10 @@ const validator = require("../validator/validationForm");
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/images/products'))
+        cb(null, path.join(__dirname, '../public/images/'))
     },
     filename: (req, file, cb) => {
-        const newFilename = 'imagen-' + Date.now() + path.extname(file.originalname);
+        const newFilename = 'products/' + Date.now() + path.extname(file.originalname);
         cb(null, newFilename);
     }
 });
