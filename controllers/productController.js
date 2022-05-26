@@ -48,8 +48,8 @@ const controlador = {
     store: (req, res) => {
         const errors = validationResult(req)
 
-        if(errors.errors.length > 0){
-           return res.render("create", {errors: errors.mapped()})
+        if (errors.errors.length > 0) {
+            return res.render("create", { errors: errors.mapped() })
         }
         db.Product.create({
             name: req.body.name,
@@ -68,7 +68,7 @@ const controlador = {
     },
 
     // Update - Form to edit
-    edit: function (req, res) {        
+    edit: function (req, res) {
         let productToEdit = db.Product.findByPk(req.params.id, {
             include: [{ association: "collection" }]
         })
@@ -81,25 +81,28 @@ const controlador = {
     update: (req, res) => {
         const errors = validationResult(req)
 
-        if(errors.errors.length > 0){
-           return res.render("create", {errors: errors.mapped()}) //como hacemos para hacer un render
-           //de una url especifica por id? si solo se le puede pasar una view x ahora lo dejamos asi
-        }
+        if (errors.errors.length > 0) {
+            db.Product.findByPk(req.params.id, {
+                include: [{ association: "collection" }]
+            }).then(productToEdit => {
+                res.render('edit', { productToEdit, errors: errors.mapped() })
+            });
 
-        db.Product.update({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: 'coleccionJo/genshin1.jpg',//req.body.image, lo dejo asi hasta q tenga multer
-            collection_id: req.body.collection_id
-        }, {
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function () {
+        } else {
+            db.Product.update({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: 'coleccionJo/genshin1.jpg',//req.body.image, lo dejo asi hasta q tenga multer
+                collection_id: req.body.collection_id
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function () {
                 return res.redirect('/');
             })
+        }
     },
 
     // Delete - Delete one product from DB

@@ -8,33 +8,35 @@
 <body>
     
     <!-- header --> <%- include('./partials/header') %> 
-   
-   <main>
+    <div id="errores">
+        <ul></ul>
+       </div>   
+   <main>       
     <form action="/users" method="POST" enctype="multipart/form-data" class="register-form">
         <div class="form-control">
             <label>Nombre de usuario</label>
-            <input type="text" name="name" class="control">     
+            <input type="text" id="name" name="name" class="control">     
             <% if(locals.errors && locals.errors.name){ %>
                 <span style="color: red;"> <%= errors.name.msg  %> </span>
             <%} %>        
         </div>
         <div class="form-control">
             <label>Apellido de usuario</label>
-            <input type="text" name="last_name" class="control">   
+            <input type="text" id="last_name" name="last_name" class="control">   
             <% if(locals.errors && locals.errors.last_name) { %>
                 <span style="color: red;"> <%= errors.last_name.msg  %> </span>
             <%} %>          
         </div>
         <div class="form-control">
             <label>Contraseña</label>
-            <input type="password" name="password" class="control">
+            <input type="password" id="password" name="password" class="control">
             <% if(locals.errors && locals.errors.password){ %>
                 <span style="color: red;"> <%= errors.password.msg  %> </span>
             <% } %>                         
         </div>       
         <div class="form-control">
             <label>e-mail</label>
-            <input type="email" name="email" class="control" placeholder="example01@gmail.com">
+            <input type="email" id="email" name="email" class="control" placeholder="example01@gmail.com">
             <% if(locals.errors && locals.errors.email){ %>
                 <span style="color: red;"> <%= errors.email.msg  %> </span>
             <% } %>              
@@ -56,5 +58,6 @@
     </form>
    </main>
     <!-- footer --> <%- include('./partials/footer') %> 
+    <script src="/js/register.js"></script>  
 </body>
 </html>

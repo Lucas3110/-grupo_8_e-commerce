@@ -41,9 +41,10 @@ window.addEventListener('load', function () {
         }
         //Fin validacion custom de email valido
         
+
         if (errores.length > 0) {
             e.preventDefault();
-
+                        
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
@@ -56,5 +57,3 @@ window.addEventListener('load', function () {
     })
 
 })
-
-

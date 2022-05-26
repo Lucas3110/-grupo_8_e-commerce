@@ -8,47 +8,40 @@
 <body>
     
     <!-- header --> <%- include('./partials/header') %> 
-   
-   <main>
-       <div class="errores">
+    <div id="errores">
         <ul></ul>
-       </div>
+    </div>
+   <div class="container">
     <form action="/users/<%= userToEdit.id %>/userEdit?_method=PATCH" method="POST" enctype="multipart/form-data" class="register-form">
-        <div class="form-control">
-            <label for="name">Nombre </label>
-            <input type="text" id="name" name="name" class="control" value="<%= userToEdit.name %>">
+        <div class="productDetails">
+            <div class="inputBox">
+                <span class="details">Nombre </span>
+                <input type="text" id="name" name="name" class="control" value="<%= userToEdit.name %>">
+            </div>
+            <div class="inputBox">
+                <span class="details">Apellido </span>
+                <input type="text" id="last_name" name="last_name" class="control" value="<%= userToEdit.last_name %>">
+            </div>
+            <div class="inputBox">
+                <span class="details">Contraseña </span>
+                <input type="password" id="password" name="password" class="control">
+            </div>
+            <div class="inputBox">
+                <span class="details">Email </span>
+                <input type="email" id="email" name="email" class="control" value="<%= userToEdit.email %>">
+            </div>
+            <div class="inputBox">
+                <span class="details">Selecciona una imagen:</span>
+                <input type="file" id="image" name="image" value="<%= userToEdit.image %>">
+            </div>
         </div>
-
-        <div class="form-control">
-            <label for="name">Apellido </label>
-            <input type="text" id="last_name" name="last_name" class="control" value="<%= userToEdit.last_name %>">
+        <div class="button">
+            <input type="submit" value="Guardar">
         </div>
-
-        <div class="form-control">
-            <label for="name">Contraseña </label>
-            <input type="password" id="password" name="password" class="control">
-        </div>
-
-        <div class="form-control">
-            <label for="name">Email </label>
-            <input type="email" id="email" name="email" class="control" value="<%= userToEdit.email %>">
-        </div>
-
-        <div class="form-control">
-            <label for="imagen">Selecciona una imagen:</label>
-            <input type="file" id="imagen" name="image" value="<%= userToEdit.image %>">            
-        </div>             
-      
-       
-        <button type="submit" class="button">Guardar</button> 
-             
-        
     </form>
-    
-   </main>
-    <!-- afooter --> <%- include('./partials/footer') %> 
-
+   </div>
+ 
+    <!-- footer --> <%- include('./partials/footer') %> 
     <script src="/js/userEdit.js"></script>   
-
 </body>
 </html>
