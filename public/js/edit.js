@@ -19,15 +19,19 @@ window.addEventListener('load', function () {
             errores.push("La descripcion debe tener al menos 20 caracteres");
         }
 
-        if (image.value == "") {
-            errores.push("La imagen no puede estar vacia");
-        }
+        //Comienzo validacion custom imagen
+        const allowedExtensions = /(.jpg|.jpeg|.png|.gif|.JPG|.JPEG|.PNG|.GIF)$/i; 
+        var fileInput =  document.getElementById('image');
 
+        if (!allowedExtensions.exec(fileInput.value)) { 
+            errores.push("Formato de imagen no valida");            
+        }
+        //Fin validacion custom de imagen
         
 
         if (errores.length > 0) {
             e.preventDefault();
-
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }

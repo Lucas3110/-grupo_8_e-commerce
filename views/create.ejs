@@ -22,6 +22,9 @@
                     <div class="inputBox">
                         <span class="details">Selecciona una imagen</span>
                         <input type="file" name="image" id="image">
+                        <% if(locals.errors && locals.errors.image){ %>
+                            <span style="color: red;"> <%= errors.image.msg  %> </span>
+                        <%} %>
                     </div>
 
                     <div class="inputBox">

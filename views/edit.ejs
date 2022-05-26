@@ -17,7 +17,7 @@
     </div>
     <div class="container">
       <div class="title">Editar producto</div>
-      <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form">
+      <form action="/product/<%= productToEdit.id %>/edit?_method=PATCH" method="POST" class="register-form" enctype="multipart/form-data">
         <div class="productDetails">
           <div class="inputBox">
             <span class="details">Selecciona una imagen</span>

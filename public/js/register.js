@@ -2,6 +2,11 @@ window.addEventListener('load', function () {
 
     let formulario = document.querySelector(".register-form");
 
+
+
+
+
+
     formulario.addEventListener("submit", function (e) {
         let nombre = document.querySelector('#name');
         let apellido = document.querySelector('#last_name');
@@ -40,11 +45,19 @@ window.addEventListener('load', function () {
             errores.push("El email no es valido");
         }
         //Fin validacion custom de email valido
-        
+
+        //Comienzo validacion custom imagen
+        const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; 
+        var fileInput =  document.getElementById('image');
+
+        if (!allowedExtensions.exec(fileInput.value)) { 
+            errores.push("Formato de imagen no valida");            
+        }
+        //Fin validacion custom de imagen
 
         if (errores.length > 0) {
             e.preventDefault();
-                        
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
@@ -56,4 +69,8 @@ window.addEventListener('load', function () {
 
     })
 
+
+
 })
+
+

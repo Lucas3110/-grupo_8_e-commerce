@@ -51,7 +51,10 @@
                  
         <div class="form-control">
             <label>Imagen de perfil</label>
-            <input type="file" name="image" class="control">
+            <input type="file" id="image" name="image" class="control">
+            <% if(locals.errors && locals.errors.image){ %>
+                <span style="color: red;"> <%= errors.image.msg  %> </span>
+            <%} %> 
         </div>
         <button type="reset" class="button">Borrar</button>
         <button type="submit" class="button">Guardar</button>

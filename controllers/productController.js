@@ -55,7 +55,7 @@ const controlador = {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
-            image: 'coleccionJo/genshin1.jpg',
+            image: req.file ? req.file.filename : "defaultPic.jpg",
             collection_id: req.body.collection_id,
         })
             .then(function () {
@@ -93,7 +93,7 @@ const controlador = {
                 name: req.body.name,
                 price: req.body.price,
                 description: req.body.description,
-                image: 'coleccionJo/genshin1.jpg',//req.body.image, lo dejo asi hasta q tenga multer
+                image: req.file ? req.file.filename : "defaultPic.jpg",
                 collection_id: req.body.collection_id
             }, {
                 where: {
@@ -119,6 +119,9 @@ const controlador = {
 };
 
 module.exports = controlador;
+
+
+
 
 
 

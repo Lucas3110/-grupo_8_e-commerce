@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
 
         if (errores.length > 0) {
             e.preventDefault();
-
+            ulErrores.innerHTML = "";
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
             }
