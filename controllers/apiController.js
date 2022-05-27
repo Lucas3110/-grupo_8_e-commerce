@@ -12,7 +12,7 @@ const apis = {
                     id: product.id,
                     name: product.name,
                     description: product.description,
-                    collection: product.collection_id,
+                    collection: product.collection,
                     detail: "/api/products/" + product.id
                 }
             })
@@ -21,14 +21,19 @@ const apis = {
                     status: 200,
                     count: products.length, //faltaria el countByCategory
                     url: "/api/products"
+                    /*countByCategory: [
+                        newProduct.collection
+                    ]              */      
                 },
                 products: newProduct
             }
             res.json(respuesta)
         })
     },
-    productDetail: function (req, res) {
-        db.Product.findByPk(req.params.id).then(product => {
+    productDetail: function (req, res) {        
+        db.Product.findByPk(req.params.id,{
+            include: [{ association: "collection" }]
+        }).then(product => {            
             let jsonProducto = {
                 meta: {
                     status: 200,
@@ -40,7 +45,7 @@ const apis = {
                     price: product.price,
                     description: product.description,
                     image: product.image, //aca habria q poner URL img
-                    collection: product.collection_id
+                    collection: product.collection.name
                 }
             }
             res.json(jsonProducto);
