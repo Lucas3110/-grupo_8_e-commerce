@@ -16,15 +16,14 @@
     border-color: #4b4b4b;
     background-color: #333;
     text-align: center;
-    font-size: 16px;
     display: flex;
     width: 50%;
     margin: auto;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 5px,;
+    margin-bottom: 2em;
     justify-content: center;
     border-radius: 10px;
-
+    font-size: 12px;
 }
 input{
     border-radius: 6px;
@@ -32,8 +31,8 @@ input{
     height: 23px;
 }
 .inicio{
-    padding: 10px;
-    padding-bottom: 10px;
+    padding: 8px;
+    padding-bottom: 8px;
     color: white;
     display: flex;
     justify-content: center;
@@ -47,14 +46,20 @@ input{
 
 .registro{
     border-radius: 7px;
-    -webkit-border-radius: 7px;
-    padding: 5px;
+    padding: 0.3rem;
     text-decoration: #0F4C75;
     font-size: 16px;
     color: white;
-    width: 120px;
+    width: 10em;
     background-color: #333;
     margin: 10px;
+    cursor: pointer;
+    
+}
+
+.registro:hover{
+    background-color: #0F4C75;
+    transition: all 250ms;
 }
 
 .boton-login{
@@ -66,6 +71,7 @@ input{
     color: white;
     width: 120px;
     background-color: #333;
+    cursor: pointer;
 }
 
 .boton-login:hover{ 
@@ -79,7 +85,7 @@ transition: all 250ms;
 
 .recordarme{
     color: white;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .recuerdame{
@@ -96,7 +102,7 @@ transition: all 250ms;
 }
 
 .textolvido{
-    font-size: 13px;
+    font-size: 10px;
     color: #BBE1FA;
 
 }
