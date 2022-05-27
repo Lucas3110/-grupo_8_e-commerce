@@ -13,7 +13,7 @@ const apis = {
                     name: product.name,
                     description: product.description,
                     collection: product.collection,
-                    detail: "/api/products/" + product.id
+                    detail: "http://localhost:3000/api/products/" + product.id
                 }
             })
             let respuesta = {
