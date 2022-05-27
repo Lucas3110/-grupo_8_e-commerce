@@ -89,7 +89,7 @@ const apis = {
                     name: user.name,
                     last_name: user.last_name,
                     email: user.email,
-                    image: "/images/users/"+ user.image                   
+                    image: "http://localhost:3000/images/users/"+ user.image                   
                 } 
             }
             res.json(jsonProducto);
