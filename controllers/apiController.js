@@ -79,7 +79,7 @@ const apis = {
                     id: user.id,
                     name: user.name,
                     email: user.email,
-                    detail: "/api/users/" + user.id,                    
+                    detail: "http://localhost:3000/api/users/" + user.id,                    
                 }
             })
             let respuesta = {
