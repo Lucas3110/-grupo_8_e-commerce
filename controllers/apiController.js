@@ -31,9 +31,25 @@ const apis = {
         })
     },
     productDetail: function (req, res) {        
-        db.Product.findByPk(req.params.id,{
+        db.Product.findByPk(req.params.id,{            
             include: [{ association: "collection" }]
-        }).then(product => {            
+        }).then(product => {   
+            if(product.collection.name == "Genshin")
+            {
+                var imagen = "http://localhost:3000/images/" + product.image
+            }
+            if(product.collection.name == "Van-Gogh")
+            {
+                var imagen = "http://localhost:3000/images/" + product.image
+            } 
+            if(product.collection.name == "Punks")
+            {
+                var imagen = "http://localhost:3000/images/" + product.image
+            } 
+            if(product.collection.name == "Magic")
+            {
+                var imagen = "http://localhost:3000/images/" + product.image
+            }          
             let jsonProducto = {
                 meta: {
                     status: 200,
@@ -44,7 +60,7 @@ const apis = {
                     name: product.name,
                     price: product.price,
                     description: product.description,
-                    image: product.image, //aca habria q poner URL img
+                    image: imagen, //aca habria q poner URL img
                     collection: product.collection.name
                 }
             }
