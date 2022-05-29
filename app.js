@@ -7,6 +7,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 let session = require('express-session');
 const recordame = require("./middlewares/recordar");
 const locals = require("./middlewares/locals");
+const cors = require ('cors');
 
 
 var productRouter = require('./routes/productRoutes');
@@ -26,6 +27,7 @@ app.use(session({
   saveUninitialized: true,
 }))
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

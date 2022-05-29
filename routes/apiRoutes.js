@@ -1,6 +1,13 @@
 var express = require('express');
 var router = express.Router();
 const apiController= require("../controllers/apiController");
+const app = express();
+
+const cors = require('cors');
+
+
+app.use(cors());
+
 
 router.get('/users', apiController.userList);
 router.get("/users/:id" , apiController.userDetail);

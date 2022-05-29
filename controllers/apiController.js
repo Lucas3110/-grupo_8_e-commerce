@@ -17,7 +17,7 @@ const apis = {
                 }
             })
             let respuesta = {
-                meta: {
+                meta: {                                     
                     status: 200,
                     count: products.length, //faltaria el countByCategory
                     url: "/api/products"
