@@ -31,7 +31,7 @@ window.addEventListener('load', function () {
         if (password.value == "") {
             errores.push("La contraseña no puede estar vacia");
         } else if (password.value.length < 8) {
-            errores.push("La contraseña debe tener al menos 5 caracteres");
+            errores.push("La contraseña debe tener al menos 8 caracteres");
         }
 
         //Validacion custom de email valido

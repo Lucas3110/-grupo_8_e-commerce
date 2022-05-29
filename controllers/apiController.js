@@ -111,5 +111,22 @@ const apis = {
             res.json(jsonProducto);
         })
     },
+    collectionTotal: function (req, res) {
+        db.Collection.findAll().then(collection => {
+            let newUser = collection.map(collection => {
+                return {
+                    hola: "No sabemos como borrar esto",                    
+                } //como hacemos para limpiar todo esto y que solo nos muestre de la linea 121 a las 126?
+            })
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    categoryCount: collection.length, //faltaria el countByCategory
+                    url: "/api/collections"
+                },
+            }
+            res.json(respuesta)
+        })
+    }    
 }
 module.exports = apis
