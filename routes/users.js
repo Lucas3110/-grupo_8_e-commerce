@@ -3,23 +3,13 @@ let router = express.Router();
 const path = require('path');
 const multer = require('multer');
 const usersController = require('../controllers/usersController');
-const { check } = require('express-validator');
+const { check } = require('express-validator'); //me parece que hay que borarrlo
 const validator = require("../validator/validationForm");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        const allowedMimes = [
-            'image/jpeg',
-            'image/jpg',
-            'image/pjpeg',
-            'image/png',
-        ];
-
-        if (!allowedMimes.includes(file.mimetype)) {
-            return cb(new Error('Invalid file type.')); //como hacemos para mandar este error a un campo input?
-        }                                               //o al menos tenerlo como alert(multer no deja usar alert)
+    destination: (req, file, cb) => {                                                     
         cb(null, path.join(__dirname, '../public/images/users'))
     },
     filename: (req, file, cb) => {
@@ -28,7 +18,18 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ 
+    storage: storage ,
+    fileFilter: function(req, file, cb){
+        const imagenesValidas = [".jpg", ".jpeg", ".png", ".gif", ".JPG", ".PNG", ".JPEG", ".GIF"]
+        const extension = path.extname(file.originalname);
+        const resultado = imagenesValidas.includes(extension)
+        if(resultado == false){
+            req.file = file;
+        }
+        cb(null, resultado)
+    }
+});
 
 
 

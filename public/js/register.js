@@ -2,6 +2,11 @@ window.addEventListener('load', function () {
 
     let formulario = document.querySelector(".register-form");
 
+
+
+
+
+
     formulario.addEventListener("submit", function (e) {
         let nombre = document.querySelector('#name');
         let apellido = document.querySelector('#last_name');
@@ -26,7 +31,7 @@ window.addEventListener('load', function () {
         if (password.value == "") {
             errores.push("La contraseña no puede estar vacia");
         } else if (password.value.length < 8) {
-            errores.push("La contraseña debe tener al menos 5 caracteres");
+            errores.push("La contraseña debe tener al menos 8 caracteres");
         }
 
         //Validacion custom de email valido
@@ -41,23 +46,12 @@ window.addEventListener('load', function () {
         }
         //Fin validacion custom de email valido
 
-        //Comiendo validacion custom imagen
+        //Comienzo validacion custom imagen
+        const allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; 
+        var fileInput =  document.getElementById('image');
 
-        function fileValidation() {
-            var fileInput =
-                document.getElementById('image');
-
-            var filePath = fileInput.value;
-
-            // Allowing file type
-            var allowedExtensions =
-                /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-
-            if (!allowedExtensions.exec(filePath)) { //no esta entrando aca, pq sera?
-                errores.push("El formato de imagen no es valido");
-
-            }
-
+        if (!allowedExtensions.exec(fileInput.value)) { 
+            errores.push("Formato de imagen no valida");            
         }
         //Fin validacion custom de imagen
 
@@ -74,6 +68,8 @@ window.addEventListener('load', function () {
 
 
     })
+
+
 
 })
 
