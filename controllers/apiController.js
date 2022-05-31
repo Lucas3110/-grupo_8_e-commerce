@@ -112,12 +112,7 @@ const apis = {
         })
     },
     collectionTotal: function (req, res) {
-        db.Collection.findAll().then(collection => {
-            let newUser = collection.map(collection => {
-                return {
-                    hola: "No sabemos como borrar esto",                    
-                } //como hacemos para limpiar todo esto y que solo nos muestre de la linea 121 a las 126?
-            })
+        db.Collection.findAll().then(collection => {            
             let respuesta = {
                 meta: {
                     status: 200,
