@@ -59,6 +59,7 @@ h1, h2, h3, h4, p{
 }
 
 .btn{
+    position: relative;
     display: inline-block;
     background-color: #0F4C75;
     color: #BBE1FA;
@@ -67,6 +68,7 @@ h1, h2, h3, h4, p{
     border-radius: 30px;
     text-decoration: none;
 }
+
 
 .single-product{
     margin-top: 30px;
@@ -90,6 +92,78 @@ h1, h2, h3, h4, p{
     width: 24px;
     height: 24px;
 }
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal_container{
+       margin: auto; 
+       width: 90%;
+       max-width: 600px;
+       background-color: #BBE1FA;
+       max-width: 200px;
+       max-height: 90%;
+       border-radius: 6px;
+       padding: 1em 1.5em;
+       display: grid;
+       gap: 0.3em;
+       place-items: center;
+       grid-auto-columns: 100%;
+}
+
+   .modal_title{
+       font-size: 1.5rem;
+       color: #0d1117;
+   }
+
+   .modal_text{
+       margin-bottom: 10px;
+       color: #0d1117;
+       text-align: center;
+   }
+
+   .modal_image{
+        width: 90%;
+        max-width: 100px;
+   }
+
+   .modal_carrito{
+        color: #0d1117;
+        background-color: #0F4C75;
+        padding: 8px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #BBE1FA;
+        cursor: pointer;
+   }
+
+   .modal_seguir{
+        color: #0d1117;
+        background-color: #0F4C75;
+        padding: 1em 1em;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #BBE1FA;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 300;
+   }
+
 
 @media only screen and (max-width: 769px){
     .row{

@@ -1,9 +1,13 @@
-let clickAgregar = document.querySelector('.btn');
+const openModal = document.querySelector('.btn');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('modal_seguir');
 
-window.addEventListener('load', function() {
+opernModal.addEventListener('click', (e)=> {
+    e.preventDefault();
+    modal.classList.add('modal--show');
+})
 
-    clickAgregar.addEventListener("click", function(){
-        clickAgregar.style.backgroundColor = '#3282B8';
-        confirm("NFT agregado al carrito de compra");
-    })
+closeModal.addEventListener('click', (e)=> {
+    e.preventDefault();
+    modal.classList.remove('modal--show');
 })
