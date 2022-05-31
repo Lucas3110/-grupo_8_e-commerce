@@ -1,5 +1,6 @@
 let clickAgregar = document.querySelector('.btn');
-let modal = document.querySelector('.modal')
+let modal = document.querySelector('.modal');
+let clickSeguir = document.querySelector('modal_seguir');
 
 window.addEventListener('load', function() {
 
