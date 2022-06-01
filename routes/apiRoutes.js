@@ -14,6 +14,8 @@ router.get("/users/:id" , apiController.userDetail);
 router.get('/products', apiController.productList);
 router.get("/products/:id", apiController.productDetail);
 router.get("/collections", apiController.collectionTotal);
+router.get("/last", apiController.lastProduct);
+router.get("/total", apiController.countByCategory);
 
 
 module.exports = router;

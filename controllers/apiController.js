@@ -60,7 +60,7 @@ const apis = {
                     name: product.name,
                     price: product.price,
                     description: product.description,
-                    image: imagen, //aca habria q poner URL img
+                    image: imagen, 
                     collection: product.collection.name
                 }
             }
@@ -112,12 +112,7 @@ const apis = {
         })
     },
     collectionTotal: function (req, res) {
-        db.Collection.findAll().then(collection => {
-            let newUser = collection.map(collection => {
-                return {
-                    hola: "No sabemos como borrar esto",                    
-                } //como hacemos para limpiar todo esto y que solo nos muestre de la linea 121 a las 126?
-            })
+        db.Collection.findAll().then(collection => {            
             let respuesta = {
                 meta: {
                     status: 200,
@@ -127,6 +122,36 @@ const apis = {
             }
             res.json(respuesta)
         })
-    }    
+    },
+    lastProduct:  function (req, res) {
+        db.Product.findAll({            
+            limit: 1,            
+            order: [ [ 'id', 'DESC' ]]       
+          }).then(product => {                       
+            let respuesta = {
+                meta: {
+                    status: 200,     
+                    lastProduct: product,                
+                    url: "/api/last"
+                },          
+            }   
+            res.json(respuesta)
+        })
+    },    
+    countByCategory:  function (req, res) {
+        db.Product.count({
+            include: [{ association: "collection" }],
+            group: ['collection_id']       
+          }).then(result => {                    
+            let respuesta = {            
+                meta: {
+                    status: 200,
+                    categoryCount: result, 
+                    url: "/api/total"
+                },
+            }   
+            res.json(respuesta)
+        })
+    } 
 }
 module.exports = apis
