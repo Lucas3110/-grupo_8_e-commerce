@@ -141,7 +141,7 @@ const apis = {
     countByCategory:  function (req, res) {
         db.Product.count({
             include: [{ association: "collection" }],
-            group: ['collection_id']       
+            group: ['collection.name']       
           }).then(result => {                    
             let respuesta = {            
                 meta: {
