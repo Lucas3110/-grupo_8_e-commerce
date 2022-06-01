@@ -36,7 +36,7 @@
                     <% if(locals.userLocals){ %>
                         <li><a href="/users/profile">Hola <%= userLocals.nombre %></a></li>
                         <li>
-                            <form action="/users/logout" method="post">
+                            <form action="/users/logout" method="post" class="parejo">
                                 <button type="submit" class="button-solid">Cerrar sesion</button>
                             </form>
                         </li>
@@ -54,7 +54,7 @@
                     </div>
                     <form action="/product/search" class="search-field">
                         <input type="text" placeholder="Search..." name="findP">
-                        <button type="submit"><i class='bx bx-search'></i></button>
+                        <button type="submit" class="borrate-pls"><i class='bx bx-search'></i></button>
                     </form>
                 </div>
             </div>
