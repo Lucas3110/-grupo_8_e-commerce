@@ -4,7 +4,6 @@ const path = require('path');
 const productController = require('../controllers/productController');
 const authMiddleware = require("../middlewares/authMiddleware");
 const multer = require('multer');
-const { check } = require('express-validator'); //me parece que hay que borarrlo
 const validator = require("../validator/validationForm");
 
 const storage = multer.diskStorage({
@@ -49,7 +48,7 @@ router.post('/', upload.single('image'), validator.product, productController.st
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', authMiddleware, productController.edit); 
 router.patch('/:id/edit', upload.single('image'), validator.product, productController.update); 
- //no sale el msg error en product edit img, aunque el error lo detecta y tira el e.preventDefault
+
 
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productController.destroy); 

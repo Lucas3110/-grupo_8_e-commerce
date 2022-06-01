@@ -83,10 +83,10 @@ const apis = {
             let respuesta = {
                 meta: {
                     status: 200,
-                    count: users.length, //faltaria el countByCategory
+                    count: users.length, 
                     url: "/api/users"
                 },
-                users: newUser //chequear q dsp no haya conflicto por cambiarle el name "data"
+                users: newUser 
             }
             res.json(respuesta)
         })
@@ -114,7 +114,7 @@ const apis = {
             let respuesta = {
                 meta: {
                     status: 200,
-                    categoryCount: collection.length, //faltaria el countByCategory
+                    categoryCount: collection.length, 
                     url: "/api/collections"
                 },
             }

@@ -3,7 +3,6 @@ let router = express.Router();
 const path = require('path');
 const multer = require('multer');
 const usersController = require('../controllers/usersController');
-const { check } = require('express-validator'); //me parece que hay que borarrlo
 const validator = require("../validator/validationForm");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
