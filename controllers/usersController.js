@@ -1,16 +1,7 @@
-let path = require ("path");
-let fs = require('fs');
 const bcrypt = require('bcryptjs');
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator');
-const db = require('../database/models'); // aca agregamos lo de db
-const sequelize = db.sequelize; // aca agregamos lo de db
-
-function writeFile(array){
-    const arrayString = JSON.stringify(array, null, 4)
-    fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayString);
-}
+const db = require('../database/models'); 
+const sequelize = db.sequelize; 
 
 const controlador = {
     index: (req, res) => {        

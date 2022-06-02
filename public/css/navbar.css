@@ -1,7 +1,7 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{    /* ===== hay q limpiar los margin 0, top 0  y capaz algun box-sizing: border-box de mas ===== */    
+*{      
     
     font-family: 'Poppins', sans-serif;
     transition: all 0.4s ease;;
@@ -39,7 +39,7 @@ body.dark{
 
 nav{
     position: -webkit-sticky; /* Safari */
-    position: sticky; /* le saque el fixed para q deje de joder el css */
+    position: sticky; 
     top: 0;
     left: 0;
     height: 65px;
@@ -68,7 +68,7 @@ nav .nav-bar{
     padding: 0 30px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;  /*le saque el space between */
+    justify-content: space-evenly;  
     box-sizing: border-box;
 }
 .button-solid {  /*Cerrar sesion boton */
@@ -103,7 +103,7 @@ nav .nav-bar{
     opacity: 1;
     margin: 0;
     padding: 0;
-} /*Cerrar sesion boton termina aca, no puedo hacer q ande el efecto de hover */
+} 
 
 nav .nav-bar .sidebarOpen{
     color: var(--text-color);
@@ -263,8 +263,7 @@ nav .nav-bar .logo a{
     height: 50px;
     width: 300px;
     display: flex;
-    align-items: center;
-    /* background-color: var(--nav-color); queda feo*/
+    align-items: center;    
     padding: 3px;
     border-radius: 6px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);

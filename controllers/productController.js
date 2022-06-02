@@ -1,7 +1,5 @@
-let path = require("path");
-let fs = require('fs');
-const db = require('../database/models'); // aca agregamos lo de db
-const sequelize = db.sequelize; // aca agregamos lo de db
+const db = require('../database/models'); 
+const sequelize = db.sequelize; 
 const { validationResult } = require('express-validator');
 const { Op } = require("sequelize");
 
@@ -20,7 +18,7 @@ const controlador = {
     // Detail - Detail from one product
     detail: (req, res) => {
         let product = db.Product.findByPk(req.params.id, {
-            include: [{ association: "collection" }] //esto es para saber el collection name en el detail
+            include: [{ association: "collection" }] 
         })
         let random = db.Product.findAll({ order: sequelize.literal('rand()'), limit: 4 })
         Promise.all([product, random])
@@ -30,7 +28,7 @@ const controlador = {
     },
 
     search: async (req, res) => {
-        const { findP } = req.query;//viene de la form del header
+        const { findP } = req.query;
         products = await db.Product.findAll({
             where: {
                 name: { [Op.like]: '%' + findP + '%' }

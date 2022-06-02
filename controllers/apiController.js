@@ -1,55 +1,53 @@
-const db = require('../database/models'); 
+const db = require('../database/models');
 
 
 
 const apis = {
-    productList: function (req, res) {
-        db.Product.findAll({
-            include: [{ association: "collection" }]
-        }).then(products => {
-            let newProduct = products.map(product => {
-                return {
-                    id: product.id,
-                    name: product.name,
-                    description: product.description,
-                    collection: product.collection,
-                    detail: "http://localhost:3000/api/products/" + product.id
-                }
-            })
-            let respuesta = {
-                meta: {                                     
-                    status: 200,
-                    count: products.length, //faltaria el countByCategory
-                    url: "/api/products"
-                    /*countByCategory: [
-                        newProduct.collection
-                    ]              */      
-                },
-                products: newProduct
+    productList: async function (req, res) {
+
+        let products = await db.Product.findAll({ include: [{ association: "collection" }] })
+        let newProduct = products.map(product => {
+            return {
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                collection: product.collection,
+                detail: "http://localhost:3000/api/products/" + product.id
             }
-            res.json(respuesta)
         })
+
+        let total = await db.Product.count({
+            include: [{ association: "collection" }],
+            group: ['collection.name']
+        })
+
+        let respuesta = {
+            meta: {
+                status: 200,
+                count: products.length,
+                countByCategory: total,
+                url: "/api/products"
+            },
+            products: newProduct
+        }
+        res.json(respuesta)
     },
-    productDetail: function (req, res) {        
-        db.Product.findByPk(req.params.id,{            
+    productDetail: function (req, res) {
+        db.Product.findByPk(req.params.id, {
             include: [{ association: "collection" }]
-        }).then(product => {   
-            if(product.collection.name == "Genshin")
-            {
+        }).then(product => {
+            if (product.collection.name == "Genshin") {
                 var imagen = "http://localhost:3000/images/" + product.image
             }
-            if(product.collection.name == "Van-Gogh")
-            {
+            if (product.collection.name == "Van-Gogh") {
                 var imagen = "http://localhost:3000/images/" + product.image
-            } 
-            if(product.collection.name == "Punks")
-            {
+            }
+            if (product.collection.name == "Punks") {
                 var imagen = "http://localhost:3000/images/" + product.image
-            } 
-            if(product.collection.name == "Magic")
-            {
+            }
+            if (product.collection.name == "Magic") {
                 var imagen = "http://localhost:3000/images/" + product.image
-            }          
+            }
             let jsonProducto = {
                 meta: {
                     status: 200,
@@ -60,7 +58,7 @@ const apis = {
                     name: product.name,
                     price: product.price,
                     description: product.description,
-                    image: imagen, 
+                    image: imagen,
                     collection: product.collection.name
                 }
             }
@@ -79,16 +77,16 @@ const apis = {
                     id: user.id,
                     name: user.name,
                     email: user.email,
-                    detail: "http://localhost:3000/api/users/" + user.id,                    
+                    detail: "http://localhost:3000/api/users/" + user.id,
                 }
             })
             let respuesta = {
                 meta: {
                     status: 200,
-                    count: users.length, //faltaria el countByCategory
+                    count: users.length, 
                     url: "/api/users"
                 },
-                users: newUser //chequear q dsp no haya conflicto por cambiarle el name "data"
+                users: newUser 
             }
             res.json(respuesta)
         })
@@ -105,53 +103,53 @@ const apis = {
                     name: user.name,
                     last_name: user.last_name,
                     email: user.email,
-                    image: "http://localhost:3000/images/users/"+ user.image                   
-                } 
+                    image: "http://localhost:3000/images/users/" + user.image
+                }
             }
             res.json(jsonProducto);
         })
     },
     collectionTotal: function (req, res) {
-        db.Collection.findAll().then(collection => {            
+        db.Collection.findAll().then(collection => {
             let respuesta = {
                 meta: {
                     status: 200,
-                    categoryCount: collection.length, //faltaria el countByCategory
+                    categoryCount: collection.length, 
                     url: "/api/collections"
                 },
             }
             res.json(respuesta)
         })
     },
-    lastProduct:  function (req, res) {
-        db.Product.findAll({            
-            limit: 1,            
-            order: [ [ 'id', 'DESC' ]]       
-          }).then(product => {                       
+    lastProduct: function (req, res) {
+        db.Product.findAll({
+            limit: 1,
+            order: [['id', 'DESC']]
+        }).then(product => {
             let respuesta = {
                 meta: {
-                    status: 200,     
-                    lastProduct: product,                
+                    status: 200,
+                    lastProduct: product,
                     url: "/api/last"
-                },          
-            }   
+                },
+            }
             res.json(respuesta)
         })
-    },    
-    countByCategory:  function (req, res) {
+    },
+    countByCategory: function (req, res) {
         db.Product.count({
             include: [{ association: "collection" }],
-            group: ['collection_id']       
-          }).then(result => {                    
-            let respuesta = {            
+            group: ['collection.name']
+        }).then(result => {
+            let respuesta = {
                 meta: {
                     status: 200,
-                    categoryCount: result, 
+                    categoryCount: result,
                     url: "/api/total"
                 },
-            }   
+            }
             res.json(respuesta)
         })
-    } 
+    }
 }
 module.exports = apis

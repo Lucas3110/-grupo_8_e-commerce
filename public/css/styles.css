@@ -16,7 +16,7 @@ html,body{
   border: none;
 }
 
-/* borrar las lineas sobrantes de la navbar ya que las tenes en el mq de 1200px*/
+
 .navbar {
 display: flex;
 position: relative;
@@ -71,7 +71,7 @@ width: 100%;
 background-color: white;
 border-radius: 10px;
 }
-/* CSS de lupa falta ubicarlo bien*/
+/* CSS de lupa*/
 header .form{
   width: 50%;
   position: absolute;
@@ -87,87 +87,6 @@ header .form .input{
   color: #666;
   padding: 2px;
 }
-/* CSS lupa fin */
-/* .banner{
-background-image: url('/images/banner.jpeg');
-background-size: cover;
-background-position: center center;    
-height: 60vh;
-width: 100%;     */
-
-/* } */
-/* slider de imagen*/
-
-/* #slider {
-  position: relative;
-  width: 500px;
-  height: 265px;
-  margin: 11rem 50rem -4rem;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);    
-}
-.fondo-sliders div a{
-  display: block;
-  text-decoration: none;
-  margin: 10rem 63rem -8rem;
-  color: white;
-  font-weight: 500; 
-  transition: all 25ms;   
-  
-}
-.fondo-sliders div a:hover{
-  font-weight: bold;
-  color: #BBE1FA;
-  
-}
-#slider ul {
-  position: relative;
-  list-style: none;
-  height: 100%;
-  width: 10000%;
-  padding: 0;
-  margin: 0;
-  transition: all 750ms ease;
-  left: 0;
-}
-#slider ul li {
-  position: relative;
-  height: 100%;
- 
-  float: left;
-}
-#slider ul li img{
-  width: 500px;
-  height: 265px;
-}
- 
-#slider #prev, #slider #next {
-  width: 50px;
-  line-height: 50px;
-  border-radius: 50%;
-  font-size: 2rem;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 150ms ease;
-}
-#slider #prev:hover, #slider #next:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 0;
-}
-#slider #prev {
-  left: 10px;
-}
-#slider #next {
-  right: 10px;
-} */
-
-
-/* slider de imagen fin*/
 
 h2{
   color: #BBE1FA;
@@ -178,21 +97,11 @@ h2{
   padding: 0;    
 }
 
-/* .fondo-sliders{
-  background: #333;       
-  margin: 2.5rem auto;
-  max-width: 110em;
-  width: 72%;
-  height: 1288px;    
-  overflow: hidden;    
-  border-radius: 0.6em;    
-  box-shadow: 0 0.5em 0 rgb(138 148 152 / 20%);
-}  */
 
 
 .final{
   display: flex;
-  margin-top:26px; /* con esto bajas el footer para abajo pero rompe la home*/
+  margin-top:26px; 
   align-items: center;    
   justify-content: space-evenly;
   color: white;
