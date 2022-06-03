@@ -93,7 +93,6 @@ h1, h2, h3, h4, p{
     height: 24px;
 }
 
-
 .modal{
     position: fixed;
     top: 0;
@@ -103,12 +102,13 @@ h1, h2, h3, h4, p{
     background-color: #111111bd;
     display: flex;
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
 }
 
 .modal--show{
+    visibility: visible;
     opacity: 1;
-    pointer-events: unset;
+    z-index: 100;
 }
 
 .modal_container{

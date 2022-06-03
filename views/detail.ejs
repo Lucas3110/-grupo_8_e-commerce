@@ -16,6 +16,17 @@
         <div class="row">
           <div class="col-2">
             <img src="/images/<%= product.image %>" alt="" width="100%">
+
+            <section class="modal" id="modal" >
+              <div class="modal_container">
+                <img src="/images/modal.svg" alt="Carrito" class="modal_image">
+                  <h2 class="modal_title">¡Felicidades!</h2>
+                    <p class="modal_text">Tu producto fue agregado con éxito</p>
+                      <a href="/product/cart"><button class="modal_carrito">Ir al carrito</button></a>
+                      <a href="/product"><button class="modal_seguir">Sumar + NFT</button></a>
+              </div>
+            </section>
+
           </div>
           <div class="col-2">
             <h1>
@@ -32,7 +43,7 @@
               <%= product.price %>
             </h4>
           <div class="wrapper">
-            <a href="#modal" class="btn">Add to cart</a>
+            <button class="btn" type="button"> Add to cart </button>
           </div>  
             <h3>
               <%= product.description %>
@@ -58,16 +69,6 @@
       </div>
       <%- include('./partials/footer') %>
   </main>
-
-  <section class="modal" >
-    <div class="modal_container">
-      <img src="/images/modal.svg" alt="Carrito" class="modal_image">
-        <h2 class="modal_title">¡Felicidades!</h2>
-          <p class="modal_text">Tu producto fue agregado con éxito</p>
-            <a href="/product/cart"><button class="modal_carrito">Ir al carrito</button></a>
-            <a href="/product"><button class="modal_seguir">Sumar + NFT</button></a>
-    </div>
-  </section>
   
   <script src="/js/detail.js"></script>   
 

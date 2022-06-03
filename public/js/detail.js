@@ -1,13 +1,9 @@
-const openModal = document.querySelector('.btn');
-const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('modal_seguir');
+let clickAgregar = document.querySelector('.btn');
 
-opernModal.addEventListener('click', (e)=> {
-    e.preventDefault();
-    modal.classList.add('modal--show');
-})
+window.addEventListener('load', function() {
 
-closeModal.addEventListener('click', (e)=> {
-    e.preventDefault();
-    modal.classList.remove('modal--show');
+    clickAgregar.addEventListener("click", function(){
+        document.getElementById('modal').classList.add("modal--show");
+
+    })
 })
