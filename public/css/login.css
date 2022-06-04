@@ -1,10 +1,4 @@
 /*login */
-*{
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .bodylogin{
     font-family: 'Lato', sans-serif;
@@ -22,14 +16,15 @@
     border-color: #4b4b4b;
     background-color: #333;
     text-align: center;
+    font-size: 16px;
     display: flex;
     width: 50%;
     margin: auto;
-    margin-top: 5px,;
-    margin-bottom: 2em;
+    margin-top: 10%;
+    margin-bottom: 5%;
     justify-content: center;
     border-radius: 10px;
-    font-size: 12px;
+
 }
 input{
     border-radius: 6px;
@@ -37,8 +32,8 @@ input{
     height: 23px;
 }
 .inicio{
-    padding: 8px;
-    padding-bottom: 8px;
+    padding: 10px;
+    padding-bottom: 10px;
     color: white;
     display: flex;
     justify-content: center;
@@ -52,6 +47,8 @@ input{
 
 .registro{
     border-radius: 7px;
+    border-color: #4b4b4b;
+    -webkit-border-radius: 7px;
     padding: 0.3rem;
     text-decoration: #0F4C75;
     font-size: 16px;
@@ -60,16 +57,14 @@ input{
     background-color: #333;
     margin: 10px;
     cursor: pointer;
-    
 }
-
 .registro:hover{
     background-color: #0F4C75;
     transition: all 250ms;
 }
-
 .boton-login{
     border-radius: 7px;
+    border-color: #4b4b4b;
     -webkit-border-radius: 7px;
     padding: 5px;
     text-decoration: #0F4C75;
@@ -91,7 +86,7 @@ transition: all 250ms;
 
 .recordarme{
     color: white;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .recuerdame{
@@ -108,7 +103,7 @@ transition: all 250ms;
 }
 
 .textolvido{
-    font-size: 10px;
+    font-size: 13px;
     color: #BBE1FA;
 
 }
@@ -147,5 +142,3 @@ transition: all 250ms;
       height: 10%;
   }
 }
-
-
