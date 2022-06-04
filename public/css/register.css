@@ -50,6 +50,7 @@ main {
 
 .button {
     border-radius: 7px;  
+    border-color: #4b4b4b;
     padding: 5px;   
     font-size: 16px;
     color: white;
