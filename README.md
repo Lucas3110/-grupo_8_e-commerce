@@ -32,9 +32,5 @@ https://fonts.google.com/specimen/Lato
 - https://www.figma.com/file/HUi7V0cisctBpTCE58vftD/Wireframe-NFTs?node-id=0%3A1
 - https://www.figma.com/file/XedTDFU08cVJmGxgofyYD5/Untitled (la última pantalla está divida en 2 ya que no podiamos crear otra por el free trial)
 
-Roles:
-Front End - Lucas y Jessica |
-Backend - Joan y Nicolas
-
 **Tablero:** https://proyectounforged.atlassian.net/jira/software/c/projects/UN/boards/1 (los invitamos como colaboradores)
 
